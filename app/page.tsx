@@ -18,8 +18,6 @@ export default function Home() {
   
   // Animation Sequence
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
-
     const runSequence = async () => {
       // 1. Website (Initial State)
       setPhase('website');
@@ -75,7 +73,10 @@ export default function Home() {
 
     runSequence();
 
-    return () => clearTimeout(timeout);
+    // Cleanup function - component unmount will stop the sequence
+    return () => {
+      // Animation will stop when component unmounts
+    };
   }, []);
 
   return (
@@ -132,29 +133,35 @@ export default function Home() {
                             </p>
                          </div>
                          
-                         <div className="relative h-16 w-64">
+                         <div className="relative h-24 w-80 flex items-center justify-center">
                             {/* Old Button */}
-                            <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${phase === 'website' ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}>
-                               <button className="bg-gray-200 text-gray-600 px-8 py-3 rounded-full font-bold text-sm w-full border border-gray-300">
+                            <div className={`absolute transition-all duration-500 ease-in-out transform ${phase === 'website' ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-90 -translate-y-4'}`}>
+                               <button className="bg-gray-200 text-gray-600 px-8 py-3 rounded-full font-bold text-sm border border-gray-300 shadow-sm">
                                   資料請求・お問い合わせ
                                </button>
                             </div>
                             
                             {/* New Button */}
-                            <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${phase === 'cta_change' ? 'opacity-100 scale-100' : 'opacity-0 scale-110'}`}>
-                               <button className="bg-[#1a1a1a] text-white px-8 py-3 rounded-full font-bold text-lg shadow-xl w-full flex items-center justify-center gap-2 animate-pulse">
-                                  <Sparkles className="w-4 h-4 text-yellow-400" />
-                                  提案を受け取る
-                               </button>
-                               <div className="absolute -right-8 top-8 animate-bounce">
-                                  <MousePointer2 className="w-8 h-8 text-black fill-white" />
+                            <div className={`absolute transition-all duration-700 ease-out transform ${phase === 'cta_change' ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-110 translate-y-4'}`}>
+                               <div className="relative">
+                                  <button className="bg-[#1a1a1a] text-white px-10 py-4 rounded-full font-bold text-lg shadow-2xl flex items-center justify-center gap-3 animate-[pulse_2s_infinite]">
+                                     <Sparkles className="w-5 h-5 text-yellow-400" />
+                                     提案を受け取る
+                                  </button>
+                                  {/* Flash Effect */}
+                                  <div className="absolute inset-0 rounded-full bg-yellow-400/30 animate-ping" />
+                                  
+                                  {/* Cursor Animation */}
+                                  <div className="absolute -right-12 top-10 animate-bounce">
+                                     <MousePointer2 className="w-10 h-10 text-black fill-white drop-shadow-md" />
+                                  </div>
                                </div>
                             </div>
                          </div>
                          
                          {phase === 'cta_change' && (
-                             <div className="mt-8 text-sm text-[#1a1a1a] font-bold animate-in fade-in slide-in-from-bottom-2">
-                                CTAが自動で最適化されました
+                             <div className="mt-8 text-sm text-[#1a1a1a] font-bold bg-yellow-100 px-4 py-2 rounded-full animate-in fade-in slide-in-from-bottom-4 shadow-sm">
+                                <span className="mr-2">✨</span>CTAが自動で最適化されました
                              </div>
                          )}
                       </div>
