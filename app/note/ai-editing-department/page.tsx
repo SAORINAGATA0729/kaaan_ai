@@ -489,7 +489,7 @@ export default function AiEditingDepartmentPage() {
             プロジェクトの進め方
           </h2>
 
-          <div className="space-y-0 relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0">
+          <div className="relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0 space-y-12">
             {[
               { step: "01", title: "Hearing & Audit", sub: "現状分析", desc: "現在の課題、体制、データの状況を詳細にヒアリングします。" },
               { step: "02", title: "Strategy Planning", sub: "戦略策定", desc: "2週間でマーケティング戦略とAI活用のロードマップを策定します。" },
@@ -497,17 +497,28 @@ export default function AiEditingDepartmentPage() {
               { step: "04", title: "Onboarding & Lecture", sub: "運用・定着", desc: "実際の業務の中でレクチャーを実施。メンバーが使いこなせるまで伴走します。" },
               { step: "05", title: "Self-Running", sub: "自走化", desc: "運用データを元にチューニングし、完全な自走体制へ移行します。" },
             ].map((item, i) => (
-              <div key={i} className="relative flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-200 last:border-0 pl-12 md:pl-0">
-                {/* Mobile Marker */}
-                <div className="absolute left-[-5px] top-12 w-3 h-3 rounded-full bg-black md:hidden" />
-                
-                <div className="md:w-1/3 md:text-right md:pt-2">
-                  <span className="text-lg font-bold text-gray-400 block mb-1">STEP {item.step}</span>
-                  <h3 className="text-2xl font-bold">{item.title}</h3>
-                  <span className="text-xs font-bold text-[#1a1a1a] bg-gray-100 px-2 py-1 mt-2 inline-block">{item.sub}</span>
+              <div key={i} className="flex flex-col md:flex-row md:items-start md:gap-12 relative pl-12 md:pl-0 group">
+                {/* Number & Border (Desktop) */}
+                <div className="hidden md:block w-32 shrink-0 text-right sticky top-32">
+                  <span className="text-6xl font-bold text-gray-200 group-hover:text-black transition-colors leading-none block">{item.step}</span>
                 </div>
-                <div className="md:w-2/3 md:pt-3">
-                  <p className="text-lg text-gray-600 leading-relaxed">{item.desc}</p>
+
+                {/* Mobile Marker */}
+                <div className="absolute left-[-5px] top-1.5 w-3 h-3 rounded-full bg-black md:hidden" />
+                
+                {/* Content */}
+                <div className="md:pt-2 border-l-0 md:border-l-2 md:border-gray-200 md:pl-12 md:pb-12 md:group-last:border-l-0 md:group-last:pb-0 relative transition-all duration-300">
+                   {/* Desktop Dot */}
+                   <div className="hidden md:block absolute -left-[7px] top-3 w-3 h-3 rounded-full bg-gray-300 group-hover:bg-black transition-colors" />
+
+                   <h3 className="text-2xl font-bold mb-3 flex items-center gap-3">
+                     <span className="md:hidden text-gray-300 font-bold text-xl">{item.step}</span>
+                     {item.title}
+                     <span className="text-xs font-bold text-white bg-black px-2 py-1 ml-2 rounded-sm">{item.sub}</span>
+                   </h3>
+                   <p className="text-lg text-gray-600 leading-relaxed">
+                     {item.desc}
+                   </p>
                 </div>
               </div>
             ))}
