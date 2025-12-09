@@ -69,7 +69,7 @@ export default function AiEditingDepartmentPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-14 px-8 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-gray-50 bg-transparent transition-all">
-                <Link href="/download">
+                <Link href="/download/ai-editing">
                   サービス資料ダウンロード
                 </Link>
               </Button>
@@ -613,7 +613,7 @@ export default function AiEditingDepartmentPage() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="h-16 px-12 rounded-full text-lg font-bold border-2 border-white text-white hover:bg-white hover:text-[#1a1a1a] bg-transparent">
-              <Link href="/download">
+              <Link href="/download/ai-editing">
                 サービス紹介資料
               </Link>
             </Button>

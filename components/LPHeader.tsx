@@ -61,7 +61,7 @@ export function LPHeader() {
               variant="outline"
               className="bg-transparent text-[#1a1a1a] hover:bg-gray-50 h-[44px] px-6 text-[14px] font-bold tracking-wide border border-[#1a1a1a] rounded-full transition-all"
             >
-              <Link href="/download">サービス紹介資料</Link>
+              <Link href="/download/ai-editing">サービス紹介資料</Link>
             </Button>
           </div>
           
