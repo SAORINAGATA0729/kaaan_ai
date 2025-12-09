@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -40,7 +40,7 @@ const formSchema = z.object({
   }),
 });
 
-export default function ContactServicePage() {
+function ContactForm() {
   const searchParams = useSearchParams();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -368,6 +368,27 @@ export default function ContactServicePage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function ContactServicePage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-white text-[#1a1a1a] font-sans">
+        <Header />
+        <main className="pt-32 pb-20">
+          <div className="container mx-auto px-6 md:px-8 max-w-[800px]">
+            <div className="text-center">
+              <h1 className="text-3xl font-bold mb-4">ご相談</h1>
+              <p className="text-sm text-gray-600">読み込み中...</p>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    }>
+      <ContactForm />
+    </Suspense>
   );
 }
 
