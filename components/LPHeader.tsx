@@ -29,9 +29,9 @@ export function LPHeader() {
           <nav className="hidden xl:flex items-center gap-8 flex-1 justify-end mr-8">
             {[
               { label: "課題", id: "problem" },
-              { label: "新しい視点", id: "discovery" },
               { label: "解決策", id: "solution" },
-              { label: "特徴", id: "features" },
+              { label: "手法", id: "how" },
+              { label: "特徴", id: "authority" },
               { label: "流れ", id: "flow" },
             ].map((item) => (
               <a
@@ -76,4 +76,3 @@ export function LPHeader() {
     </header>
   );
 }
-
