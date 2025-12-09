@@ -145,25 +145,32 @@ export default function AiEditingDepartmentPage() {
             でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。
           </h2>
           
-          <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed space-y-12 font-medium">
-            <div className="space-y-2 text-gray-500">
-              <p>「議事録の要約は、一瞬で終わるようになった。」</p>
-              <p>「資料の骨子作成も、壁打ちも、AIがやってくれる。」</p>
-              <p>「確かに、現場の『作業』は楽になったはずです。」</p>
+          <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed font-medium">
+            {/* Voices - No awkward line breaks */}
+            <div className="space-y-4 mb-20 text-left text-gray-500">
+              <p className="md:whitespace-nowrap">「議事録の要約は、一瞬で終わるようになった。」</p>
+              <p className="md:whitespace-nowrap">「資料の骨子作成も、壁打ちも、AIがやってくれる。」</p>
             </div>
             
-            <p className="text-2xl font-bold text-black">
-              でも、肝心の「売上」や「採用」は伸びていない。
-            </p>
-            
-            <p>
-              結局、重要な仕事は<span className="font-bold border-b-2 border-yellow-300">優秀な個人が手作業で</span>回している。
-            </p>
-            
-            <p className="text-2xl font-extrabold text-black">
-              「個人の時短」が「組織の成果」に繋がらない。<br />
-              これが、多くの企業の現実です。
-            </p>
+            {/* Core Message - Centered */}
+            <div className="text-center space-y-12">
+              <p className="text-gray-500">
+                「確かに、現場の『作業』は楽になったはずです。」
+              </p>
+              
+              <p className="text-2xl font-bold text-black">
+                でも、肝心の「売上」や「採用」は伸びていない。
+              </p>
+              
+              <p>
+                結局、重要な仕事は<span className="font-bold border-b-2 border-yellow-300">優秀な個人が手作業で</span>回している。
+              </p>
+              
+              <p className="text-2xl font-extrabold text-black leading-normal">
+                「個人の時短」が「組織の成果」に繋がらない。<br />
+                これが、多くの企業の現実です。
+              </p>
+            </div>
           </div>
         </div>
       </section>
