@@ -125,239 +125,245 @@ function ContactForm() {
           </div>
 
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               
-              <div className="space-y-6">
-                <div className="flex gap-2 items-center text-sm font-bold border-b pb-2 mb-6">
-                  お客様情報
-                </div>
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">
+                      お名前 <span className="text-red-500">*</span>
+                    </FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="山田 太郎" 
+                        {...field} 
+                        className="h-12 bg-white border-gray-300 focus:border-black focus:ring-0 rounded-md"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>お名前 <span className="text-red-500 text-xs ml-1">*</span></FormLabel>
-                        <FormControl>
-                          <Input placeholder="山田 太郎" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="company"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>会社名 <span className="text-red-500 text-xs ml-1">*</span></FormLabel>
-                        <FormControl>
-                          <Input placeholder="株式会社KAAAN" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
+              <FormField
+                control={form.control}
+                name="company"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">
+                      会社名 <span className="text-red-500">*</span>
+                    </FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="株式会社KAAAN" 
+                        {...field} 
+                        className="h-12 bg-white border-gray-300 focus:border-black focus:ring-0 rounded-md"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <FormField
-                    control={form.control}
-                    name="role"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>役職 <span className="text-red-500 text-xs ml-1">*</span></FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
-                          <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="選択してください" />
-                            </SelectTrigger>
-                          </FormControl>
-                          <SelectContent>
-                            <SelectItem value="executive">経営者・役員</SelectItem>
-                            <SelectItem value="manager">責任者クラス</SelectItem>
-                            <SelectItem value="employee">一般社員</SelectItem>
-                            <SelectItem value="freelance">フリーランス</SelectItem>
-                            <SelectItem value="other">その他</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>メールアドレス <span className="text-red-500 text-xs ml-1">*</span></FormLabel>
-                        <FormControl>
-                          <Input placeholder="example@kaaan.jp" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex gap-2 items-center text-sm font-bold border-b pb-2 mb-6">
-                  ご相談内容 <span className="text-red-500 text-xs ml-1">*</span>
-                </div>
-                
-                <FormField
-                  control={form.control}
-                  name="consultation"
-                  render={() => (
-                    <FormItem>
-                      <div className="space-y-8">
-                        {consultationGroups.map((group) => (
-                          <div key={group.title}>
-                            <h3 className="font-bold mb-3 text-sm">{group.title}</h3>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                              {group.items.map((item) => (
-                                <FormField
-                                  key={item}
-                                  control={form.control}
-                                  name="consultation"
-                                  render={({ field }) => {
-                                    return (
-                                      <FormItem
-                                        key={item}
-                                        className="flex flex-row items-start space-x-3 space-y-0 rounded-md border p-4 shadow-sm hover:bg-gray-50 transition-colors"
-                                      >
-                                        <FormControl>
-                                          <Checkbox
-                                            checked={field.value?.includes(item)}
-                                            onCheckedChange={(checked) => {
-                                              return checked
-                                                ? field.onChange([...field.value, item])
-                                                : field.onChange(
-                                                    field.value?.filter(
-                                                      (value) => value !== item
-                                                    )
-                                                  )
-                                            }}
-                                          />
-                                        </FormControl>
-                                        <FormLabel className="text-sm font-normal cursor-pointer w-full">
-                                          {item}
-                                        </FormLabel>
-                                      </FormItem>
-                                    )
-                                  }}
-                                />
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex gap-2 items-center text-sm font-bold border-b pb-2 mb-6">
-                  詳細情報
-                </div>
-
-                <FormField
-                  control={form.control}
-                  name="budget"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>現時点でのご予算</FormLabel>
-                      <Select onValueChange={field.onChange} defaultValue={field.value}>
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="選択してください" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="under_1m">100万円以下</SelectItem>
-                          <SelectItem value="under_5m">500万円以下</SelectItem>
-                          <SelectItem value="under_10m">1000万円以下</SelectItem>
-                          <SelectItem value="under_30m">3000万円以下</SelectItem>
-                          <SelectItem value="under_50m">5000万円以下</SelectItem>
-                          <SelectItem value="over_50m">5001万円以上</SelectItem>
-                          <SelectItem value="undecided">予算未定</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="detail"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>ご相談の詳細</FormLabel>
+              <FormField
+                control={form.control}
+                name="role"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">
+                      役職 <span className="text-red-500">*</span>
+                    </FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <Textarea 
-                          placeholder="ご相談内容の詳細をご記入ください" 
-                          className="min-h-[150px]"
-                          {...field} 
-                        />
+                        <SelectTrigger className="h-12 bg-white border-gray-300 focus:border-black focus:ring-0 rounded-md">
+                          <SelectValue placeholder="選択してください" />
+                        </SelectTrigger>
                       </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                      <SelectContent>
+                        <SelectItem value="executive">経営者・役員</SelectItem>
+                        <SelectItem value="manager">責任者クラス</SelectItem>
+                        <SelectItem value="employee">一般社員</SelectItem>
+                        <SelectItem value="freelance">フリーランス</SelectItem>
+                        <SelectItem value="other">その他</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-                <FormField
-                  control={form.control}
-                  name="source"
-                  render={({ field }) => (
-                    <FormItem className="space-y-3">
-                      <FormLabel>知ったキッカケ <span className="text-red-500 text-xs ml-1">*</span></FormLabel>
-                      <FormControl>
-                        <div className="flex flex-col space-y-2">
-                          <div className="flex items-center space-x-3">
-                            <input 
-                                type="radio" 
-                                id="known" 
-                                value="known" 
-                                checked={field.value === "known"}
-                                onChange={field.onChange}
-                                className="h-4 w-4 border-gray-300 text-black focus:ring-black"
-                            />
-                            <label htmlFor="known" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                              もともとKAAANを知っていた
-                            </label>
-                          </div>
-                          <div className="flex items-center space-x-3">
-                            <input 
-                                type="radio" 
-                                id="unknown" 
-                                value="unknown" 
-                                checked={field.value === "unknown"}
-                                onChange={field.onChange}
-                                className="h-4 w-4 border-gray-300 text-black focus:ring-black"
-                            />
-                            <label htmlFor="unknown" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                              KAAANを知らなかった
-                            </label>
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">
+                      メールアドレス <span className="text-red-500">*</span>
+                    </FormLabel>
+                    <FormControl>
+                      <Input 
+                        placeholder="example@kaaan.jp" 
+                        type="email"
+                        {...field} 
+                        className="h-12 bg-white border-gray-300 focus:border-black focus:ring-0 rounded-md"
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="consultation"
+                render={() => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">
+                      ご相談内容 <span className="text-red-500">*</span>
+                    </FormLabel>
+                    <div className="space-y-6 mt-2">
+                      {consultationGroups.map((group) => (
+                        <div key={group.title}>
+                          <h3 className="text-sm font-bold mb-3">{group.title}</h3>
+                          <div className="space-y-2">
+                            {group.items.map((item) => (
+                              <FormField
+                                key={item}
+                                control={form.control}
+                                name="consultation"
+                                render={({ field }) => {
+                                  return (
+                                    <FormItem
+                                      key={item}
+                                      className="flex flex-row items-center space-x-3 space-y-0"
+                                    >
+                                      <FormControl>
+                                        <Checkbox
+                                          checked={field.value?.includes(item)}
+                                          onCheckedChange={(checked) => {
+                                            return checked
+                                              ? field.onChange([...field.value, item])
+                                              : field.onChange(
+                                                  field.value?.filter(
+                                                    (value) => value !== item
+                                                  )
+                                                )
+                                          }}
+                                          className="border-gray-300 data-[state=checked]:bg-black data-[state=checked]:border-black"
+                                        />
+                                      </FormControl>
+                                      <FormLabel className="text-sm font-normal cursor-pointer !mt-0">
+                                        {item}
+                                      </FormLabel>
+                                    </FormItem>
+                                  )
+                                }}
+                              />
+                            ))}
                           </div>
                         </div>
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
+                      ))}
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-              <div className="text-center space-y-6 pt-8">
-                <p className="text-sm text-gray-500">
-                  株式会社KAAANは規定の<a href="#" className="underline">プライバシーポリシー</a>に従い、情報を取り扱います。<br />
-                  同意いただける場合は、送信を押してください。
+              <FormField
+                control={form.control}
+                name="budget"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">現時点でのご予算</FormLabel>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger className="h-12 bg-white border-gray-300 focus:border-black focus:ring-0 rounded-md">
+                          <SelectValue placeholder="選択してください" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="under_1m">100万円以下</SelectItem>
+                        <SelectItem value="under_5m">500万円以下</SelectItem>
+                        <SelectItem value="under_10m">1000万円以下</SelectItem>
+                        <SelectItem value="under_30m">3000万円以下</SelectItem>
+                        <SelectItem value="under_50m">5000万円以下</SelectItem>
+                        <SelectItem value="over_50m">5001万円以上</SelectItem>
+                        <SelectItem value="undecided">予算未定</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="detail"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-sm font-medium">ご相談の詳細</FormLabel>
+                    <FormControl>
+                      <Textarea 
+                        placeholder="ご相談内容の詳細をご記入ください" 
+                        className="min-h-[120px] bg-white border-gray-300 focus:border-black focus:ring-0 rounded-md resize-y"
+                        {...field} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="source"
+                render={({ field }) => (
+                  <FormItem className="space-y-3">
+                    <FormLabel className="text-sm font-medium">
+                      知ったキッカケ <span className="text-red-500">*</span>
+                    </FormLabel>
+                    <FormControl>
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <input 
+                            type="radio" 
+                            id="known" 
+                            value="known" 
+                            checked={field.value === "known"}
+                            onChange={() => field.onChange("known")}
+                            className="h-4 w-4 border-gray-300 text-black focus:ring-black focus:ring-2"
+                          />
+                          <label htmlFor="known" className="text-sm font-normal cursor-pointer">
+                            もともとKAAANを知っていた
+                          </label>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <input 
+                            type="radio" 
+                            id="unknown" 
+                            value="unknown" 
+                            checked={field.value === "unknown"}
+                            onChange={() => field.onChange("unknown")}
+                            className="h-4 w-4 border-gray-300 text-black focus:ring-black focus:ring-2"
+                          />
+                          <label htmlFor="unknown" className="text-sm font-normal cursor-pointer">
+                            KAAANを知らなかった
+                          </label>
+                        </div>
+                      </div>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <div className="pt-6 space-y-6">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  株式会社KAAANは規定の<a href="https://kaaan.jp/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-black">プライバシーポリシー</a>に従い、情報を取り扱います。同意いただける場合は、送信を押してください。
                 </p>
-                <Button type="submit" size="lg" className="px-12 py-6 text-lg rounded-full bg-black hover:bg-gray-800">
+                <Button type="submit" className="w-full h-14 text-base font-medium bg-black hover:bg-gray-800 text-white rounded-md">
                   送信する
                 </Button>
               </div>
