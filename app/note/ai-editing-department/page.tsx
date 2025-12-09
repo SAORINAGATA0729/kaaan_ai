@@ -142,7 +142,7 @@ export default function AiEditingDepartmentPage() {
         <div className="container mx-auto px-6 md:px-8 max-w-[900px]">
           <h2 className="text-2xl md:text-5xl font-extrabold leading-tight mb-16 tracking-tight text-left">
             「個人の生産性」は上がった。<br />
-            <span className="whitespace-nowrap">でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。</span>
+            <span className="inline-block whitespace-nowrap text-[0.9em] md:text-[1em]">でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。</span>
           </h2>
           
           <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed font-medium text-center">
