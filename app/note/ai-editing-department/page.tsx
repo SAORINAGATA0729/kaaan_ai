@@ -2,22 +2,20 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { LPHeader } from "@/components/LPHeader";
 import { Footer } from "@/components/Footer";
 import { 
   ArrowRight, 
   Check, 
-  Target, 
   Settings, 
-  Rocket,
-  Sparkles,
-  FileText,
-  Search,
-  TrendingUp,
   Database,
+  Users,
+  BarChart,
+  MessageSquare,
+  FileText,
+  Layers,
   Zap,
-  RefreshCw
+  HelpCircle
 } from "lucide-react";
 
 export default function AiEditingDepartmentPage() {
@@ -25,7 +23,7 @@ export default function AiEditingDepartmentPage() {
     <div className="min-h-screen bg-white text-[#1a1a1a] font-sans selection:bg-gray-200">
       <LPHeader />
 
-      {/* 1. Hero Section - Impactful & Direct */}
+      {/* 1. Hero Section - KAAAN Style (Bold & Minimal) */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-5xl">
@@ -36,15 +34,15 @@ export default function AiEditingDepartmentPage() {
             </div>
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] mb-12">
-              <span className="block">会議での発言が、</span>
-              <span className="block text-gray-400">そのまま最強の</span>
-              <span className="block">コンテンツになる。</span>
+              <span className="block">経営OSをアップデートさせる、</span>
+              <span className="block text-gray-400">AIと共創する</span>
+              <span className="block">編集部へ</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-16 font-medium">
-              「何を書こう？」から考えるのは、もう終わり。<br />
-              社内のあらゆる情報を資産に変え、<br />
-              <strong className="border-b-2 border-black pb-1">AIと共創する新しい編集部</strong>を構築します。
+            <p className="text-xl md:text-2xl text-[#1a1a1a] max-w-3xl leading-relaxed mb-16 font-medium border-l-4 border-black pl-8">
+              テクノロジーの進化で、従来の何倍ものスピードで事業成長できる時代に。<br />
+              ナレッジをデータベース化し、<br />
+              全員が高品質なアウトプットを生み出せる組織を実現します。
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6">
@@ -64,289 +62,264 @@ export default function AiEditingDepartmentPage() {
         </div>
       </section>
 
-      {/* 2. Problem Section - Empathy */}
-      <section id="problem" className="py-24 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
+      {/* 2. Consultation Examples (よくある相談例) - Concrete & Professional */}
+      <section id="problem" className="py-24 bg-[#f9f9f9]">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight tracking-tight">
-                AIツールを入れたのに、<br />
-                なぜ現場は楽にならない？
-              </h2>
-              <p className="text-[#1a1a1a]/70 text-lg leading-relaxed">
-                「メール作成は早くなった」「議事録は自動化できた」。<br />
-                でも、肝心のコンテンツ制作や事業企画は、相変わらず<br />
-                特定の人に依存し、時間がかかっていませんか？
-              </p>
-              
-              <div className="mt-12">
-                <Link href="/contact/service" className="group inline-flex items-center text-lg font-bold border-b-2 border-black pb-1 hover:opacity-70 transition-opacity">
-                  その原因を知る
-                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-2" />
-                </Link>
-              </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 flex items-center gap-4">
+            <MessageSquare className="w-8 h-8" />
+            多くの企業が抱えるAI活用の課題
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="bg-white p-10 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold mb-6 border-b border-gray-200 pb-4">データ・ナレッジの課題</h3>
+              <ul className="space-y-4">
+                {[
+                  "制作物のナレッジが属人化しており、担当者がいないと回らない",
+                  "過去のコンテンツや社内資料が活用されず、埋もれている",
+                  "データが蓄積されず検索もできないため、毎回ゼロから作っている",
+                  "社内の知見が形式知化されておらず、AIに学習させられない"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-gray-700">
+                    <Check className="w-5 h-5 mt-1 text-gray-400 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-white p-8 rounded-none border-l-4 border-black shadow-sm">
-                <div className="flex items-start gap-4">
-                  <Search className="h-6 w-6 text-[#1a1a1a] mt-1" />
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">「何を作ろう？」から始めている</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      毎回ゼロから企画を考え、担当者が情報を集めに行く。
-                      これではAIを使っても、本質的な工数は減りません。
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-8 rounded-none border-l-4 border-black shadow-sm">
-                <div className="flex items-start gap-4">
-                  <TrendingUp className="h-6 w-6 text-[#1a1a1a] mt-1" />
-                  <div>
-                    <h3 className="font-bold text-xl mb-2">ナレッジが流れている</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      日々の会議での素晴らしい発言や、Slackでの議論。<br />
-                      これらが活用されず、ただ流れて消えてしまっています。
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-white p-10 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold mb-6 border-b border-gray-200 pb-4">品質・効率・組織の課題</h3>
+              <ul className="space-y-4">
+                {[
+                  "AIを導入したが品質が担保できず、結局手直しに時間がかかる",
+                  "企画の切り口がワンパターンになり、ターゲットに刺さらない",
+                  "編集部が対外発信だけで終わり、マーケ・営業と連携できていない",
+                  "採用・育成にコストがかかり、スケールする体制が作れない"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-gray-700">
+                    <Check className="w-5 h-5 mt-1 text-gray-400 shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. New Discovery Section - The Core Concept */}
-      <section id="discovery" className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden scroll-mt-20">
-        <div className="container mx-auto px-6 md:px-8 relative z-10 max-w-[1200px]">
+      {/* 3. Value Proposition (提供価値) - Deep Dive */}
+      <section id="discovery" className="py-32 bg-white">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="mb-20">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-[2px] bg-white"></div>
-              <span className="text-white font-bold tracking-widest text-sm uppercase">New Perspective</span>
-            </div>
-
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-12">
-              「アウトプット」から考えるのをやめ、<br />
-              <span className="text-gray-400">「インプット」から生成する</span>へ。
+            <span className="text-[#1a1a1a] font-bold tracking-widest text-sm uppercase mb-4 block">Our Approach</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+              AIと共創し、<br />
+              全員が価値を生み出す組織へ
             </h2>
-          </div>
-
-          <div className="border border-white/20 p-8 md:p-16 relative bg-[#1a1a1a]">
-            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-white"></div>
-            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-white"></div>
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-white"></div>
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-white"></div>
-
-            <h3 className="text-2xl md:text-3xl font-bold mb-16 text-center leading-snug">
-              KAAANが提唱する<br />
-              <span className="bg-white text-[#1a1a1a] px-4 py-1 mx-2">逆転の発想</span>
-            </h3>
-
-            <div className="grid md:grid-cols-2 gap-12 items-stretch">
-              {/* Conventional */}
-              <div className="space-y-6 opacity-60">
-                <div className="border-b border-gray-600 pb-4 mb-6">
-                  <h4 className="font-bold text-xl text-gray-400">これまでの作り方</h4>
-                </div>
-                <div className="pl-6 border-l-2 border-gray-600 space-y-4">
-                  <p className="text-lg">1. 目的を決める（採用、マーケ）</p>
-                  <p className="text-lg">2. 担当者が情報を集めに行く（取材、調査）</p>
-                  <p className="text-lg">3. コンテンツを作る</p>
-                </div>
-                <p className="text-sm pt-4">❌ 担当者に依存する / スピードが遅い / 質がばらつく</p>
-              </div>
-
-              {/* KAAAN Way */}
-              <div className="space-y-6 relative">
-                 <div className="absolute -left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-white to-gray-500"></div>
-                <div className="border-b border-white pb-4 mb-6">
-                  <h4 className="font-bold text-xl text-white">AI編集部のアプローチ</h4>
-                </div>
-                <div className="pl-6 space-y-4 font-bold text-xl">
-                  <p>1. 日々の活動を全て蓄積する（会議、Slack、資料）</p>
-                  <p>2. <span className="text-yellow-300">ここからAIが生成する</span></p>
-                  <p>3. 目的に合わせて形を変える（記事、資料、SNS）</p>
-                </div>
-                <p className="text-base pt-4 text-white">⭕️ 情報収集ゼロ秒 / 爆速アウトプット / 誰でも高品質</p>
-              </div>
-            </div>
-
-            <div className="mt-16 bg-white/10 p-8 text-center">
-              <p className="text-xl leading-relaxed font-medium">
-                わざわざ情報を集めに行く必要はありません。<br />
-                <span className="underline decoration-yellow-300 underline-offset-4">あなたの会社には、すでに最強の素材（インプット）があるからです。</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 4. Solution Section - The 3 Steps */}
-      <section id="solution" className="py-32 bg-white scroll-mt-20">
-        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="mb-20 max-w-4xl">
-            <span className="text-[#1a1a1a] font-bold tracking-widest text-sm uppercase mb-4 block">Our Solution</span>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
-              埋もれた資産を価値に変える<br />
-              3つのエンジン
-            </h2>
-            <p className="text-2xl text-gray-500 font-medium">
-              1〜1.5ヶ月で、このサイクルをあなたの会社に構築します。
+            <p className="text-lg text-gray-600 max-w-3xl leading-relaxed">
+              テクノロジーの進化により、従来の何倍ものスピードで事業成長できる時代になりました。<br />
+              これまで、コンテンツ制作は特定の担当者に依存し、ナレッジが属人化。高クオリティなものを量産することは困難でした。<br />
+              しかし、AIと共創することで、従来不可能だったことが可能になります。<br />
+              <br />
+              社内のあらゆるナレッジをデータベースとして蓄積することで、担当者だけでなく、全員が高クオリティなアウトプットを生み出せる組織に変わります。<br />
+              自社でAIと共創しながら編集部を構築し、実践し続けているKAAANが、ナレッジをデータベース化する仕組み、体制づくり、教育まで一貫して支援します。
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          <div className="grid gap-12">
             {[
               {
-                icon: Database,
-                title: "1. Stock (蓄積)",
-                sub: "情報のデータベース化",
-                desc: "会議の議事録、日報、Slackのやり取り、社内資料。これら全てを一箇所に集約。AIがいつでも引き出せる状態にします。",
-                point: "情報収集コストをゼロにする"
+                num: "01",
+                title: "データ蓄積の仕組み構築",
+                desc: "過去のコンテンツ、企画の切り口、社内の専門知識を検索可能な形でデータベース化します。NotionやGoogleドライブなどを活用し、ターゲット別、フェーズ別など複数の切り口を整理。ワンパターンな企画から脱却します。",
+                icon: Database
               },
               {
-                icon: Zap,
-                title: "2. Generate (生成)",
-                sub: "AIオペレーション構築",
-                desc: "「採用広報用に」「営業資料用に」など、目的に合わせてAIが最適な形に変換。プロンプトチェーンを組み、自動化します。",
-                point: "用途に合わせた爆速生成"
+                num: "02",
+                title: "体制構築・役割設計",
+                desc: "AIと共創する編集部の体制を設計します。誰が企画を担当し、誰がレビューを行い、誰が最終承認をするのか。AIと人の役割分担を明確化し、スケールする組織体制を構築します。",
+                icon: Users
               },
               {
-                icon: RefreshCw,
-                title: "3. Cycle (循環)",
-                sub: "フィードバックと進化",
-                desc: "生成されたコンテンツの反応データを再び蓄積。AIの精度が日々向上し、使うほどに賢くなる編集部へと進化します。",
-                point: "自走し、進化し続ける組織へ"
+                num: "03",
+                title: "AIワークフロー構築",
+                desc: "企画、執筆、編集、レビューの各フェーズでAIをどう活用するか、誰がどのタイミングで介入するかを明確化。効果的なプロンプトテンプレートを作成し、効率と品質を両立する仕組みを作ります。",
+                icon: Zap
+              },
+              {
+                num: "04",
+                title: "AI教育・レクチャー",
+                desc: "チームメンバーへのAI教育を実施します。AIツールの使い方、プロンプトの書き方、データの蓄積方法など、実務を通じて段階的に共有。自走できるまで伴走します。",
+                icon: FileText
+              },
+              {
+                num: "05",
+                title: "コミュニケーション設計",
+                desc: "誰に、何を、どのように伝えるかを明確化します。ペルソナ・カスタマージャーニーを設計し、フェーズやタッチポイントに合わせたコミュニケーション戦略を構築。AIで制作する前提での設計を行います。",
+                icon: MessageSquare
+              },
+              {
+                num: "06",
+                title: "他部門との連携設計",
+                desc: "編集部を対外発信だけでなく、社内の知識基盤として機能させます。マーケティング・営業・CS部門と連携し、各部門が持つ知見をコンテンツ化、あるいはコンテンツを各部門で活用するフローを作ります。",
+                icon: Layers
               }
             ].map((item, i) => (
-              <div key={i} className="group border border-gray-200 p-10 hover:border-black transition-colors duration-300 relative bg-white">
-                <div className="mb-8 p-4 bg-gray-50 inline-block rounded-full">
-                  <item.icon className="w-8 h-8 text-[#1a1a1a]" />
-                </div>
-                <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                <p className="text-sm text-gray-500 font-bold mb-6">{item.sub}</p>
-                <p className="text-gray-600 leading-relaxed mb-8 text-sm h-24">
-                  {item.desc}
-                </p>
-                <div className="pt-6 border-t border-gray-100">
-                  <p className="text-sm font-bold flex items-center gap-2">
-                    <ArrowRight className="w-4 h-4" />
-                    {item.point}
+              <div key={i} className="flex flex-col md:flex-row gap-8 items-start border-t border-gray-200 pt-12">
+                <div className="w-20 shrink-0 text-3xl font-bold text-gray-300">{item.num}</div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                    <item.icon className="w-6 h-6" />
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">
+                    {item.desc}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-
-          <div id="features" className="bg-[#f5f5f5] p-12 border border-gray-200 scroll-mt-20">
-             <div className="text-center mb-12">
-               <h4 className="font-bold text-3xl mb-4">なぜ、自社だけではできないのか？</h4>
-               <p className="text-gray-600">AIツールを契約するだけでは、この仕組みは作れません。</p>
-             </div>
-             
-             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-               <div className="bg-white p-8 shadow-sm">
-                 <h5 className="font-bold text-xl mb-4 flex items-center gap-2">
-                   <Settings className="w-5 h-5" />
-                   オペレーター（Engineering）
-                 </h5>
-                 <p className="text-sm text-gray-600 leading-relaxed">
-                   単なるプロンプト入力ではなく、複数のAIを連携させる「プロンプトチェーン」や「ワークフロー」の設計が必要です。KAAANのエンジニアリングチームがこれを実装します。
-                 </p>
-               </div>
-               <div className="bg-white p-8 shadow-sm">
-                 <h5 className="font-bold text-xl mb-4 flex items-center gap-2">
-                   <Target className="w-5 h-5" />
-                   フロント（Designing）
-                 </h5>
-                 <p className="text-sm text-gray-600 leading-relaxed">
-                   「誰に」「何を」届けるかというコミュニケーション設計が必要です。マーケティングのプロが、AIのアウトプットを成果に繋がる文脈へ導きます。
-                 </p>
-               </div>
-             </div>
-          </div>
         </div>
       </section>
 
-      {/* 5. Why KAAAN Section */}
+      {/* 4. Members (プロフェッショナル) - Real People */}
       <section className="py-32 bg-[#1a1a1a] text-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="text-center mb-20">
+          <div className="mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-              プロフェッショナルと一緒に、<br />
-              「最強の編集部」を実装する
+              事業成長のプロフェッショナルが<br />
+              チームに伴走します
             </h2>
+            <p className="text-gray-400 text-lg max-w-3xl">
+              単なるAIツールの導入支援ではありません。<br />
+              数々の事業成長を実現してきたマーケター、エディター、エンジニアが、貴社のプロジェクトメンバーとして参画します。
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {[
-              { title: "自社で実践済み", desc: "KAAAN自身がこの仕組みで運営。実験ではなく、実証されたノウハウです。" },
-              { title: "エンジニアリング", desc: "単なるライティングではなく、AIを組み込む技術実装まで行います。" },
-              { title: "ブラックボックス化なし", desc: "最終的には貴社メンバーが運用できるよう、全てのノウハウを移譲します。" },
-              { title: "成果重視", desc: "Half the Time, Twice the Result。時間半分で、2倍の成果を。" },
-            ].map((item, i) => (
-              <div key={i} className="border border-white/20 p-8 hover:bg-white/5 transition-colors">
-                <Check className="w-8 h-8 text-white mb-6" />
-                <h3 className="font-bold text-xl mb-4">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {/* Member 1: Tajima */}
+            <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
+              <div className="w-20 h-20 bg-gray-600 rounded-full mb-6 overflow-hidden">
+                {/* Image Placeholder */}
+                <div className="w-full h-full bg-gray-500 flex items-center justify-center text-xs">田島</div>
               </div>
-            ))}
-          </div>
+              <div className="mb-4">
+                <p className="text-xs font-bold tracking-widest text-gray-400 uppercase">Representative</p>
+                <h3 className="text-xl font-bold">田島 光太郎</h3>
+              </div>
+              <p className="text-sm text-gray-300 leading-relaxed mb-6">
+                サイトグロースの全体設計を担当。AIを「事業成長の武器」として定義し、経営戦略への実装をリードする。数々のクライアント企業の事業変革を支援。
+              </p>
+              <div className="border-t border-white/10 pt-4">
+                <p className="text-xs text-gray-500 font-bold">担当領域</p>
+                <p className="text-sm">全体戦略設計 / 経営実装</p>
+              </div>
+            </div>
 
-          <div className="text-center">
-            <Button asChild size="lg" className="h-16 px-12 rounded-full font-bold bg-white text-[#1a1a1a] hover:bg-gray-200">
-              <Link href="/contact/service">
-                案件相談
-              </Link>
-            </Button>
+            {/* Member 2: Somehiko */}
+            <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
+               <div className="w-20 h-20 bg-gray-600 rounded-full mb-6 overflow-hidden">
+                {/* Image Placeholder */}
+                <div className="w-full h-full bg-gray-500 flex items-center justify-center text-xs">寺倉</div>
+              </div>
+              <div className="mb-4">
+                <p className="text-xs font-bold tracking-widest text-gray-400 uppercase">CSO</p>
+                <h3 className="text-xl font-bold">寺倉 大史</h3>
+              </div>
+              <p className="text-sm text-gray-300 leading-relaxed mb-6">
+                コンテンツマーケティングの第一人者。MOLTSでの豊富な支援実績を持ち、「価値あるコンテンツ」の定義と品質担保の仕組みを構築する。
+              </p>
+              <div className="border-t border-white/10 pt-4">
+                <p className="text-xs text-gray-500 font-bold">担当領域</p>
+                <p className="text-sm">編集戦略 / 品質管理フロー</p>
+              </div>
+            </div>
+
+            {/* Member 3: Nagata/Kishi (Combined or Representative) */}
+            <div className="bg-white/5 border border-white/10 p-8 hover:bg-white/10 transition-colors">
+               <div className="w-20 h-20 bg-gray-600 rounded-full mb-6 overflow-hidden">
+                {/* Image Placeholder */}
+                <div className="w-full h-full bg-gray-500 flex items-center justify-center text-xs">永田</div>
+              </div>
+              <div className="mb-4">
+                <p className="text-xs font-bold tracking-widest text-gray-400 uppercase">Director</p>
+                <h3 className="text-xl font-bold">永田 さおり</h3>
+              </div>
+              <p className="text-sm text-gray-300 leading-relaxed mb-6">
+                AI活用の最前線でオペレーションを構築。自身の業務をAIで劇的に効率化し、そのノウハウを「誰でも使える形」に言語化・実装する。
+              </p>
+              <div className="border-t border-white/10 pt-4">
+                <p className="text-xs text-gray-500 font-bold">担当領域</p>
+                <p className="text-sm">オペレーション構築 / 伴走支援</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 7. Process Section - Timeline */}
-      <section id="flow" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
+      {/* 5. Process (支援の流れ) - Step by Step */}
+      <section id="flow" className="py-32 bg-[#f9f9f9]">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
-          <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
-            1〜1.5ヶ月で、<br />
-            あなたの会社が「メディア」になる
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">支援開始までの流れ</h2>
+          
+          <div className="space-y-8">
+             {[
+               { step: "01", title: "ヒアリング・現状分析", desc: "貴社の事業課題、現在のコンテンツ制作体制、保有しているデータ資産（議事録、資料等）の状況をヒアリングします。" },
+               { step: "02", title: "戦略・ロードマップ策定", desc: "目指すべき編集部の姿と、そこに至るまでのステップを策定。どのAIツールを選定し、どう組み合わせるかの設計図を描きます。" },
+               { step: "03", title: "ご提案・ディスカッション", desc: "策定したプランをご提案します。単なる見積もり提示ではなく、実現可能性や期待効果について深く議論します。" },
+               { step: "04", title: "プロジェクト開始・環境構築", desc: "合意後、プロジェクトを開始。データベースの設計、AIツールの導入設定、初期プロンプトの構築をKAAAN主導で行います。" },
+               { step: "05", title: "運用・レクチャー・内製化", desc: "実際にコンテンツを制作しながら、貴社メンバーへのレクチャーを実施。最終的にはKAAANの手を離れて自走できる状態を目指します。" }
+             ].map((item, i) => (
+               <div key={i} className="flex flex-col md:flex-row gap-8 bg-white p-8 border border-gray-200 items-start">
+                 <div className="text-sm font-bold bg-black text-white px-3 py-1 shrink-0">STEP {item.step}</div>
+                 <div>
+                   <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                   <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                 </div>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="space-y-0 relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0">
+      {/* 6. FAQ (よくある質問) - Real Questions */}
+      <section className="py-32 bg-white">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">よくある質問</h2>
+          
+          <div className="grid gap-8">
             {[
-              { step: "01", title: "資産の棚卸し (ヒアリング)", desc: "現在、社内にどんな情報（会議、資料）があるかを確認し、データベース化の設計を行います。" },
-              { step: "02", title: "生成フローの設計 (ストラテジー)", desc: "「採用」や「リード獲得」など、目的に合わせてAIに何を生成させるか戦略を決めます。" },
-              { step: "03", title: "AIワークフロー実装 (構築)", desc: "1〜1.5ヶ月で、情報蓄積から生成までの自動化フローをKAAANが構築します。" },
-              { step: "04", title: "レクチャーと実践 (伴走)", desc: "構築した仕組みの使い方をレクチャー。実際に記事や資料を生成し、効果を体感します。" },
-              { step: "05", title: "自走化と展開 (内製化)", desc: "社内メンバーだけで運用できるようチューニング。他の部署へも展開していきます。" },
+              { q: "AI編集部構築には、どのくらいの期間がかかりますか?", a: "プロジェクトの規模によりますが、3〜6ヶ月程度を想定しています。最初の1〜1.5ヶ月で基盤構築と初期レクチャーを集中的に行い、その後は運用しながら内製化を進めます。" },
+              { q: "社内にAIリテラシーがない状態でも大丈夫ですか?", a: "はい、問題ありません。AIツールの使い方、プロンプトの書き方から丁寧にレクチャーします。実務を通じて段階的にスキルを習得できるよう支援しますので、現時点でのリテラシーは問いません。" },
+              { q: "既存のライターや編集者はどうなりますか?", a: "彼らの役割は「書くこと」から「ディレクション・品質管理」へと進化します。AIが下書きや構成案を作成し、人間が最終的なクオリティを引き上げる。この共創フローへの移行も支援します。" },
+              { q: "どのようなAIツールを使用しますか?", a: "プロジェクトの要件に応じて最適なツールを選定します（ChatGPT, Claude, Perplexity, Notion AIなど）。特定のツールありきではなく、目的から逆算して選定・組み合わせ（AIミキシング）を行います。" },
+              { q: "データ蓄積の仕組みは、どのようなツールで構築しますか?", a: "NotionやGoogleドライブなど、既存の社内ツールを活用することが多いです。新規ツール導入の場合は、運用負荷やコストを考慮して提案します。重要なのはツールではなく、蓄積されたデータを検索・活用できる設計です。" }
             ].map((item, i) => (
-              <div key={i} className="relative flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-200 last:border-0 pl-12 md:pl-0">
-                <div className="absolute left-[-5px] top-12 w-3 h-3 rounded-full bg-black md:hidden" />
-                
-                <div className="md:w-1/3 md:text-right md:pt-2">
-                  <span className="text-4xl font-bold text-gray-200 block mb-2">STEP {item.step}</span>
-                  <h3 className="text-2xl font-bold">{item.title}</h3>
-                </div>
-                <div className="md:w-2/3 md:pt-3">
-                  <p className="text-lg text-gray-600 leading-relaxed">{item.desc}</p>
-                </div>
+              <div key={i} className="border-b border-gray-200 pb-8 last:border-0">
+                <h3 className="font-bold text-lg mb-4 flex items-start gap-3">
+                  <span className="text-[#1a1a1a] shrink-0">Q.</span>
+                  {item.q}
+                </h3>
+                <p className="text-gray-600 leading-relaxed pl-7">
+                  <span className="font-bold text-black mr-2">A.</span>
+                  {item.a}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 10. Final CTA - Impact */}
-      <section className="py-40 bg-white text-center">
+      {/* 7. Final CTA - Impact */}
+      <section className="py-40 bg-[#f9f9f9] text-center">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
-          <h2 className="text-4xl md:text-6xl font-bold mb-10 leading-tight tracking-tight">
-            社内の「会話」を、<br />
-            事業を伸ばす「武器」に変える。
+          <h2 className="text-4xl md:text-5xl font-bold mb-10 leading-tight tracking-tight">
+            AIを事業成長のエンジンに変えませんか？
           </h2>
-          <p className="text-xl md:text-2xl text-gray-500 mb-16 max-w-3xl mx-auto font-medium">
-            AI編集部で、<br />
-            Half the Time, Twice the Resultを実現しませんか？
+          <p className="text-xl text-gray-500 mb-16 max-w-3xl mx-auto font-medium">
+            まずは貴社の現状をお聞かせください。<br />
+            最適なAI編集部の形をご提案します。
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
