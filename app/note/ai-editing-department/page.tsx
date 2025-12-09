@@ -58,7 +58,7 @@ export default function AiEditingDepartmentPage() {
             <p className="text-base md:text-lg text-[#1a1a1a]/80 max-w-2xl leading-relaxed mb-12 font-medium">
               時間を半分にし、成果を2倍にする。単なる効率化ではありません。<br className="hidden md:inline" />
               社内に眠る情報を資産に変え、事業成長を加速させるための<br className="hidden md:inline" />
-              最強のチームと仕組みを構築します。
+              チームと仕組みを構築します。
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
