@@ -1,25 +1,21 @@
 "use client";
 
-// Ver: Input Revolution Revert Fix
+// Ver: English Hero + Polished Process
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { LPHeader } from "@/components/LPHeader";
 import { Footer } from "@/components/Footer";
 import { 
   ArrowRight, 
-  Check, 
-  Target, 
-  Settings, 
-  Rocket,
-  Sparkles,
-  FileText,
-  Search,
+  Search, 
   TrendingUp,
   Database,
   Zap,
-  RefreshCw
+  RefreshCw,
+  Settings,
+  Target,
+  Check
 } from "lucide-react";
 
 export default function AiEditingDepartmentPage() {
@@ -27,23 +23,27 @@ export default function AiEditingDepartmentPage() {
     <div className="min-h-screen bg-white text-[#1a1a1a] font-sans selection:bg-gray-200">
       <LPHeader />
 
-      {/* 1. Hero Section - Impactful & Direct */}
+      {/* 1. Hero Section - English Main Message */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="max-w-5xl">
+          <div className="max-w-6xl">
             <div className="inline-block mb-8">
               <span className="text-[13px] tracking-[0.25em] uppercase font-bold border-b-2 border-black pb-2">
                 AI Editing Department Service
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[1.1] mb-12">
-              <span className="block">会議での発言が、</span>
-              <span className="block text-gray-400">そのまま最強の</span>
-              <span className="block">コンテンツになる。</span>
+            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-12">
+              <span className="block">Half the Time,</span>
+              <span className="block text-gray-400">Twice the Result</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-16 font-medium">
+            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-10 tracking-tight">
+              会議での発言が、<br className="md:hidden" />
+              そのまま最強のコンテンツになる。
+            </h2>
+
+            <p className="text-lg md:text-xl text-[#1a1a1a]/80 max-w-2xl leading-relaxed mb-16 font-medium">
               「何を書こう？」から考えるのは、もう終わり。<br />
               社内のあらゆる情報を資産に変え、<br />
               <strong className="border-b-2 border-black pb-1">AIと共創する新しい編集部</strong>を構築します。
@@ -136,6 +136,7 @@ export default function AiEditingDepartmentPage() {
           </div>
 
           <div className="border border-white/20 p-8 md:p-16 relative bg-[#1a1a1a]">
+            {/* Decorative corners */}
             <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-white"></div>
             <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-white"></div>
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-white"></div>
@@ -307,7 +308,7 @@ export default function AiEditingDepartmentPage() {
         </div>
       </section>
 
-      {/* 7. Process Section - Timeline */}
+      {/* 7. Process Section - Timeline (Polished) */}
       <section id="flow" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
@@ -315,7 +316,7 @@ export default function AiEditingDepartmentPage() {
             あなたの会社が「メディア」になる
           </h2>
 
-          <div className="space-y-0 relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0">
+          <div className="space-y-8">
             {[
               { step: "01", title: "資産の棚卸し (ヒアリング)", desc: "現在、社内にどんな情報（会議、資料）があるかを確認し、データベース化の設計を行います。" },
               { step: "02", title: "生成フローの設計 (ストラテジー)", desc: "「採用」や「リード獲得」など、目的に合わせてAIに何を生成させるか戦略を決めます。" },
@@ -323,15 +324,12 @@ export default function AiEditingDepartmentPage() {
               { step: "04", title: "レクチャーと実践 (伴走)", desc: "構築した仕組みの使い方をレクチャー。実際に記事や資料を生成し、効果を体感します。" },
               { step: "05", title: "自走化と展開 (内製化)", desc: "社内メンバーだけで運用できるようチューニング。他の部署へも展開していきます。" },
             ].map((item, i) => (
-              <div key={i} className="relative flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-200 last:border-0 pl-12 md:pl-0">
-                {/* Mobile Marker */}
-                <div className="absolute left-[-5px] top-12 w-3 h-3 rounded-full bg-black md:hidden" />
-                
-                <div className="md:w-1/3 md:text-right md:pt-2">
-                  <span className="text-4xl font-bold text-gray-200 block mb-2">STEP {item.step}</span>
-                  <h3 className="text-2xl font-bold">{item.title}</h3>
+              <div key={i} className="bg-white p-8 md:p-12 border border-gray-200 hover:border-black transition-colors flex flex-col md:flex-row gap-8 items-start shadow-sm">
+                <div className="md:w-1/4">
+                  <span className="text-5xl font-bold text-gray-200 block mb-2">0{i + 1}</span>
                 </div>
-                <div className="md:w-2/3 md:pt-3">
+                <div className="md:w-3/4">
+                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
                   <p className="text-lg text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
