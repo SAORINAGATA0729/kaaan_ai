@@ -350,7 +350,7 @@ export default function AiEditingDepartmentPage() {
                   <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Reason 01</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                  「Half the Time, Twice the Result」<br />へのコミット
+                  「Half the Time, Twice the Result」へのコミット
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   時間を半分にし、成果を2倍にする。<br />
