@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Header } from "@/components/Header";
+import { LPHeader } from "@/components/LPHeader";
 import { Footer } from "@/components/Footer";
 import { 
   ArrowRight, 
@@ -20,7 +20,7 @@ import {
 export default function AiEditingDepartmentPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] font-sans selection:bg-gray-200">
-      <Header />
+      <LPHeader />
 
       {/* 1. Hero Section - KAAAN Style (Bold & Minimal) */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
@@ -46,14 +46,14 @@ export default function AiEditingDepartmentPage() {
             
             <div className="flex flex-col sm:flex-row gap-6">
               <Button asChild size="lg" className="h-16 px-10 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
-                <Link href="/contact">
-                  お問い合わせ・相談する
+                <Link href="/contact/service">
+                  案件相談
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-16 px-10 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white bg-transparent transition-all">
-                <Link href="/contact">
-                  資料ダウンロード
+                <Link href="/download">
+                  サービス資料
                 </Link>
               </Button>
             </div>
@@ -62,7 +62,7 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 2. Problem Section (課題共感) - Clean Layout */}
-      <section className="py-24 bg-[#f9f9f9] border-t border-gray-100">
+      <section id="problem" className="py-24 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div>
@@ -76,7 +76,7 @@ export default function AiEditingDepartmentPage() {
               </p>
               
               <div className="mt-12">
-                <Link href="/contact" className="group inline-flex items-center text-lg font-bold border-b-2 border-black pb-1 hover:opacity-70 transition-opacity">
+                <Link href="/contact/service" className="group inline-flex items-center text-lg font-bold border-b-2 border-black pb-1 hover:opacity-70 transition-opacity">
                   この課題を解決する方法を知る
                   <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-2" />
                 </Link>
@@ -115,7 +115,7 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 3. New Discovery Section (新しい発見) ⭐最重要 - High Contrast */}
-      <section className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden">
+      <section id="discovery" className="py-32 bg-[#1a1a1a] text-white relative overflow-hidden scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 relative z-10 max-w-[1200px]">
           <div className="mb-20">
             <div className="flex items-center gap-3 mb-8">
@@ -172,7 +172,7 @@ export default function AiEditingDepartmentPage() {
 
           <div className="mt-20 text-center">
             <Button asChild size="lg" className="h-16 px-12 rounded-full text-base font-bold bg-white text-[#1a1a1a] hover:bg-gray-200 hover:scale-105 transition-all">
-              <Link href="/contact">
+              <Link href="/contact/service">
                 事業成長に繋がるAI活用を知る
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -182,7 +182,7 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 4. Solution Section (解決策) - Minimal Cards */}
-      <section className="py-32 bg-white">
+      <section id="solution" className="py-32 bg-white scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="mb-20 max-w-4xl">
             <span className="text-[#1a1a1a] font-bold tracking-widest text-sm uppercase mb-4 block">Our Solution</span>
@@ -238,7 +238,7 @@ export default function AiEditingDepartmentPage() {
             ))}
           </div>
 
-          <div className="bg-[#f5f5f5] p-12 border border-gray-200">
+          <div id="features" className="bg-[#f5f5f5] p-12 border border-gray-200 scroll-mt-20">
             <h4 className="font-bold text-2xl mb-8 flex items-center gap-3">
               <Sparkles className="w-6 h-6 text-[#1a1a1a]" />
               ここが違います
@@ -290,8 +290,8 @@ export default function AiEditingDepartmentPage() {
 
           <div className="text-center">
             <Button asChild size="lg" className="h-16 px-12 rounded-full font-bold bg-white text-[#1a1a1a] hover:bg-gray-200">
-              <Link href="/contact">
-                プロフェッショナルと一緒に始める
+              <Link href="/contact/service">
+                案件相談
               </Link>
             </Button>
           </div>
@@ -359,7 +359,7 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 7. Process Section - Timeline */}
-      <section className="py-32 bg-[#f9f9f9] border-t border-gray-100">
+      <section id="flow" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
             1〜1.5ヶ月で、<br />
@@ -404,7 +404,7 @@ export default function AiEditingDepartmentPage() {
           </div>
           <div className="mt-16">
              <Button asChild variant="outline" className="h-14 px-8 rounded-full text-base font-bold border-white text-white hover:bg-white hover:text-black transition-all">
-               <Link href="/contact">実績について問い合わせる</Link>
+               <Link href="/contact/service">実績について問い合わせる</Link>
              </Button>
           </div>
         </div>
@@ -428,14 +428,14 @@ export default function AiEditingDepartmentPage() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild size="lg" className="h-16 px-12 rounded-full text-lg font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-2xl">
-              <Link href="/contact">
-                無料相談に申し込む
+              <Link href="/contact/service">
+                案件相談
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="h-16 px-12 rounded-full text-lg font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white bg-transparent">
-              <Link href="/contact">
-                資料ダウンロード
+              <Link href="/download">
+                サービス資料
               </Link>
             </Button>
           </div>
