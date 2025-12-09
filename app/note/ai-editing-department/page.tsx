@@ -63,7 +63,7 @@ export default function AiEditingDepartmentPage() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
-                <Link href="/contact/service">
+                <Link href="/contact/service?service=ai">
                   案件相談・お問い合わせ
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
@@ -603,7 +603,7 @@ export default function AiEditingDepartmentPage() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild size="lg" className="h-16 px-12 rounded-full text-lg font-bold bg-white text-[#1a1a1a] hover:bg-gray-200 hover:scale-105 transition-all shadow-2xl">
-              <Link href="/contact/service">
+              <Link href="/contact/service?service=ai">
                 案件相談・お問い合わせ
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

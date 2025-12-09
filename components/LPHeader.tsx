@@ -53,7 +53,7 @@ export function LPHeader() {
               size="sm" 
               className="bg-[#1a1a1a] text-white hover:bg-[#333] h-[44px] px-6 text-[14px] font-bold tracking-wide rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
-              <Link href="/contact/service">案件相談・お問い合わせ</Link>
+              <Link href="/contact/service?service=ai">案件相談・お問い合わせ</Link>
             </Button>
             <Button 
               asChild 
