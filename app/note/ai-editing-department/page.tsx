@@ -294,7 +294,8 @@ export default function AiEditingDepartmentPage() {
             <div className="text-center mb-16">
               <h3 className="text-3xl md:text-4xl font-bold leading-tight">
                 AIを「効率化ツール」で終わらせない。<br />
-                事業成長を加速させる<span className="bg-black text-white px-2">「成長エンジン」</span>へと進化させる。
+                事業成長を加速させる<br />
+                <span className="bg-black text-white px-2">「成長エンジン」</span>へと進化させる。
               </h3>
             </div>
 
