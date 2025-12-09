@@ -140,9 +140,9 @@ export default function AiEditingDepartmentPage() {
       {/* 3. Insight Section - Core Question */}
       <section className="py-32 bg-white scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[900px]">
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-16 tracking-tight text-left">
+          <h2 className="text-2xl md:text-5xl font-extrabold leading-tight mb-16 tracking-tight text-left">
             「個人の生産性」は上がった。<br />
-            でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。
+            <span className="whitespace-nowrap">でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。</span>
           </h2>
           
           <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed font-medium text-center">
