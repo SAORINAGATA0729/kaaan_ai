@@ -544,12 +544,12 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 7. FAQ Section */}
-      <section className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
+      <section className="py-32 bg-white border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[800px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
             よくある質問
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-16">
             {[
               {
                 q: "AIリテラシーが低く、ツールを使いこなせるか不安です。",
@@ -572,15 +572,19 @@ export default function AiEditingDepartmentPage() {
                 a: "はい、可能です。ただしツールありきではなく、「事業成果を出すために何が最適か」という視点で戦略を設計します。既存ツールを活かすべきか、より適した構成に見直すべきかを含めて精査・提案します。"
               }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-                <h3 className="text-lg font-bold mb-4 flex items-start gap-4">
-                  <span className="text-black font-serif italic text-2xl leading-none">Q.</span>
-                  {item.q}
-                </h3>
-                <p className="text-gray-600 leading-relaxed pl-8 border-l-2 border-yellow-300 ml-1">
-                  <span className="font-bold text-black block mb-2 text-sm">A.</span>
-                  {item.a}
-                </p>
+              <div key={i} className="flex flex-col gap-5">
+                <div className="flex items-start gap-5">
+                  <span className="text-2xl font-bold leading-none shrink-0 font-serif mt-1">Q</span>
+                  <h3 className="text-lg md:text-xl font-bold leading-relaxed">
+                    {item.q}
+                  </h3>
+                </div>
+                <div className="flex items-start gap-5">
+                  <span className="text-2xl font-bold leading-none shrink-0 font-serif mt-1">A</span>
+                  <p className="text-gray-600 leading-relaxed text-base">
+                    {item.a}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
