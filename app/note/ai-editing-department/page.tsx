@@ -1,5 +1,7 @@
 "use client";
 
+// Ver: Input Revolution Revert Fix
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -322,6 +324,7 @@ export default function AiEditingDepartmentPage() {
               { step: "05", title: "自走化と展開 (内製化)", desc: "社内メンバーだけで運用できるようチューニング。他の部署へも展開していきます。" },
             ].map((item, i) => (
               <div key={i} className="relative flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-200 last:border-0 pl-12 md:pl-0">
+                {/* Mobile Marker */}
                 <div className="absolute left-[-5px] top-12 w-3 h-3 rounded-full bg-black md:hidden" />
                 
                 <div className="md:w-1/3 md:text-right md:pt-2">
