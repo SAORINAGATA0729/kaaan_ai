@@ -426,7 +426,7 @@ export default function AiEditingDepartmentPage() {
                   <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Reason 03</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                  自社での実践と実証<br />（Dogfooding）
+                  自社での実践と実証
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   KAAANが提供するノウハウは、すべて自社の成長のために開発・実証されたものです。
