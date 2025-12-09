@@ -1,5 +1,6 @@
 "use client";
 
+// AI編集部構築支援サービス 資料ダウンロードページ
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
