@@ -432,10 +432,27 @@ export default function AiEditingDepartmentPage() {
                 <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   KAAANが提供するノウハウは、すべて自社の成長のために開発・実証されたものです。
                 </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   机上の空論ではなく、<span className="font-bold text-black border-b border-yellow-300">私たち自身がこの「AI編集部」で成果を出している</span>からこそ、
                   生きた仕組みと、再現性のあるメソッドを提供できるのです。
                 </p>
+                <div className="bg-white border-l-4 border-black p-6 shadow-sm">
+                  <p className="font-bold mb-4 text-sm text-gray-400 uppercase tracking-widest">KAAANの取り組み</p>
+                  <ul className="space-y-3 text-base text-gray-700 font-medium">
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      「全員が月1回、新ツールや手法を発表する」社内文化
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      自社サイトを実験場とした、継続的な仮説検証とアップデート
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      最新AI（ChatGPT, Claude, Gemini等）の徹底的な比較・検証
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div className="w-full md:w-1/2 order-1 md:order-2 bg-gray-100 aspect-square md:aspect-[4/3] relative overflow-hidden group">
                  {/* Placeholder for Image */}
@@ -526,7 +543,51 @@ export default function AiEditingDepartmentPage() {
         </div>
       </section>
 
-      {/* 7. Final CTA - Impact */}
+      {/* 7. FAQ Section */}
+      <section className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
+        <div className="container mx-auto px-6 md:px-8 max-w-[800px]">
+          <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
+            よくある質問
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "AIリテラシーが低く、ツールを使いこなせるか不安です。",
+                a: "問題ありません。KAAANは「ツール導入」ではなく「チーム構築」を提供します。プロンプトの書き方から日々の運用まで、プロが伴走してレクチャーしますのでご安心ください。"
+              },
+              {
+                q: "どのようなAIツールを使用しますか？",
+                a: "特定のツールに縛られません。ChatGPT、Claude、Geminiなど、その時々で最適な最新ツールを選定・提案します。また、貴社のセキュリティ基準に合わせて環境を構築します。"
+              },
+              {
+                q: "情報セキュリティや機密保持は大丈夫ですか？",
+                a: "セキュリティは最優先事項です。入力データがAIの学習に利用されない設定（オプトアウト）や、セキュアな社内データベースの構築を徹底して行います。"
+              },
+              {
+                q: "どのくらいの期間で成果が出ますか？",
+                a: "企業の状況によりますが、構築から1ヶ月目で初稿のアウトプットを開始し、3〜6ヶ月で自走体制の確立を目指すのが一般的です。"
+              },
+              {
+                q: "すでに導入しているAIツールがあるのですが、連携は可能ですか？",
+                a: "もちろんです。既存のツールやワークフローを活かしつつ、成果が出ないボトルネックを解消する形で設計します。無理なリプレイスは提案しません。"
+              }
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                <h3 className="text-lg font-bold mb-4 flex items-start gap-4">
+                  <span className="text-black font-serif italic text-2xl leading-none">Q.</span>
+                  {item.q}
+                </h3>
+                <p className="text-gray-600 leading-relaxed pl-8 border-l-2 border-yellow-300 ml-1">
+                  <span className="font-bold text-black block mb-2 text-sm">A.</span>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Final CTA - Impact */}
       <section className="py-20 bg-[#1a1a1a] text-white text-center">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-tight">
