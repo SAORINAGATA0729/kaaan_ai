@@ -24,7 +24,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Header } from "@/components/Header";
+import Link from "next/link";
 import { Footer } from "@/components/Footer";
 
 const formSchema = z.object({
@@ -93,7 +93,18 @@ function ContactForm() {
 
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] font-sans">
-      <Header />
+      <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-sm">
+        <div className="container mx-auto max-w-[1200px] px-6 md:px-8">
+          <div className="flex h-[80px] items-center">
+            <Link 
+              href="/" 
+              className="text-lg font-bold tracking-tight text-[#1a1a1a] hover:opacity-80 transition-opacity"
+            >
+              KAAAN
+            </Link>
+          </div>
+        </div>
+      </header>
       
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[800px]">

@@ -21,7 +21,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Header } from "@/components/Header";
+import Link from "next/link";
 import { Footer } from "@/components/Footer";
 
 const formSchema = z.object({
@@ -50,7 +50,18 @@ export default function DownloadAiEditingPage() {
 
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] font-sans">
-      <Header />
+      <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-sm">
+        <div className="container mx-auto max-w-[1200px] px-6 md:px-8">
+          <div className="flex h-[80px] items-center">
+            <Link 
+              href="/" 
+              className="text-lg font-bold tracking-tight text-[#1a1a1a] hover:opacity-80 transition-opacity"
+            >
+              KAAAN
+            </Link>
+          </div>
+        </div>
+      </header>
       
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
@@ -99,12 +110,18 @@ export default function DownloadAiEditingPage() {
                 </p>
               </div>
 
-              {/* Preview Image Placeholder */}
-              <div className="w-full aspect-[3/4] bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300">
-                <div className="text-center text-gray-400">
-                  <p className="text-sm font-medium">資料プレビュー</p>
-                  <p className="text-xs mt-2">AI編集部構築支援サービス紹介資料</p>
-                </div>
+              {/* Preview Images - 4枚 */}
+              <div className="grid grid-cols-2 gap-4">
+                {[1, 2, 3, 4].map((num) => (
+                  <div 
+                    key={num}
+                    className="w-full aspect-[3/4] bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300"
+                  >
+                    <div className="text-center text-gray-400">
+                      <p className="text-xs font-medium">資料{num}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
