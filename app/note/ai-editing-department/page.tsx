@@ -155,8 +155,12 @@ export default function AiEditingDepartmentPage() {
             
             {/* Core Message - Centered */}
             <div className="space-y-12">
+              <p className="text-gray-500">
+                「確かに、現場の『作業』は楽になったはずです。」
+              </p>
+              
               <p className="text-2xl font-bold text-black">
-                でも、肝心の「売上」や「採用」は伸びていない。
+                しかし、肝心の「売上」や「採用」は伸びていない。
               </p>
               
               <p>
