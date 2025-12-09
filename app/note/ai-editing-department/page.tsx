@@ -2,6 +2,7 @@
 
 // Ver: 2024-12-09 Final Structure based on "00_LP構成シート.md"
 
+import { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { LPHeader } from "@/components/LPHeader";
