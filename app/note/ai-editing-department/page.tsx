@@ -83,7 +83,7 @@ export default function AiEditingDepartmentPage() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
-              AI活用において、<br />
+              AI活用において、<br className="md:hidden" />
               このような課題はありませんか？
             </h2>
           </div>
@@ -123,10 +123,10 @@ export default function AiEditingDepartmentPage() {
             ].map((item, i) => (
               <div key={i} className="bg-white p-8 border-l-4 border-gray-300 hover:border-black transition-colors shadow-sm group">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-yellow-300 transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-yellow-300 transition-colors shrink-0">
                     <item.icon className="w-5 h-5 text-gray-600 group-hover:text-black transition-colors" />
                   </div>
-                  <h3 className="font-bold text-xl">{item.title}</h3>
+                  <h3 className="font-bold text-lg whitespace-nowrap">{item.title}</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed text-sm">
                   {item.desc}
@@ -138,26 +138,29 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 3. Insight Section - Core Question */}
-      <section className="py-32 bg-white scroll-mt-20 text-center">
+      <section className="py-32 bg-white scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[900px]">
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-12">
+          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight mb-16 tracking-tight text-left">
             「個人の生産性」は上がった。<br />
-            でも、<span className="text-red-600">「組織の成果」</span>は変わっていない。
+            でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。
           </h2>
           
-          <div className="text-lg md:text-xl text-gray-600 leading-relaxed space-y-8 font-medium">
-            <p>
-              「議事録の要約は、一瞬で終わるようになった。」<br />
-              「資料の骨子作成も、壁打ちも、AIがやってくれる。」<br />
-              「確かに、現場の『作業』は楽になったはずです。」
+          <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed space-y-12 font-medium">
+            <div className="space-y-2 text-gray-500">
+              <p>「議事録の要約は、一瞬で終わるようになった。」</p>
+              <p>「資料の骨子作成も、壁打ちも、AIがやってくれる。」</p>
+              <p>「確かに、現場の『作業』は楽になったはずです。」</p>
+            </div>
+            
+            <p className="text-2xl font-bold text-black">
+              でも、肝心の「売上」や「採用」は伸びていない。
             </p>
+            
             <p>
-              でも、<span className="font-bold text-black border-b-2 border-yellow-300">肝心の「売上」や「採用」は伸びていない。</span>
+              結局、重要な仕事は<span className="font-bold border-b-2 border-yellow-300">優秀な個人が手作業で</span>回している。
             </p>
-            <p>
-              結局、重要な仕事は<span className="font-bold text-black">優秀な個人が手作業で</span>回している。
-            </p>
-            <p className="text-2xl font-bold text-black pt-4">
+            
+            <p className="text-2xl font-extrabold text-black">
               「個人の時短」が「組織の成果」に繋がらない。<br />
               これが、多くの企業の現実です。
             </p>
