@@ -337,38 +337,107 @@ export default function AiEditingDepartmentPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 mb-24">
-            <div className="bg-white p-10 shadow-sm border-t-4 border-black group hover:-translate-y-1 transition-transform duration-300">
-              <Zap className="w-12 h-12 mb-6 text-[#1a1a1a] stroke-1" />
-              <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-end">「Half the Time, Twice the Result」へのコミット</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                時間を半分にし、成果を2倍にする。単なる効率化ではなく、<span className="font-bold text-black border-b border-yellow-300">「事業成果の最大化」</span>にコミットします。
-              </p>
-            </div>
-            <div className="bg-white p-10 shadow-sm border-t-4 border-black group hover:-translate-y-1 transition-transform duration-300">
-              <Users className="w-12 h-12 mb-6 text-[#1a1a1a] stroke-1" />
-              <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-end">プロフェッショナルによる<br />伴走（Bansou）</h3>
-              <div className="text-gray-600 leading-relaxed text-sm">
-                <p className="mb-4">
-                  数々の事業を成長させてきたプロフェッショナルが参画。ツール導入で終わらせず、<span className="font-bold text-black border-b border-yellow-300">「事業成長」というゴールまで泥臭く伴走します。</span>
+          <div className="space-y-24 mb-32">
+            {/* Reason 1: Right Image, Left Text (Standard) */}
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+              <div className="w-full md:w-1/2 order-2 md:order-1">
+                <div className="flex items-center gap-4 mb-6">
+                  <Zap className="w-10 h-10 text-black stroke-1" />
+                  <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Reason 01</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                  「Half the Time, Twice the Result」<br />へのコミット
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  時間を半分にし、成果を2倍にする。<br />
+                  KAAANが目指すのは、単なる「作業の効率化」ではありません。
                 </p>
-                <div className="bg-gray-50 p-4 rounded text-xs">
-                  <p className="font-bold mb-2 text-gray-900">これまでの実績領域:</p>
-                  <ul className="list-disc list-inside space-y-1 text-gray-600">
-                    <li>市場とブランドをつなぐコミュニケーション設計</li>
-                    <li>データドリブンな集客施策の最適化と運用</li>
-                    <li>サイトグロースを通じた継続的な事業成長の実現</li>
-                    <li>クライアント経営層と伴走するプロジェクト推進</li>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  空いた時間をクリエイティブな思考や戦略立案に充て、
+                  <span className="font-bold text-black border-b border-yellow-300">「事業成果の最大化」を実現すること</span>。
+                  そのために必要なチーム構築とプロセス変革に、徹底的にコミットします。
+                </p>
+              </div>
+              <div className="w-full md:w-1/2 order-1 md:order-2 bg-gray-100 aspect-square md:aspect-[4/3] relative overflow-hidden group">
+                 {/* Placeholder for Image */}
+                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-500">
+                    <Zap className="w-32 h-32 text-gray-400 opacity-20" />
+                 </div>
+                 <div className="absolute inset-0 border-2 border-black/5 m-4"></div>
+              </div>
+            </div>
+
+            {/* Reason 2: Left Image, Right Text (Reverse) */}
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+               <div className="w-full md:w-1/2 order-1 bg-gray-100 aspect-square md:aspect-[4/3] relative overflow-hidden group">
+                 {/* Placeholder for Image */}
+                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-500">
+                    <Users className="w-32 h-32 text-gray-400 opacity-20" />
+                 </div>
+                 <div className="absolute inset-0 border-2 border-black/5 m-4"></div>
+              </div>
+              <div className="w-full md:w-1/2 order-2">
+                <div className="flex items-center gap-4 mb-6">
+                  <Users className="w-10 h-10 text-black stroke-1" />
+                  <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Reason 02</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                  プロフェッショナルによる<br />伴走（Bansou）
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                  AIエンジニアだけでなく、数々の事業を成長させてきたプロフェッショナルが参画。
+                  ツール導入で終わらせず、<span className="font-bold text-black border-b border-yellow-300">「事業成長」というゴールまで泥臭く伴走します。</span>
+                </p>
+                
+                <div className="bg-white border-l-4 border-black p-6 shadow-sm">
+                  <p className="font-bold mb-4 text-sm text-gray-400 uppercase tracking-widest">Achievements</p>
+                  <ul className="space-y-3 text-base text-gray-700 font-medium">
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      市場とブランドをつなぐコミュニケーション設計
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      データドリブンな集客施策の最適化と運用
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      サイトグロースを通じた継続的な事業成長の実現
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      クライアント経営層と伴走するプロジェクト推進
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="bg-white p-10 shadow-sm border-t-4 border-black group hover:-translate-y-1 transition-transform duration-300">
-              <FlaskConical className="w-12 h-12 mb-6 text-[#1a1a1a] stroke-1" />
-              <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-end">自社での実践と実証<br />（Dogfooding）</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
-                提供するノウハウは、KAAAN自社の成長のために開発・実証されたものです。<span className="font-bold text-black border-b border-yellow-300">私たち自身がこの「AI編集部」で成果を出している</span>からこそ、生きた仕組みを提供できます。
-              </p>
+
+            {/* Reason 3: Right Image, Left Text (Standard) */}
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+              <div className="w-full md:w-1/2 order-2 md:order-1">
+                <div className="flex items-center gap-4 mb-6">
+                  <FlaskConical className="w-10 h-10 text-black stroke-1" />
+                  <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Reason 03</span>
+                </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                  自社での実践と実証<br />（Dogfooding）
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  KAAANが提供するノウハウは、すべて自社の成長のために開発・実証されたものです。
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  机上の空論ではなく、<span className="font-bold text-black border-b border-yellow-300">私たち自身がこの「AI編集部」で成果を出している</span>からこそ、
+                  生きた仕組みと、再現性のあるメソッドを提供できるのです。
+                </p>
+              </div>
+              <div className="w-full md:w-1/2 order-1 md:order-2 bg-gray-100 aspect-square md:aspect-[4/3] relative overflow-hidden group">
+                 {/* Placeholder for Image */}
+                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-500">
+                    <FlaskConical className="w-32 h-32 text-gray-400 opacity-20" />
+                 </div>
+                 <div className="absolute inset-0 border-2 border-black/5 m-4"></div>
+              </div>
             </div>
           </div>
 
