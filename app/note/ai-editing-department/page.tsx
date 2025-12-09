@@ -448,10 +448,13 @@ export default function AiEditingDepartmentPage() {
           </div>
 
           {/* Testimonials */}
-          <div className="bg-white p-8 md:p-12 border border-gray-200 rounded-xl">
+          <div className="bg-white p-8 md:p-12 border border-gray-200 rounded-xl relative">
             <div className="flex items-center gap-3 mb-10 justify-center md:justify-start">
               <MessageSquareQuote className="w-8 h-8 text-[#1a1a1a]" />
               <h3 className="text-2xl font-bold">支援実績・お客様の声</h3>
+            </div>
+            <div className="absolute top-8 right-8 md:top-12 md:right-12">
+               <p className="text-xs text-gray-400">※一部抜粋して掲載</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {[
