@@ -386,15 +386,15 @@ export default function AiEditingDepartmentPage() {
                   <span className="text-sm font-bold tracking-widest uppercase text-gray-400">Reason 02</span>
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                  プロフェッショナルによる<br />伴走（Bansou）
+                  プロフェッショナルによる伴走
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   AIエンジニアだけでなく、数々の事業を成長させてきたプロフェッショナルが参画。
-                  ツール導入で終わらせず、<span className="font-bold text-black border-b border-yellow-300">「事業成長」というゴールまで泥臭く伴走します。</span>
+                  ツール導入で終わらせず、<span className="font-bold text-black border-b border-yellow-300">「事業成長」というゴールまで伴走します。</span>
                 </p>
                 
                 <div className="bg-white border-l-4 border-black p-6 shadow-sm">
-                  <p className="font-bold mb-4 text-sm text-gray-400 uppercase tracking-widest">Achievements</p>
+                  <p className="font-bold mb-4 text-sm text-gray-400 uppercase tracking-widest">主要実績</p>
                   <ul className="space-y-3 text-base text-gray-700 font-medium">
                     <li className="flex items-start gap-3">
                       <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
@@ -413,6 +413,7 @@ export default function AiEditingDepartmentPage() {
                       クライアント経営層と伴走するプロジェクト推進
                     </li>
                   </ul>
+                  <p className="text-xs text-gray-400 mt-4 text-right">※一部抜粋して掲載</p>
                 </div>
               </div>
             </div>
