@@ -491,11 +491,11 @@ export default function AiEditingDepartmentPage() {
 
           <div className="relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0 space-y-12">
             {[
-              { step: "01", title: "現状分析", desc: "現在の課題、体制、データの状況を詳細にヒアリングします。" },
-              { step: "02", title: "戦略策定", desc: "マーケティング戦略とAI活用のロードマップを策定します。" },
-              { step: "03", title: "構築・実装", desc: "AI環境（プロンプト、DB）を構築し、アウトプットを開始します。" },
-              { step: "04", title: "運用・定着", desc: "実際の業務の中でレクチャーを実施。メンバーが使いこなせるまで伴走します。" },
-              { step: "05", title: "自走化", desc: "運用データを元にチューニングし、完全な自走体制へ移行します。" },
+              { step: "01", title: "Hearing & Audit", sub: "現状分析", desc: "現在の課題、体制、データの状況を詳細にヒアリングします。" },
+              { step: "02", title: "Strategy Planning", sub: "戦略策定", desc: "マーケティング戦略とAI活用のロードマップを策定します。" },
+              { step: "03", title: "Construction", sub: "構築・実装", desc: "AI環境（プロンプト、DB）を構築し、アウトプットを開始します。" },
+              { step: "04", title: "Onboarding & Lecture", sub: "運用・定着", desc: "実際の業務の中でレクチャーを実施。メンバーが使いこなせるまで伴走します。" },
+              { step: "05", title: "Self-Running", sub: "自走化", desc: "運用データを元にチューニングし、完全な自走体制へ移行します。" },
             ].map((item, i) => (
               <div key={i} className="flex flex-col md:flex-row md:items-start md:gap-12 relative pl-12 md:pl-0 group">
                 {/* Number & Border (Desktop) */}
@@ -514,6 +514,7 @@ export default function AiEditingDepartmentPage() {
                    <h3 className="text-2xl font-bold mb-3 flex items-center gap-3">
                      <span className="md:hidden text-gray-300 font-bold text-xl">{item.step}</span>
                      {item.title}
+                     <span className="text-xs font-bold text-white bg-black px-2 py-1 ml-2 rounded-sm">{item.sub}</span>
                    </h3>
                    <p className="text-lg text-gray-600 leading-relaxed">
                      {item.desc}
