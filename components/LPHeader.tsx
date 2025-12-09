@@ -38,7 +38,7 @@ export function LPHeader() {
                 key={item.id}
                 href={`#${item.id}`}
                 onClick={(e) => scrollToSection(e, item.id)}
-                className="text-[13px] font-medium text-[#666] hover:text-[#1a1a1a] transition-colors relative group py-2"
+                className="text-[15px] font-medium text-[#666] hover:text-[#1a1a1a] transition-colors relative group py-2"
               >
                 {item.label}
                 <span className="absolute bottom-1 left-0 w-0 h-[1px] bg-[#1a1a1a] transition-all duration-200 group-hover:w-full" />
@@ -51,17 +51,17 @@ export function LPHeader() {
             <Button 
               asChild 
               size="sm" 
-              variant="outline"
-              className="bg-transparent text-[#1a1a1a] hover:bg-gray-50 h-[40px] px-5 text-[13px] font-bold tracking-wide border border-[#1a1a1a] rounded-full transition-all"
+              className="bg-[#1a1a1a] text-white hover:bg-[#333] h-[44px] px-6 text-[14px] font-bold tracking-wide rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
-              <Link href="/download">サービス紹介資料</Link>
+              <Link href="/contact/service">案件相談・お問い合わせ</Link>
             </Button>
             <Button 
               asChild 
               size="sm" 
-              className="bg-[#1a1a1a] text-white hover:bg-[#333] h-[40px] px-5 text-[13px] font-bold tracking-wide rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+              variant="outline"
+              className="bg-transparent text-[#1a1a1a] hover:bg-gray-50 h-[44px] px-6 text-[14px] font-bold tracking-wide border border-[#1a1a1a] rounded-full transition-all"
             >
-              <Link href="/contact/service">案件相談・お問い合わせ</Link>
+              <Link href="/download">サービス紹介資料</Link>
             </Button>
           </div>
           
