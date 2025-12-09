@@ -516,8 +516,9 @@ export default function AiEditingDepartmentPage() {
       <section className="py-40 bg-[#1a1a1a] text-white text-center">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-4xl md:text-6xl font-bold mb-10 leading-tight tracking-tight">
-            AIと共創し、<br className="md:hidden" />
-            <span className="whitespace-nowrap">事業成長を加速させる「強い組織」へ。</span>
+            AIと共創し、<br />
+            事業成長を加速させる<br />
+            <span className="whitespace-nowrap">「強い組織」へ。</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto font-medium">
             社内に眠る情報を「資産」に変える。<br />
