@@ -179,7 +179,8 @@ export default function AiEditingDepartmentPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6">
               生産性を向上させるだけでは、事業は伸びません。<br />
-              社内に眠る膨大な情報を「資産」へと変え、<span className="text-white font-bold border-b border-white pb-1">組織全体で成果に繋がるコンテンツを生み出し続ける。</span>
+              社内に眠る膨大な情報を「資産」へと変え、<br />
+              <span className="text-white font-bold border-b border-white pb-1">組織全体で成果に繋がるコンテンツを生み出し続ける。</span>
             </p>
             <p className="text-xl font-bold text-white">
               そのための「仕組み作り」こそが、KAAANが提供する「AI編集部構築サービス」です。
@@ -219,7 +220,7 @@ export default function AiEditingDepartmentPage() {
                 </div>
                 <ul className="space-y-4 text-sm text-white">
                   <li><span className="block text-xs uppercase tracking-widest mb-1 text-gray-500">INPUT</span><span className="font-bold">社内の独自情報</span>（会議・日報・顧客の声）</li>
-                  <li><span className="block text-xs uppercase tracking-widest mb-1 text-gray-500">OUTPUT</span><span className="font-bold">「御社にしか書けない、唯一無二のコンテンツ」</span></li>
+                  <li><span className="block text-xs uppercase tracking-widest mb-1 text-gray-500">OUTPUT</span><span className="font-bold">「その企業にしか書けない、唯一無二のコンテンツ」</span></li>
                   <li className="pt-2 text-yellow-300 font-bold">→ 競合が模倣できない「独自性」があるため、顧客に選ばれる。</li>
                 </ul>
               </div>
@@ -229,7 +230,7 @@ export default function AiEditingDepartmentPage() {
               <p className="text-lg font-bold leading-relaxed">
                 だからこそ、KAAANは「インプット」に徹底的にこだわります。<br />
                 社内に眠る膨大な情報を「資産」として整理し、<span className="text-yellow-300">AIに学習させ続ける。</span><br />
-                そうすることで、AIは御社の事業を深く理解した「最強のパートナー」へと進化します。
+                そうすることで、AIはその企業の事業を深く理解した「最強のパートナー」へと進化します。
               </p>
             </div>
           </div>
@@ -285,7 +286,7 @@ export default function AiEditingDepartmentPage() {
             <div className="text-center mb-16">
               <h3 className="text-3xl md:text-4xl font-bold leading-tight">
                 AIを「効率化ツール」で終わらせない。<br />
-                事業を加速させる<span className="bg-black text-white px-2">「成長エンジン」</span>に変える。
+                事業成長を加速させる<span className="bg-black text-white px-2">「成長エンジン」</span>へと進化させる。
               </h3>
             </div>
 
