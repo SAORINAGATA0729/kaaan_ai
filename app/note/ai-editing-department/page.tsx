@@ -520,8 +520,8 @@ export default function AiEditingDepartmentPage() {
       <section className="py-40 bg-[#1a1a1a] text-white text-center">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-4xl md:text-6xl font-bold mb-10 leading-tight tracking-tight">
-            AIと共創し、<br />
-            事業成長を加速させる「強い組織」へ。
+            AIと共創し、<br className="md:hidden" />
+            <span className="whitespace-nowrap">事業成長を加速させる「強い組織」へ。</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto font-medium">
             社内に眠る情報を「資産」に変える。<br />
@@ -531,13 +531,13 @@ export default function AiEditingDepartmentPage() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild size="lg" className="h-16 px-12 rounded-full text-lg font-bold bg-white text-[#1a1a1a] hover:bg-gray-200 hover:scale-105 transition-all shadow-2xl">
               <Link href="/contact/service">
-                無料相談に申し込む
+                案件相談・お問い合わせ
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="h-16 px-12 rounded-full text-lg font-bold border-2 border-white text-white hover:bg-white hover:text-[#1a1a1a] bg-transparent">
               <Link href="/download">
-                サービス資料をダウンロード
+                サービス紹介資料
               </Link>
             </Button>
           </div>
