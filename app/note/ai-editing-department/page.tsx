@@ -145,19 +145,16 @@ export default function AiEditingDepartmentPage() {
             でも、<span className="border-b-4 border-black pb-1">「組織の成果」</span>は変わっていない。
           </h2>
           
-          <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed font-medium">
-            {/* Voices - No awkward line breaks */}
-            <div className="space-y-4 mb-20 text-left text-gray-500">
-              <p className="md:whitespace-nowrap">「議事録の要約は、一瞬で終わるようになった。」</p>
-              <p className="md:whitespace-nowrap">「資料の骨子作成も、壁打ちも、AIがやってくれる。」</p>
+          <div className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed font-medium text-center">
+            {/* Voices - Grouped and Centered */}
+            <div className="space-y-3 mb-12 text-gray-500">
+              <p>「議事録の要約は、一瞬で終わるようになった。」</p>
+              <p>「資料の骨子作成も、壁打ちも、AIがやってくれる。」</p>
+              <p>「確かに、現場の『作業』は楽になったはずです。」</p>
             </div>
             
             {/* Core Message - Centered */}
-            <div className="text-center space-y-12">
-              <p className="text-gray-500">
-                「確かに、現場の『作業』は楽になったはずです。」
-              </p>
-              
+            <div className="space-y-12">
               <p className="text-2xl font-bold text-black">
                 でも、肝心の「売上」や「採用」は伸びていない。
               </p>
