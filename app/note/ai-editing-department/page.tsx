@@ -527,14 +527,14 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 7. Final CTA - Impact */}
-      <section className="py-24 bg-[#1a1a1a] text-white text-center">
+      <section className="py-20 bg-[#1a1a1a] text-white text-center">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-tight">
             AIと共創し、<br />
             事業成長を加速させる<br />
             <span className="whitespace-nowrap">「強い組織」へ。</span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto font-medium">
+          <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto font-medium">
             社内に眠る情報を「資産」に変える。<br />
             プロフェッショナルが伴走し、<br />
             事業成長につながる「AI編集部」を構築します。
