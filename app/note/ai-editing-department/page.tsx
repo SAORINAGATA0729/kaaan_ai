@@ -1,6 +1,6 @@
 "use client";
 
-// Ver: English Hero + Polished Process
+// Ver: Fix Hero to English & Fix Process Section
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -8,14 +8,14 @@ import { LPHeader } from "@/components/LPHeader";
 import { Footer } from "@/components/Footer";
 import { 
   ArrowRight, 
-  Search, 
+  Check, 
+  Target, 
+  Settings, 
+  Search,
   TrendingUp,
   Database,
   Zap,
-  RefreshCw,
-  Settings,
-  Target,
-  Check
+  RefreshCw
 } from "lucide-react";
 
 export default function AiEditingDepartmentPage() {
@@ -136,7 +136,6 @@ export default function AiEditingDepartmentPage() {
           </div>
 
           <div className="border border-white/20 p-8 md:p-16 relative bg-[#1a1a1a]">
-            {/* Decorative corners */}
             <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-white"></div>
             <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-white"></div>
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-white"></div>
@@ -308,28 +307,31 @@ export default function AiEditingDepartmentPage() {
         </div>
       </section>
 
-      {/* 7. Process Section - Timeline (Polished) */}
+      {/* 7. Process Section - Timeline */}
       <section id="flow" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
             1〜1.5ヶ月で、<br />
-            あなたの会社が「メディア」になる
+            事業成長に繋がる仕組みを構築
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-0 relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0">
             {[
-              { step: "01", title: "資産の棚卸し (ヒアリング)", desc: "現在、社内にどんな情報（会議、資料）があるかを確認し、データベース化の設計を行います。" },
-              { step: "02", title: "生成フローの設計 (ストラテジー)", desc: "「採用」や「リード獲得」など、目的に合わせてAIに何を生成させるか戦略を決めます。" },
-              { step: "03", title: "AIワークフロー実装 (構築)", desc: "1〜1.5ヶ月で、情報蓄積から生成までの自動化フローをKAAANが構築します。" },
-              { step: "04", title: "レクチャーと実践 (伴走)", desc: "構築した仕組みの使い方をレクチャー。実際に記事や資料を生成し、効果を体感します。" },
-              { step: "05", title: "自走化と展開 (内製化)", desc: "社内メンバーだけで運用できるようチューニング。他の部署へも展開していきます。" },
+              { step: "01", title: "現状ヒアリング", desc: "現在、社内にどんな情報（会議、資料）があるかを確認し、データベース化の設計を行います。" },
+              { step: "02", title: "戦略・基盤設計", desc: "「採用」や「リード獲得」など、目的に合わせてAIに何を生成させるか戦略を決めます。" },
+              { step: "03", title: "AI編集部構築（1〜1.5ヶ月）", desc: "1〜1.5ヶ月で、情報蓄積から生成までの自動化フローをKAAANが構築します。" },
+              { step: "04", title: "運用・レクチャー", desc: "構築した仕組みの使い方をレクチャー。実際に記事や資料を生成し、効果を体感します。" },
+              { step: "05", title: "自走化支援・改善", desc: "運用データに基づき仕組みをチューニング。最終的に貴社が自走できる体制を確立します。" },
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 md:p-12 border border-gray-200 hover:border-black transition-colors flex flex-col md:flex-row gap-8 items-start shadow-sm">
-                <div className="md:w-1/4">
-                  <span className="text-5xl font-bold text-gray-200 block mb-2">0{i + 1}</span>
+              <div key={i} className="relative flex flex-col md:flex-row gap-8 md:gap-16 py-12 border-b border-gray-200 last:border-0 pl-12 md:pl-0">
+                {/* Mobile Marker */}
+                <div className="absolute left-[-5px] top-12 w-3 h-3 rounded-full bg-black md:hidden" />
+                
+                <div className="md:w-1/3 md:text-right md:pt-2">
+                  <span className="text-4xl font-bold text-gray-200 block mb-2">STEP {item.step}</span>
+                  <h3 className="text-2xl font-bold">{item.title}</h3>
                 </div>
-                <div className="md:w-3/4">
-                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <div className="md:w-2/3 md:pt-3">
                   <p className="text-lg text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
