@@ -75,36 +75,19 @@ function ContactForm() {
   const consultationGroups = [
     {
       title: "サイト価値最大化支援",
-      items: [
-        "コミュニケーションリデザイン",
-        "データ分析・計測基盤構築",
-        "CTR・CVR改善",
-        "クリエイティブ制作",
-      ],
+      items: "コミュニケーションリデザイン, データ分析・計測基盤構築, CTR・CVR改善, クリエイティブ制作",
     },
     {
       title: "コミュニケーション支援",
-      items: [
-        "コンテンツマーケティング",
-        "オウンドメディア",
-        "運用型広告",
-        "SEO・LLMO強化",
-      ],
+      items: "コンテンツマーケティング, オウンドメディア, 運用型広告, SEO・LLMO強化",
     },
     {
       title: "総合プロジェクト支援",
-      items: [
-        "コミュニケーションプランニング",
-        "マーケティングプロジェクト推進",
-        "組織・体制構築",
-        // "AI編集部構築" removed as per request
-      ],
+      items: "コミュニケーションプランニング, マーケティングプロジェクト推進, 組織・体制構築",
     },
     {
-        title: "AI編集部構築支援", // New category
-        items: [
-            "AI編集部構築支援"
-        ]
+      title: "AI編集部構築支援",
+      items: "AI編集部構築支援",
     }
   ];
 
@@ -223,47 +206,45 @@ function ContactForm() {
                     <FormLabel className="text-sm font-medium">
                       ご相談内容 <span className="text-red-500">*</span>
                     </FormLabel>
-                    <div className="space-y-6 mt-2">
+                    <div className="space-y-4 mt-2">
                       {consultationGroups.map((group) => (
-                        <div key={group.title}>
-                          <h3 className="text-sm font-bold mb-3">{group.title}</h3>
-                          <div className="space-y-2">
-                            {group.items.map((item) => (
-                              <FormField
-                                key={item}
-                                control={form.control}
-                                name="consultation"
-                                render={({ field }) => {
-                                  return (
-                                    <FormItem
-                                      key={item}
-                                      className="flex flex-row items-center space-x-3 space-y-0"
-                                    >
-                                      <FormControl>
-                                        <Checkbox
-                                          checked={field.value?.includes(item)}
-                                          onCheckedChange={(checked) => {
-                                            return checked
-                                              ? field.onChange([...field.value, item])
-                                              : field.onChange(
-                                                  field.value?.filter(
-                                                    (value) => value !== item
-                                                  )
-                                                )
-                                          }}
-                                          className="border-gray-300 data-[state=checked]:bg-black data-[state=checked]:border-black"
-                                        />
-                                      </FormControl>
-                                      <FormLabel className="text-sm font-normal cursor-pointer !mt-0">
-                                        {item}
-                                      </FormLabel>
-                                    </FormItem>
-                                  )
-                                }}
-                              />
-                            ))}
-                          </div>
-                        </div>
+                        <FormField
+                          key={group.title}
+                          control={form.control}
+                          name="consultation"
+                          render={({ field }) => {
+                            return (
+                              <FormItem
+                                key={group.title}
+                                className="flex flex-row items-start space-x-3 space-y-0"
+                              >
+                                <FormControl>
+                                  <Checkbox
+                                    checked={field.value?.includes(group.title)}
+                                    onCheckedChange={(checked) => {
+                                      return checked
+                                        ? field.onChange([...field.value, group.title])
+                                        : field.onChange(
+                                            field.value?.filter(
+                                              (value) => value !== group.title
+                                            )
+                                          )
+                                    }}
+                                    className="border-gray-300 data-[state=checked]:bg-black data-[state=checked]:border-black mt-1"
+                                  />
+                                </FormControl>
+                                <div className="flex-1">
+                                  <FormLabel className="text-sm font-bold cursor-pointer !mt-0 block mb-1">
+                                    {group.title}
+                                  </FormLabel>
+                                  <p className="text-xs text-gray-600 leading-relaxed">
+                                    {group.items}
+                                  </p>
+                                </div>
+                              </FormItem>
+                            )
+                          }}
+                        />
                       ))}
                     </div>
                     <FormMessage />
