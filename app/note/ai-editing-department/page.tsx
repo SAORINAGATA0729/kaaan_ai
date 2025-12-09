@@ -525,7 +525,8 @@ export default function AiEditingDepartmentPage() {
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto font-medium">
             社内に眠る情報を「資産」に変える。<br />
-            プロフェッショナルが泥臭く伴走し、あなたの会社に「AI編集部」を構築します。
+            プロフェッショナルが伴走し、<br className="md:hidden" />
+            事業成長につながる「AI編集部」を構築します。
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
