@@ -1,15 +1,7 @@
-"use client";
-
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CTASection } from "@/components/CTASection";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Check, ArrowRight, ShieldCheck, Clock, Users, Brain, Zap, BarChart3, Shield, Sparkles, Loader2, MessageSquare, Calendar, MousePointer2, FileText, ChevronRight, Search, Layers } from "lucide-react";
+import { redirect } from "next/navigation";
 
 export default function Home() {
+  redirect("/note/ai-editing-department");
   // Animation Phase State
   // website -> cta_change -> hearing_start -> hearing_input1 -> hearing_q2 -> hearing_input2 -> generating -> proposal -> booking
   const [phase, setPhase] = useState<string>('website');
