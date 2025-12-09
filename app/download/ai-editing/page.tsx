@@ -69,44 +69,31 @@ export default function DownloadAiEditingPage() {
             
             {/* Left Column: Content & Preview */}
             <div className="space-y-8">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-8">
                 AI編集部構築支援サービス紹介資料
               </h1>
               
-              <div className="space-y-6 text-base leading-relaxed text-gray-700">
+              <div className="space-y-6 text-sm leading-relaxed text-[#1a1a1a]">
                 <p>
-                  AI活用が進まない最大の原因は、「ツール」ではなく「プロセス」にあります。<br />
-                  本資料では、単なる効率化に留まらず、<strong className="text-black font-bold">「事業成果（売上・リード）」を創出するAI編集部の構築メソッド</strong>について、具体的な事例を交えて解説しています。
+                  サイトグロースエージェンシー「KAAAN」では、これまで、<br />
+                  - 市場とブランドをつなぐコミュニケーション設計<br />
+                  - データドリブンな集客施策の最適化と運用<br />
+                  - サイトグロースを通じた継続的な事業成長の実現<br />
+                  - クライアント経営層と伴走するプロジェクト推進<br />
+                  などを始め、数多くの実績を残してきました。
                 </p>
                 
-                <div>
-                  <p className="font-bold text-black mb-4">本資料でわかること:</p>
-                  <ul className="space-y-3 list-none pl-0">
-                    <li className="flex items-start gap-3">
-                      <span className="text-black font-bold mt-1">・</span>
-                      <span><strong className="text-black">なぜ、「個人の生産性」が上がっても「組織の成果」は変わらないのか？</strong></span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-black font-bold mt-1">・</span>
-                      <span><strong className="text-black">「インプット思考」で実現する、競合優位性の高いコンテンツ生成フロー</strong></span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-black font-bold mt-1">・</span>
-                      <span><strong className="text-black">AI編集部構築の具体的な3ステップ（Input / Edit / Growth）</strong></span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-black font-bold mt-1">・</span>
-                      <span><strong className="text-black">半年で自走するためのロードマップと支援体制</strong></span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-black font-bold mt-1">・</span>
-                      <span><strong className="text-black">実際の導入企業におけるBefore/Afterと成果事例</strong></span>
-                    </li>
-                  </ul>
-                </div>
+                <p>
+                  本資料では、<br />
+                  - KAAANが選ばれる理由<br />
+                  - 提供している3つのサービス内容<br />
+                  - これまでの実績・事例<br />
+                  を掲載しています。
+                </p>
                 
-                <p className="text-gray-600">
-                  ぜひ、貴社の事業成長にお役立てください。
+                <p>
+                  デジタルマーケティングのプロフェッショナルが<br />
+                  あらゆるサイトを軸にビジネスグロースを実現します。
                 </p>
               </div>
 
