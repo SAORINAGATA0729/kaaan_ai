@@ -44,7 +44,8 @@ export default function AiEditingDepartmentPage() {
             
             <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-10 tracking-tight">
               プロフェッショナルと共に、<br />
-              事業成長に繋がる<span className="border-b-4 border-yellow-300">AI編集部</span>を構築する
+              事業成長を実現する<br />
+              <span className="border-b-4 border-yellow-300">AI編集部構築サービス</span>
             </h2>
 
             <p className="text-lg md:text-xl text-[#1a1a1a]/80 max-w-2xl leading-relaxed mb-16 font-medium">
