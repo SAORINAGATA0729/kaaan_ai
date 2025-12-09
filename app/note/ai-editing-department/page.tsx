@@ -292,10 +292,10 @@ export default function AiEditingDepartmentPage() {
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-200"></div>
             
             <div className="text-center mb-16">
-              <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+              <h3 className="text-3xl md:text-4xl font-bold leading-relaxed md:leading-relaxed">
                 AIを「効率化ツール」で終わらせない。<br />
                 事業成長を加速させる<br />
-                <span className="bg-black text-white px-2">「成長エンジン」</span>へと進化させる。
+                <span className="bg-black text-white px-2 inline-block mt-2">「成長エンジン」</span>へと進化させる。
               </h3>
             </div>
 
