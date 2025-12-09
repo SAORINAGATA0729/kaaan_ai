@@ -22,7 +22,11 @@ import {
   TrendingUp,
   X,
   Check,
-  FlaskConical
+  FlaskConical,
+  Compass,
+  Lock,
+  Flag,
+  CircleDollarSign
 } from "lucide-react";
 
 export default function AiEditingDepartmentPage() {
@@ -88,34 +92,42 @@ export default function AiEditingDepartmentPage() {
             {[
               {
                 title: "「個人の効率化」止まり",
-                desc: "メールや議事録は早くなったが、事業成果（売上・リード）には繋がっていない。"
+                desc: "メールや議事録は早くなったが、事業成果（売上・リード）には繋がっていない。",
+                icon: Users
               },
               {
                 title: "ツール迷子と疲弊",
-                desc: "次々と出る新ツール。選定基準がなく、現場は振り回されているだけ。"
+                desc: "次々と出る新ツール。選定基準がなく、現場は振り回されているだけ。",
+                icon: Compass
               },
               {
                 title: "属人化とブラックボックス",
-                desc: "「あの人しか使えない」。組織としてナレッジが蓄積されず、品質もバラバラ。"
+                desc: "「あの人しか使えない」。組織としてナレッジが蓄積されず、品質もバラバラ。",
+                icon: Lock
               },
               {
                 title: "戦略なきAI利用",
-                desc: "「何を作るか」の企画以前に、マーケティング戦略がなく、AIを活かせていない。"
+                desc: "「何を作るか」の企画以前に、マーケティング戦略がなく、AIを活かせていない。",
+                icon: Target
               },
               {
                 title: "費用対効果が見えない",
-                desc: "ツール代はかかるが、それが本当に事業利益として回収できているのか不明確。"
+                desc: "ツール代はかかるが、それが本当に事業利益として回収できているのか不明確。",
+                icon: CircleDollarSign
               },
               {
                 title: "導入しただけで満足",
-                desc: "勉強会を開いて終わり。現場の業務プロセスに組み込まれず、定着していない。"
+                desc: "勉強会を開いて終わり。現場の業務プロセスに組み込まれず、定着していない。",
+                icon: Flag
               }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 border-l-4 border-gray-300 hover:border-black transition-colors shadow-sm">
-                <h3 className="font-bold text-xl mb-3 flex items-start gap-3">
-                  <span className="text-gray-300 font-normal">0{i+1}.</span>
-                  {item.title}
-                </h3>
+              <div key={i} className="bg-white p-8 border-l-4 border-gray-300 hover:border-black transition-colors shadow-sm group">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-yellow-300 transition-colors">
+                    <item.icon className="w-5 h-5 text-gray-600 group-hover:text-black transition-colors" />
+                  </div>
+                  <h3 className="font-bold text-xl">{item.title}</h3>
+                </div>
                 <p className="text-gray-600 leading-relaxed text-sm">
                   {item.desc}
                 </p>
