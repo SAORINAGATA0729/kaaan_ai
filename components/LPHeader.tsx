@@ -52,16 +52,16 @@ export function LPHeader() {
               asChild 
               size="sm" 
               variant="outline"
-              className="bg-transparent text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white h-[40px] px-5 text-[13px] font-bold tracking-wide border border-[#1a1a1a] rounded-full transition-all"
+              className="bg-transparent text-[#1a1a1a] hover:bg-gray-50 h-[40px] px-5 text-[13px] font-bold tracking-wide border border-[#1a1a1a] rounded-full transition-all"
             >
-              <Link href="/download">サービス資料</Link>
+              <Link href="/ai-proposal">AI簡易提案</Link>
             </Button>
             <Button 
               asChild 
               size="sm" 
               className="bg-[#1a1a1a] text-white hover:bg-[#333] h-[40px] px-5 text-[13px] font-bold tracking-wide rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
             >
-              <Link href="/contact/service">案件相談</Link>
+              <Link href="/contact/service">案件相談・お問い合わせ</Link>
             </Button>
           </div>
           

@@ -21,7 +21,8 @@ import {
   PenTool,
   TrendingUp,
   X,
-  Check
+  Check,
+  FlaskConical
 } from "lucide-react";
 
 export default function AiEditingDepartmentPage() {
@@ -39,33 +40,33 @@ export default function AiEditingDepartmentPage() {
               </span>
             </div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.9] mb-12">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] mb-10">
               <span className="block">Half the Time,</span>
               <span className="block text-gray-400">Twice the Result</span>
             </h1>
             
-            <h2 className="text-2xl md:text-4xl font-bold leading-tight mb-10 tracking-tight">
-              プロフェッショナルと共に、<br />
-              事業成長を実現する<br />
+            <h2 className="text-xl md:text-3xl font-bold leading-tight mb-8 tracking-tight text-gray-800">
+              プロフェッショナルと共に、<br className="md:hidden" />
+              事業成長を実現する<br className="md:hidden" />
               <span className="border-b-4 border-yellow-300">AI編集部構築サービス</span>
             </h2>
 
-            <p className="text-lg md:text-xl text-[#1a1a1a]/80 max-w-2xl leading-relaxed mb-16 font-medium">
-              AIはあくまで手段です。重要なのは、それをどう事業成長に繋げるか。<br />
-              数々の事業を成長させてきたプロフェッショナルが、<br />
+            <p className="text-base md:text-lg text-[#1a1a1a]/80 max-w-2xl leading-relaxed mb-12 font-medium">
+              AIはあくまで手段です。重要なのは、それをどう事業成長に繋げるか。<br className="hidden md:inline" />
+              数々の事業を成長させてきたプロフェッショナルが、<br className="hidden md:inline" />
               あなたの会社に「成果を生み出し続けるAI編集部」を実装します。
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Button asChild size="lg" className="h-16 px-10 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
                 <Link href="/contact/service">
                   案件相談・お問い合わせ
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="h-16 px-10 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white bg-transparent transition-all">
-                <Link href="/download">
-                  サービス資料ダウンロード
+              <Button asChild size="lg" variant="outline" className="h-14 px-8 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-gray-50 bg-transparent transition-all">
+                <Link href="/ai-proposal">
+                  AI簡易提案
                 </Link>
               </Button>
             </div>
@@ -83,7 +84,7 @@ export default function AiEditingDepartmentPage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 title: "「個人の効率化」止まり",
@@ -322,14 +323,14 @@ export default function AiEditingDepartmentPage() {
 
           <div className="grid md:grid-cols-3 gap-10 mb-24">
             <div className="bg-white p-10 shadow-sm border-t-4 border-black group hover:-translate-y-1 transition-transform duration-300">
-              <Award className="w-12 h-12 mb-6 text-[#1a1a1a]" />
+              <Zap className="w-12 h-12 mb-6 text-[#1a1a1a] stroke-1" />
               <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-end">「Half the Time, Twice the Result」へのコミット</h3>
               <p className="text-gray-600 leading-relaxed text-sm">
                 時間を半分にし、成果を2倍にする。単なる効率化ではなく、<span className="font-bold text-black border-b border-yellow-300">「事業成果の最大化」</span>にコミットします。
               </p>
             </div>
             <div className="bg-white p-10 shadow-sm border-t-4 border-black group hover:-translate-y-1 transition-transform duration-300">
-              <Users className="w-12 h-12 mb-6 text-[#1a1a1a]" />
+              <Users className="w-12 h-12 mb-6 text-[#1a1a1a] stroke-1" />
               <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-end">プロフェッショナルによる<br />伴走（Bansou）</h3>
               <div className="text-gray-600 leading-relaxed text-sm">
                 <p className="mb-4">
@@ -347,7 +348,7 @@ export default function AiEditingDepartmentPage() {
               </div>
             </div>
             <div className="bg-white p-10 shadow-sm border-t-4 border-black group hover:-translate-y-1 transition-transform duration-300">
-              <BarChart className="w-12 h-12 mb-6 text-[#1a1a1a]" />
+              <FlaskConical className="w-12 h-12 mb-6 text-[#1a1a1a] stroke-1" />
               <h3 className="text-xl font-bold mb-4 min-h-[3.5rem] flex items-end">自社での実践と実証<br />（Dogfooding）</h3>
               <p className="text-gray-600 leading-relaxed text-sm">
                 提供するノウハウは、KAAAN自社の成長のために開発・実証されたものです。<span className="font-bold text-black border-b border-yellow-300">私たち自身がこの「AI編集部」で成果を出している</span>からこそ、生きた仕組みを提供できます。
@@ -356,28 +357,32 @@ export default function AiEditingDepartmentPage() {
           </div>
 
           {/* Testimonials */}
-          <div className="bg-white p-12 border border-gray-200">
-            <div className="flex items-center gap-3 mb-10">
+          <div className="bg-white p-8 md:p-12 border border-gray-200 rounded-xl">
+            <div className="flex items-center gap-3 mb-10 justify-center md:justify-start">
               <MessageSquareQuote className="w-8 h-8 text-[#1a1a1a]" />
               <h3 className="text-2xl font-bold">支援実績・お客様の声</h3>
             </div>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                 <p className="text-lg font-bold mb-2">「初めてAIを使うメンバーばかりだったが、1ヶ月で記事制作が自走できるようになった」</p>
-                 <p className="text-sm text-gray-500">SaaS企業 マーケティング責任者</p>
-              </div>
-              <div>
-                 <p className="text-lg font-bold mb-2">「単なる時短ではなく、自分たちが気づかなかった企画案がAIから出てくるようになった」</p>
-                 <p className="text-sm text-gray-500">人材系企業 事業部長</p>
-              </div>
-              <div>
-                 <p className="text-lg font-bold mb-2">「プロと一緒に進めることで、AIへの苦手意識がなくなり、今では全社で活用している」</p>
-                 <p className="text-sm text-gray-500">IT企業 代表</p>
-              </div>
-              <div>
-                 <p className="text-lg font-bold mb-2">「BtoB企業のリード獲得数が200%達成。AI活用の本質がわかった」</p>
-                 <p className="text-sm text-gray-500">BtoBサービス企業 経営企画室長</p>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { text: "初めてAIを使うメンバーばかりだったが、1ヶ月で記事制作が自走できるようになった", attr: "SaaS企業 マーケティング責任者" },
+                { text: "単なる時短ではなく、自分たちが気づかなかった企画案がAIから出てくるようになった", attr: "人材系企業 事業部長" },
+                { text: "プロと一緒に進めることで、AIへの苦手意識がなくなり、今では全社で活用している", attr: "IT企業 代表" },
+                { text: "BtoB企業のリード獲得数が200%達成。AI活用の本質がわかった", attr: "BtoBサービス企業 経営企画室長" },
+                { text: "導入から3ヶ月でオウンドメディアの公開記事数が3倍に増加しました", attr: "Webメディア 編集長" },
+                { text: "社内にある議事録がこれほど価値あるコンテンツになるとは驚きでした", attr: "コンサルティング企業 マネージャー" },
+                { text: "採用広報の記事作成時間が1/3に短縮され、スカウト業務に集中できるように", attr: "スタートアップ 人事責任者" },
+                { text: "「AIに任せる」ではなく「AIと作る」感覚がつかめ、チームの士気が上がった", attr: "EC事業 責任者" }
+              ].map((item, i) => (
+                <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow relative">
+                  <div className="absolute top-6 left-4 text-4xl text-gray-200 font-serif leading-none">“</div>
+                  <p className="text-sm font-bold text-gray-800 mb-4 relative z-10 pt-2 leading-relaxed">
+                    {item.text}
+                  </p>
+                  <p className="text-xs text-gray-500 font-medium border-t border-gray-200 pt-3">
+                    {item.attr}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -387,8 +392,7 @@ export default function AiEditingDepartmentPage() {
       <section id="flow" className="py-32 bg-white scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
-            最短1.5ヶ月で、<br />
-            強い組織へ。
+            プロジェクトの進め方
           </h2>
 
           <div className="space-y-0 relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0">
@@ -421,12 +425,12 @@ export default function AiEditingDepartmentPage() {
       <section className="py-40 bg-[#1a1a1a] text-white text-center">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-4xl md:text-6xl font-bold mb-10 leading-tight tracking-tight">
-            会議での発言を、<br />
-            事業を伸ばす「武器」に変える。
+            AIと共創し、<br />
+            事業成長を加速させる「強い組織」へ。
           </h2>
           <p className="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto font-medium">
-            プロフェッショナルと一緒に、<br />
-            あなたの会社の「AI編集部」を始めませんか？
+            社内に眠る情報を「資産」に変える。<br />
+            プロフェッショナルが泥臭く伴走し、あなたの会社に「AI編集部」を構築します。
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
