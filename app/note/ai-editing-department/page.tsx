@@ -52,9 +52,9 @@ export default function AiEditingDepartmentPage() {
             </h2>
 
             <p className="text-base md:text-lg text-[#1a1a1a]/80 max-w-2xl leading-relaxed mb-12 font-medium">
-              AIはあくまで手段です。重要なのは、それをどう事業成長に繋げるか。<br className="hidden md:inline" />
-              数々の事業を成長させてきたプロフェッショナルが、<br className="hidden md:inline" />
-              あなたの会社に「成果を生み出し続けるAI編集部」を実装します。
+              時間を半分にし、成果を2倍にする。単なる効率化ではありません。<br className="hidden md:inline" />
+              社内に眠る情報を資産に変え、事業成長を加速させるための<br className="hidden md:inline" />
+              最強のチームと仕組みを構築します。
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -65,8 +65,8 @@ export default function AiEditingDepartmentPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="h-14 px-8 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-gray-50 bg-transparent transition-all">
-                <Link href="/ai-proposal">
-                  AI簡易提案
+                <Link href="/download">
+                  サービス資料ダウンロード
                 </Link>
               </Button>
             </div>
@@ -75,16 +75,16 @@ export default function AiEditingDepartmentPage() {
       </section>
 
       {/* 2. Problem Section - Issues & Empathy */}
-      <section id="problem" className="py-24 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
-        <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
-          <div className="text-center mb-16">
+      <section id="problem" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
+          <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
               AI活用において、<br />
               このような課題はありませんか？
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-10">
             {[
               {
                 title: "「個人の効率化」止まり",
