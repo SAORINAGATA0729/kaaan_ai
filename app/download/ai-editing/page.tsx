@@ -109,26 +109,24 @@ export default function DownloadAiEditingPage() {
                   ぜひ、貴社の事業成長にお役立てください。
                 </p>
               </div>
+
+              {/* Preview Images - 4枚 */}
+              <div className="grid grid-cols-2 gap-3 max-w-md">
+                {[1, 2, 3, 4].map((num) => (
+                  <div 
+                    key={num}
+                    className="w-full aspect-[4/3] bg-gray-200 rounded flex items-center justify-center border border-gray-300"
+                  >
+                    <div className="text-center text-gray-400">
+                      <p className="text-xs font-medium">資料{num}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            {/* Right Column: Form & Preview */}
-            <div className="lg:sticky lg:top-32 space-y-8">
-              {/* Preview Images - 4枚 */}
-              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                <div className="grid grid-cols-2 gap-3 max-w-[280px] mx-auto">
-                  {[1, 2, 3, 4].map((num) => (
-                    <div 
-                      key={num}
-                      className="w-full aspect-[4/3] bg-gray-200 rounded flex items-center justify-center border border-gray-300"
-                    >
-                      <div className="text-center text-gray-400">
-                        <p className="text-xs font-medium">資料{num}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
+            {/* Right Column: Form */}
+            <div className="lg:sticky lg:top-32">
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
