@@ -76,7 +76,7 @@ export default function DownloadAiEditingPage() {
               <div className="space-y-6 text-sm leading-relaxed text-[#1a1a1a]">
                 <p>
                   AI活用が進まない最大の原因は、「ツール」ではなく「プロセス」にあります。<br />
-                  本資料では、単なる効率化に留まらず、<span className="font-bold">「事業成果（売上・リード）」を創出するAI編集部の構築メソッド</span>について、具体的な事例を交えて解説しています。
+                  本資料では、単なる効率化に留まらず、<span className="font-bold">「事業成果」を創出するAI編集部の構築メソッド</span>について、具体的な事例を交えて解説しています。
                 </p>
                 
                 <div>
