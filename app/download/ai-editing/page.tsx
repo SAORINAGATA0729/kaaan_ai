@@ -69,7 +69,7 @@ export default function DownloadAiEditingPage() {
             
             {/* Left Column: Content & Preview */}
             <div className="space-y-8">
-              <h1 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-8">
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-8">
                 AI編集部構築支援サービス紹介資料
               </h1>
               
