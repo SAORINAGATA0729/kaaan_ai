@@ -75,34 +75,47 @@ export default function DownloadAiEditingPage() {
               
               <div className="space-y-6 text-sm leading-relaxed text-[#1a1a1a]">
                 <p>
-                  サイトグロースエージェンシー「KAAAN」では、これまで、<br />
-                  - 市場とブランドをつなぐコミュニケーション設計<br />
-                  - データドリブンな集客施策の最適化と運用<br />
-                  - サイトグロースを通じた継続的な事業成長の実現<br />
-                  - クライアント経営層と伴走するプロジェクト推進<br />
-                  などを始め、数多くの実績を残してきました。
+                  AI活用が進まない最大の原因は、「ツール」ではなく「プロセス」にあります。<br />
+                  本資料では、単なる効率化に留まらず、<span className="font-bold">「事業成果（売上・リード）」を創出するAI編集部の構築メソッド</span>について、具体的な事例を交えて解説しています。
                 </p>
                 
-                <p>
-                  本資料では、<br />
-                  - KAAANが選ばれる理由<br />
-                  - 提供している3つのサービス内容<br />
-                  - これまでの実績・事例<br />
-                  を掲載しています。
-                </p>
+                <div>
+                  <p className="font-bold mb-3">本資料でわかること:</p>
+                  <ul className="space-y-2 list-none pl-0">
+                    <li className="flex items-start gap-2">
+                      <span className="text-black mt-1">-</span>
+                      <span>なぜ、「個人の生産性」が上がっても「組織の成果」は変わらないのか？</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-black mt-1">-</span>
+                      <span>「インプット思考」で実現する、競合優位性の高いコンテンツ生成フロー</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-black mt-1">-</span>
+                      <span>AI編集部構築の具体的な3ステップ（Input / Edit / Growth）</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-black mt-1">-</span>
+                      <span>半年で自走するためのロードマップと支援体制</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-black mt-1">-</span>
+                      <span>実際の導入企業におけるBefore/Afterと成果事例</span>
+                    </li>
+                  </ul>
+                </div>
                 
                 <p>
-                  デジタルマーケティングのプロフェッショナルが<br />
-                  あらゆるサイトを軸にビジネスグロースを実現します。
+                  ぜひ、貴社の事業成長にお役立てください。
                 </p>
               </div>
 
               {/* Preview Images - 4枚 */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 max-w-xs">
                 {[1, 2, 3, 4].map((num) => (
                   <div 
                     key={num}
-                    className="w-full aspect-[3/4] bg-gray-200 rounded-lg flex items-center justify-center border border-gray-300"
+                    className="w-full aspect-[3/4] bg-gray-200 rounded flex items-center justify-center border border-gray-300"
                   >
                     <div className="text-center text-gray-400">
                       <p className="text-xs font-medium">資料{num}</p>
