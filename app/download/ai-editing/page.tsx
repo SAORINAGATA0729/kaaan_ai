@@ -67,7 +67,7 @@ export default function DownloadAiEditingPage() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             
-            {/* Left Column: Content & Preview */}
+            {/* Left Column: Content */}
             <div className="space-y-8">
               <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-8">
                 AI編集部構築支援サービス紹介資料
@@ -109,24 +109,26 @@ export default function DownloadAiEditingPage() {
                   ぜひ、貴社の事業成長にお役立てください。
                 </p>
               </div>
-
-              {/* Preview Images - 4枚 */}
-              <div className="grid grid-cols-2 gap-3 max-w-xs">
-                {[1, 2, 3, 4].map((num) => (
-                  <div 
-                    key={num}
-                    className="w-full aspect-[3/4] bg-gray-200 rounded flex items-center justify-center border border-gray-300"
-                  >
-                    <div className="text-center text-gray-400">
-                      <p className="text-xs font-medium">資料{num}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            {/* Right Column: Form */}
-            <div className="lg:sticky lg:top-32">
+            {/* Right Column: Form & Preview */}
+            <div className="lg:sticky lg:top-32 space-y-8">
+              {/* Preview Images - 4枚 */}
+              <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                <div className="grid grid-cols-2 gap-3 max-w-[280px] mx-auto">
+                  {[1, 2, 3, 4].map((num) => (
+                    <div 
+                      key={num}
+                      className="w-full aspect-[3/4] bg-gray-200 rounded flex items-center justify-center border border-gray-300"
+                    >
+                      <div className="text-center text-gray-400">
+                        <p className="text-xs font-medium">資料{num}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
