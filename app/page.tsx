@@ -140,119 +140,202 @@ export default function Home() {
             <p className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-12">
               KAAANのAI編集部構築支援サービス
             </p>
-            <div className="max-w-4xl mx-auto text-left space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p className="font-bold text-xl text-[#1a1a1a]">
-                「AIのプロ」ではない。マーケティングのプロが作る仕組み
-              </p>
-              <p>
-                私たちは<strong>マーケティングのプロ</strong>であって、AIの専門家ではありません。
-              </p>
-              <p>
-                しかし、<strong>プロだからこそ</strong>、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
-              </p>
-              <p>
-                マーケティングの実務を知り尽くしたプロフェッショナルとして、AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>量だけでなく、品質も担保する仕組みを構築</li>
-                <li>外注依存・属人化を解消し、内製化できる体制を実現</li>
-                <li>ボトルネックを解消し、「公開できる量」を増やす</li>
-                <li>作ることが目的ではなく、成果を最大化するチームに</li>
-              </ul>
+            
+            <div className="bg-[#f9f9f9] rounded-2xl p-10 md:p-14 max-w-4xl mx-auto text-left relative overflow-hidden">
+               <div className="absolute top-0 left-0 w-2 h-full bg-black"></div>
+               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                 <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">!</span>
+                 「AIのプロ」ではない。マーケティングのプロが作る仕組み
+               </h3>
+               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                  <p>
+                    私たちは<strong>マーケティングのプロ</strong>であって、AIの専門家ではありません。<br />
+                    しかし、<strong>プロだからこそ</strong>、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
+                  </p>
+                  <p>
+                    マーケティングの実務を知り尽くしたプロフェッショナルとして、AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                  </p>
+                  <div className="grid sm:grid-cols-2 gap-4 mt-6">
+                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <Check className="w-5 h-5 text-black" />
+                      <span className="font-bold text-sm">量と品質の両立</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <Check className="w-5 h-5 text-black" />
+                      <span className="font-bold text-sm">内製化・脱属人化</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <Check className="w-5 h-5 text-black" />
+                      <span className="font-bold text-sm">ボトルネック解消</span>
+                    </div>
+                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                      <Check className="w-5 h-5 text-black" />
+                      <span className="font-bold text-sm">成果最大化チーム</span>
+                    </div>
+                  </div>
+               </div>
             </div>
           </div>
 
-          {/* Comparison Table */}
-          <div className="bg-[#f9f9f9] p-8 md:p-12 mb-20 max-w-[1000px] mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#1a1a1a]">一般的なAIツール導入とKAAANの違い</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b-2 border-gray-300">
-                    <th className="text-left py-4 px-4 font-bold text-[#1a1a1a]"></th>
-                    <th className="text-left py-4 px-4 font-bold text-gray-600">一般的なAIツール導入</th>
-                    <th className="text-left py-4 px-4 font-bold text-[#1a1a1a]">KAAANのAI編集部構築支援</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">ゴール</td>
-                    <td className="py-4 px-4 text-gray-600">導入完了・生産性向上</td>
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">自走化・プロジェクトの成果</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">焦点</td>
-                    <td className="py-4 px-4 text-gray-600">作れる量を増やす</td>
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">公開できる量を増やす</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">範囲</td>
-                    <td className="py-4 px-4 text-gray-600">制作工程のみAI化</td>
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">レビュー・品質管理もAI化</td>
-                  </tr>
-                  <tr className="border-b border-gray-200">
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">成果物</td>
-                    <td className="py-4 px-4 text-gray-600">ツール・知識</td>
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">動く仕組み・基盤</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">サポート</td>
-                    <td className="py-4 px-4 text-gray-600">導入時のみ</td>
-                    <td className="py-4 px-4 font-bold text-[#1a1a1a]">継続的な伴走</td>
-                  </tr>
-                </tbody>
-              </table>
+          {/* Comparison Table (Visual) */}
+          <div className="mb-32">
+            <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#1a1a1a]">一般的なAIツール導入とKAAANの違い</h3>
+            <div className="grid md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
+              {/* Left: Common */}
+              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 opacity-80">
+                <div className="text-center mb-8 pb-6 border-b border-gray-200">
+                   <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Common Case</p>
+                   <h4 className="text-xl font-bold text-gray-700">一般的なAIツール導入</h4>
+                </div>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
+                      <X className="w-4 h-4 text-gray-500" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-700 text-sm mb-1">導入完了・生産性向上</p>
+                      <p className="text-xs text-gray-500">ゴールが「導入」になりがち</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
+                      <X className="w-4 h-4 text-gray-500" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-700 text-sm mb-1">作れる量を増やす</p>
+                      <p className="text-xs text-gray-500">品質や管理は置き去り</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
+                      <X className="w-4 h-4 text-gray-500" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-700 text-sm mb-1">制作工程のみAI化</p>
+                      <p className="text-xs text-gray-500">前後工程がボトルネックに</p>
+                    </div>
+                  </li>
+                   <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
+                      <X className="w-4 h-4 text-gray-500" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-gray-700 text-sm mb-1">ツール・知識の提供</p>
+                      <p className="text-xs text-gray-500">使いこなせるかは個人次第</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Right: KAAAN */}
+              <div className="bg-[#1a1a1a] text-white rounded-2xl p-8 border-2 border-yellow-300 relative shadow-2xl transform md:-translate-y-4">
+                 <div className="absolute -top-4 -right-4 bg-yellow-300 text-black text-xs font-bold px-4 py-1 rounded-full shadow-lg">Recommended</div>
+                 <div className="text-center mb-8 pb-6 border-b border-gray-700">
+                   <p className="text-sm font-bold text-yellow-300 uppercase tracking-widest mb-2">KAAAN Service</p>
+                   <h4 className="text-xl font-bold text-white">AI編集部構築支援</h4>
+                </div>
+                <ul className="space-y-6">
+                  <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
+                      <Check className="w-5 h-5 text-black" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-lg mb-1">自走化・プロジェクトの成果</p>
+                      <p className="text-sm text-gray-400">事業成果が出るまでコミット</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
+                      <Check className="w-5 h-5 text-black" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-lg mb-1">公開できる量を増やす</p>
+                      <p className="text-sm text-gray-400">品質担保の仕組みもセットで</p>
+                    </div>
+                  </li>
+                  <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
+                      <Check className="w-5 h-5 text-black" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-lg mb-1">レビュー・品質管理もAI化</p>
+                      <p className="text-sm text-gray-400">全工程を最適化しスピードUP</p>
+                    </div>
+                  </li>
+                   <li className="flex gap-4">
+                    <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
+                      <Check className="w-5 h-5 text-black" />
+                    </div>
+                    <div>
+                      <p className="font-bold text-white text-lg mb-1">動く仕組み・基盤</p>
+                      <p className="text-sm text-gray-400">明日から使える環境を構築</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          {/* 提供するもの */}
-          <div className="mb-20 max-w-[1000px] mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#1a1a1a]">提供するもの</h3>
-            <div className="space-y-8">
+          {/* 提供するもの Grid */}
+          <div className="mb-32">
+            <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#1a1a1a]">提供するもの</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
-                  title: "1. インプットデータ基盤構築",
+                  title: "インプットデータ基盤構築",
+                  icon: Database,
                   items: [
-                    "Notion / Google Drive をベースにしたナレッジ管理基盤の構築（組織全体で使えるデータ蓄積の仕組み）",
-                    "過去に制作した記事・資料、社内打ち合わせの録画データ・議事録など、あらゆる情報の格納",
-                    "蓄積したデータをAIが情報を引き出しやすいようにクレンジング・構造化"
+                    "ナレッジ管理基盤 (Notion/Drive)",
+                    "過去記事・動画・議事録の格納",
+                    "AI用データクレンジング・構造化"
                   ]
                 },
                 {
-                  title: "2. マーケティングコミュニケーション設計",
+                  title: "マーケティング設計",
+                  icon: Target,
                   items: [
-                    "インプットデータを元に、ペルソナ・カスタマージャーニーを再設計",
-                    "コミュニケーション設計に基づくマーケティング戦略の策定",
-                    "AIが参照できる形で構造化し、コンテンツ作成の基盤を構築"
+                    "ペルソナ・カスタマージャーニー再設計",
+                    "戦略に基づくコンテンツ基盤構築",
+                    "AIが参照可能な構造化データ作成"
                   ]
                 },
                 {
-                  title: "3. プロンプト構築",
+                  title: "プロンプトチェーン構築",
+                  icon: Zap,
                   items: [
-                    "企画→構成→執筆→編集の一連の制作フローを自動化するプロンプトチェーンの作成",
-                    "インプットデータとマーケティングコミュニケーション設計の基盤を活用したプロンプト設計"
+                    "企画→構成→執筆→編集の自動化",
+                    "独自データを活用するプロンプト設計",
+                    "高品質・高精度な出力チューニング"
                   ]
                 },
                 {
-                  title: "4. 品質管理フロー構築",
+                  title: "品質管理フロー構築",
+                  icon: Check,
                   items: [
-                    "ファクトチェック、ハウスルールを守る仕組みの構築"
+                    "ファクトチェックの仕組み化",
+                    "ハウスルール順守の自動チェック",
+                    "人間による最終確認フロー設計"
                   ]
                 },
                 {
-                  title: "5. 必要な機能・ツール開発",
+                  title: "カスタムツール開発",
+                  icon: Settings,
                   items: [
-                    "プロジェクトに必要なカスタムツールや自動化ワークフローの構築",
-                    "担当コンサルタントがAIでシステム開発ができるため、課題に応じて必要なツールを開発・提供"
+                    "n8n/Zapierによる自動化ワークフロー",
+                    "課題に応じた専用ツール開発",
+                    "API連携・システム実装"
                   ]
                 }
               ].map((item, i) => (
-                <div key={i} className="bg-white border-l-4 border-black p-6 shadow-sm">
+                <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
+                    <item.icon className="w-6 h-6" />
+                  </div>
                   <h4 className="font-bold text-lg mb-4 text-[#1a1a1a]">{item.title}</h4>
-                  <ul className="space-y-2 text-gray-700">
+                  <ul className="space-y-3">
                     {item.items.map((subItem, j) => (
-                      <li key={j} className="flex items-start gap-3">
-                        <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
+                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-1.5 shrink-0 group-hover:bg-yellow-300"></span>
                         <span>{subItem}</span>
                       </li>
                     ))}
@@ -262,61 +345,68 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 実際に納品されるもの */}
-          <div className="mb-20 max-w-[1000px] mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#1a1a1a]">実際に納品されるもの</h3>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "カンバライティングの仕組み",
-                  desc: "誰でも簡単にAIと対話するだけでコンテンツ制作が完了する仕組み。あなたのブランドの「声」を学習した専用のAIが、企画出しから執筆、校正まで一連の流れを自動化するプロンプトのセット"
-                },
-                {
-                  title: "品質管理基準書",
-                  desc: "AIが出力したコンテンツを、人間がどこをどうチェックすべきかを定義したマニュアル"
-                },
-                {
-                  title: "業務フロー図・マニュアル",
-                  desc: "「誰が」「いつ」「どのツールを」使うのか。属人化を防ぎ、新人が入ってもすぐに自走できるための業務設計図"
-                }
-              ].map((item, i) => (
-                <div key={i} className="bg-[#f9f9f9] p-6 border border-gray-200">
-                  <h4 className="font-bold text-lg mb-3 text-[#1a1a1a]">{item.title}</h4>
-                  <p className="text-gray-700 leading-relaxed">{item.desc}</p>
+          {/* 納品物 & ツール */}
+          <div className="grid md:grid-cols-2 gap-12 max-w-[1000px] mx-auto">
+             {/* 納品物 */}
+             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
+                  <Award className="w-6 h-6 text-black" />
+                  実際に納品されるもの
+                </h3>
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: "カンバライティングの仕組み",
+                      desc: "対話だけでコンテンツ制作が完了する専用プロンプトセット"
+                    },
+                    {
+                      title: "品質管理基準書",
+                      desc: "AI出力物のチェックポイントを定義したマニュアル"
+                    },
+                    {
+                      title: "業務フロー図・マニュアル",
+                      desc: "「誰が」「いつ」使うかを定義した業務設計図"
+                    }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4 bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
+                      <div className="w-1 bg-black rounded-full shrink-0"></div>
+                      <div>
+                        <h4 className="font-bold text-sm text-[#1a1a1a] mb-1">{item.title}</h4>
+                        <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+             </div>
+
+             {/* ツール */}
+             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
+                  <Settings className="w-6 h-6 text-black" />
+                  使用するツールスタック
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                   {[
+                    { label: "AI Editors", name: "Cursor", icon: PenTool },
+                    { label: "LLM Models", name: "Claude / Gemini", icon: Zap },
+                    { label: "Knowledge", name: "Notion / Drive", icon: Database },
+                    { label: "Automation", name: "n8n / Zapier", icon: RefreshCw },
+                   ].map((item, i) => (
+                     <div key={i} className="bg-white p-4 rounded-xl border border-gray-100 text-center shadow-sm hover:border-black transition-colors">
+                       <div className="w-10 h-10 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-600">
+                         <item.icon className="w-5 h-5" />
+                       </div>
+                       <p className="text-xs font-bold text-gray-400 uppercase mb-1">{item.label}</p>
+                       <p className="font-bold text-[#1a1a1a]">{item.name}</p>
+                     </div>
+                   ))}
+                </div>
+                <div className="mt-6 text-center">
+                  <p className="text-xs text-gray-500">※プロジェクトに応じて最適なツールを選定・開発します</p>
+                </div>
+             </div>
           </div>
 
-          {/* 使用するツール */}
-          <div className="mb-20 max-w-[1000px] mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[#1a1a1a]">使用するツール</h3>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "AIツール",
-                  desc: "主に「Cursor」などのAIエディタや、Claude、Geminiなどの最新モデルを活用し、業務プロセス自体を変革する環境を構築します。"
-                },
-                {
-                  title: "ナレッジ管理",
-                  desc: "Notion、Google Drive 組織全体で使えるデータ蓄積の仕組みとして構築します。"
-                },
-                {
-                  title: "自動化ツール",
-                  desc: "n8n、Zapier など プロジェクトに必要な自動化ワークフローを構築します。"
-                },
-                {
-                  title: "その他",
-                  desc: "プロジェクトに応じて必要なカスタムツールを開発"
-                }
-              ].map((item, i) => (
-                <div key={i} className="bg-white border-l-4 border-gray-300 p-6">
-                  <h4 className="font-bold text-lg mb-2 text-[#1a1a1a]">{item.title}</h4>
-                  <p className="text-gray-700 leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
