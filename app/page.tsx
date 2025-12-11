@@ -361,14 +361,14 @@ export default function Home() {
           </div>
 
           {/* 納品物 & ツール */}
-          <div className="grid md:grid-cols-2 gap-12 max-w-[1000px] mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 max-w-[1000px] mx-auto mt-20">
              {/* 納品物 */}
-             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
+             <div>
+                <h3 className="text-xl font-bold mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
                   <Award className="w-6 h-6 text-black" />
                   実際に納品されるもの
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-8 pl-2">
                   {[
                     {
                       title: "カンバライティングの仕組み",
@@ -383,40 +383,38 @@ export default function Home() {
                       desc: "「誰が」「いつ」使うかを定義した業務設計図"
                     }
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-4 bg-white p-4 rounded-lg border border-gray-100 shadow-sm">
-                      <div className="w-1 bg-black rounded-full shrink-0"></div>
-                      <div>
-                        <h4 className="font-bold text-sm text-[#1a1a1a] mb-1">{item.title}</h4>
-                        <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
-                      </div>
+                    <div key={i} className="relative">
+                      <div className="absolute top-2 left-[-10px] w-1.5 h-1.5 bg-black rounded-full"></div>
+                      <h4 className="font-bold text-lg text-[#1a1a1a] mb-2">{item.title}</h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   ))}
                 </div>
              </div>
 
              {/* ツール */}
-             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-                <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
+             <div>
+                <h3 className="text-xl font-bold mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
                   <Settings className="w-6 h-6 text-black" />
                   使用するツールスタック
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-10">
                    {[
                     { label: "AI Editors", name: "Cursor", icon: PenTool },
                     { label: "LLM Models", name: "Claude / Gemini", icon: Zap },
                     { label: "Knowledge", name: "Notion / Drive", icon: Database },
                     { label: "Automation", name: "n8n / Zapier", icon: RefreshCw },
                    ].map((item, i) => (
-                     <div key={i} className="bg-white p-4 rounded-xl border border-gray-100 text-center shadow-sm hover:border-black transition-colors">
-                       <div className="w-10 h-10 mx-auto bg-gray-100 rounded-full flex items-center justify-center mb-3 text-gray-600">
-                         <item.icon className="w-5 h-5" />
+                     <div key={i} className="flex flex-col items-center text-center group">
+                       <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-4 text-gray-700 group-hover:bg-[#1a1a1a] group-hover:text-white transition-colors duration-300 shadow-sm">
+                         <item.icon className="w-8 h-8" />
                        </div>
-                       <p className="text-xs font-bold text-gray-400 uppercase mb-1">{item.label}</p>
-                       <p className="font-bold text-[#1a1a1a]">{item.name}</p>
+                       <p className="font-bold text-[#1a1a1a] text-lg">{item.name}</p>
+                       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">{item.label}</p>
                      </div>
                    ))}
                 </div>
-                <div className="mt-6 text-center">
+                <div className="mt-10 text-center border-t border-gray-100 pt-6">
                   <p className="text-xs text-gray-500">※プロジェクトに応じて最適なツールを選定・開発します</p>
                 </div>
              </div>
