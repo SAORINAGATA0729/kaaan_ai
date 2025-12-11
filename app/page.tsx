@@ -38,8 +38,8 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
-            <div className="inline-block mb-6">
-              <span className="text-xs md:text-sm tracking-[0.25em] uppercase font-bold border-b-2 border-black pb-2">
+            <div className="mb-6">
+              <span className="text-sm font-bold tracking-widest uppercase">
                 Marketing x AI
               </span>
             </div>
