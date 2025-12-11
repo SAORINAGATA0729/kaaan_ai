@@ -39,7 +39,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
-              <span className="block">AI編集部支援サービス</span>
+              <span className="block">AI編集部構築支援サービス</span>
             </h1>
 
             <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
