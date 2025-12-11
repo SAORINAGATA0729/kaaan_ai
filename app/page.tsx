@@ -38,17 +38,17 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
-            <div className="inline-block mb-8">
-              <span className="text-[13px] tracking-[0.25em] uppercase font-bold border-b-2 border-black pb-2">
+            <div className="inline-block mb-6">
+              <span className="text-xs md:text-sm tracking-[0.25em] uppercase font-bold border-b-2 border-black pb-2">
                 Marketing x AI
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.95] mb-10">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
               <span className="block">AI編集部支援サービス</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-12 font-medium">
+            <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
               マーケティングのプロフェッショナルが、<br />
               AIを武器に成果を出す編集部へと構築。<br />
               自走できるチームへと導きます。
