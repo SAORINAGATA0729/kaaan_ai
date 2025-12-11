@@ -40,7 +40,7 @@ export default function Home() {
           <div className="max-w-6xl">
             <div className="inline-block mb-8">
               <span className="text-[13px] tracking-[0.25em] uppercase font-bold border-b-2 border-black pb-2">
-                AIを武器に、成果を最大化する。
+                Marketing x AI
               </span>
             </div>
             
@@ -49,7 +49,9 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-12 font-medium">
-              マーケティングのプロフェッショナルが、AIを武器に成果を出す編集部へと構築。自走できるチームへと導きます。
+              マーケティングのプロフェッショナルが、<br />
+              AIを武器に成果を出す編集部へと構築。<br />
+              自走できるチームへと導きます。
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
