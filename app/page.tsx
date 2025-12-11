@@ -40,7 +40,7 @@ export default function Home() {
           <div className="max-w-6xl">
             <div className="inline-block mb-8">
               <span className="text-[13px] tracking-[0.25em] uppercase font-bold border-b-2 border-black pb-2">
-                導入でなく、成果を倍にする。
+                AIを武器に、成果を最大化する。
               </span>
             </div>
             
