@@ -44,7 +44,7 @@ export default function Home() {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.95] mb-10">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter leading-[0.95] mb-10">
               <span className="block">AI編集部支援サービス</span>
             </h1>
 
