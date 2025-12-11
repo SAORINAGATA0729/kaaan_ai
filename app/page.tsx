@@ -38,12 +38,6 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
-            <div className="mb-6">
-              <span className="text-sm font-bold tracking-widest uppercase">
-                Marketing x AI
-              </span>
-            </div>
-            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
               <span className="block">AI編集部支援サービス</span>
             </h1>
