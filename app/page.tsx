@@ -141,38 +141,51 @@ export default function Home() {
               KAAANのAI編集部構築支援サービス
             </p>
             
-            <div className="bg-[#f9f9f9] rounded-2xl p-10 md:p-14 max-w-4xl mx-auto text-left relative overflow-hidden">
-               <div className="absolute top-0 left-0 w-2 h-full bg-black"></div>
-               <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-                 <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">!</span>
-                 「AIのプロ」ではない。マーケティングのプロが作る仕組み
-               </h3>
-               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                  <p>
-                    私たちは<strong>マーケティングのプロ</strong>であって、AIの専門家ではありません。<br />
-                    しかし、<strong>プロだからこそ</strong>、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
-                  </p>
-                  <p>
-                    マーケティングの実務を知り尽くしたプロフェッショナルとして、AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-                  </p>
-                  <div className="grid sm:grid-cols-2 gap-4 mt-6">
-                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                      <Check className="w-5 h-5 text-black" />
-                      <span className="font-bold text-sm">量と品質の両立</span>
+            <div className="bg-white rounded-3xl p-10 md:p-14 max-w-4xl mx-auto text-left relative overflow-hidden border border-gray-100 shadow-xl">
+               <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+               
+               <div className="relative z-10">
+                 <div className="inline-flex items-center gap-2 bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                   <span className="w-2 h-2 rounded-full bg-yellow-300"></span>
+                   KAAAN's Philosophy
+                 </div>
+                 
+                 <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                   「AIのプロ」ではない。<br />
+                   <span className="border-b-4 border-yellow-300">マーケティングのプロ</span>が作る仕組み。
+                 </h3>
+                 
+                 <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
+                    <div>
+                      <p className="mb-4">
+                        私たちは<strong>マーケティングのプロ</strong>であって、AIの専門家ではありません。
+                      </p>
+                      <p>
+                        しかし、<strong>プロだからこそ</strong>、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
+                      </p>
                     </div>
-                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                      <Check className="w-5 h-5 text-black" />
-                      <span className="font-bold text-sm">内製化・脱属人化</span>
+                    
+                    <p className="font-bold text-xl text-[#1a1a1a]">
+                      マーケティングの実務を知り尽くしたプロフェッショナルとして、<br className="hidden md:inline" />
+                      AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                    </p>
+                    
+                    <div className="grid sm:grid-cols-2 gap-6 mt-8">
+                      {[
+                        { text: "量と品質の両立", icon: Target },
+                        { text: "内製化・脱属人化", icon: Users },
+                        { text: "ボトルネック解消", icon: Zap },
+                        { text: "成果最大化チーム", icon: TrendingUp }
+                      ].map((item, i) => (
+                        <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-black transition-colors group">
+                          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center border border-gray-200 group-hover:bg-yellow-300 group-hover:border-transparent transition-colors">
+                            <item.icon className="w-5 h-5 text-gray-600 group-hover:text-black" />
+                          </div>
+                          <span className="font-bold text-[#1a1a1a]">{item.text}</span>
+                        </div>
+                      ))}
                     </div>
-                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                      <Check className="w-5 h-5 text-black" />
-                      <span className="font-bold text-sm">ボトルネック解消</span>
-                    </div>
-                    <div className="flex items-center gap-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                      <Check className="w-5 h-5 text-black" />
-                      <span className="font-bold text-sm">成果最大化チーム</span>
-                    </div>
-                  </div>
+                 </div>
                </div>
             </div>
           </div>
