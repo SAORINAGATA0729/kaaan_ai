@@ -15,7 +15,6 @@ import {
   RefreshCw,
   Users,
   BarChart,
-  Award,
   MessageSquareQuote,
   Database,
   PenTool,
@@ -354,40 +353,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* 納品物 & ツール */}
-          <div className="grid md:grid-cols-2 gap-12 max-w-[1000px] mx-auto mt-20">
-             {/* 納品物 */}
-             <div>
-                <h3 className="text-xl font-bold mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
-                  <Award className="w-6 h-6 text-black" />
-                  実際に納品されるもの
-                </h3>
-                <div className="space-y-8 pl-2">
-                  {[
-                    {
-                      title: "カンバライティングの仕組み",
-                      desc: "対話だけでコンテンツ制作が完了する専用プロンプトセット"
-                    },
-                    {
-                      title: "品質管理基準書",
-                      desc: "AI出力物のチェックポイントを定義したマニュアル"
-                    },
-                    {
-                      title: "業務フロー図・マニュアル",
-                      desc: "「誰が」「いつ」使うかを定義した業務設計図"
-                    }
-                  ].map((item, i) => (
-                    <div key={i} className="relative">
-                      <div className="absolute top-2 left-[-10px] w-1.5 h-1.5 bg-black rounded-full"></div>
-                      <h4 className="font-bold text-lg text-[#1a1a1a] mb-2">{item.title}</h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-             </div>
-
-             {/* ツール */}
-             <div>
+          {/* ツール */}
+          <div className="max-w-[1000px] mx-auto mt-20">
                 <h3 className="text-xl font-bold mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
                   <Settings className="w-6 h-6 text-black" />
                   使用するツールスタック
@@ -411,7 +378,6 @@ export default function Home() {
                 <div className="mt-10 text-center border-t border-gray-100 pt-6">
                   <p className="text-xs text-gray-500">※プロジェクトに応じて最適なツールを選定・開発します</p>
                 </div>
-             </div>
           </div>
 
         </div>
