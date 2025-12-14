@@ -299,7 +299,7 @@ export default function Home() {
           </div>
 
           {/* 提供するもの Grid */}
-          <div className="mb-32">
+          <div className="mb-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#1a1a1a]">提供するもの</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
@@ -347,61 +347,34 @@ export default function Home() {
                     "課題に応じた専用ツール開発",
                     "API連携・システム実装"
                   ]
+                },
+                {
+                   // Technology Stack as the last item in the grid, spanning if needed or just styled differently
+                   title: "テクノロジースタック選定",
+                   icon: PenTool,
+                   isTechStack: true,
+                   items: [
+                     "最適なAIモデル・ツールの選定",
+                     "Cursor / Claude / n8n / Notion",
+                     "セキュアな開発環境の構築"
+                   ]
                 }
               ].map((item, i) => (
-                <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group">
-                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
+                <div key={i} className={`bg-white border rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group ${item.isTechStack ? 'border-black bg-[#1a1a1a] text-white' : 'border-gray-200'}`}>
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-colors ${item.isTechStack ? 'bg-yellow-300 text-black' : 'bg-gray-100 group-hover:bg-black group-hover:text-white'}`}>
                     <item.icon className="w-6 h-6" />
                   </div>
-                  <h4 className="font-bold text-lg mb-4 text-[#1a1a1a]">{item.title}</h4>
+                  <h4 className={`font-bold text-lg mb-4 ${item.isTechStack ? 'text-white' : 'text-[#1a1a1a]'}`}>{item.title}</h4>
                   <ul className="space-y-3">
                     {item.items.map((subItem, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-1.5 shrink-0 group-hover:bg-yellow-300"></span>
+                      <li key={j} className={`flex items-start gap-2 text-sm ${item.isTechStack ? 'text-gray-300' : 'text-gray-600'}`}>
+                        <span className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${item.isTechStack ? 'bg-yellow-300' : 'bg-gray-300 group-hover:bg-yellow-300'}`}></span>
                         <span>{subItem}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* ツール */}
-          <div className="max-w-[1000px] mx-auto mt-20">
-            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100">
-              <div className="text-center mb-10">
-                <h3 className="text-xl md:text-2xl font-bold mb-3 flex items-center justify-center gap-3 text-[#1a1a1a]">
-                  <Settings className="w-6 h-6" />
-                  Technology Stack
-                </h3>
-                <p className="text-gray-500 text-sm font-medium">成果を最大化するための、最適なツール選定とアーキテクチャ</p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                 {[
-                  { label: "AI Editor", name: "Cursor", icon: PenTool, desc: "AIネイティブ開発" },
-                  { label: "LLM", name: "Claude / Gemini", icon: Zap, desc: "推論・生成モデル" },
-                  { label: "Knowledge", name: "Notion / Drive", icon: Database, desc: "ナレッジ管理" },
-                  { label: "Automation", name: "n8n / Zapier", icon: RefreshCw, desc: "ワークフロー自動化" },
-                 ].map((item, i) => (
-                   <div key={i} className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-black transition-all group text-center flex flex-col items-center h-full justify-between">
-                     <div className="mb-4">
-                       <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-yellow-300 transition-colors duration-300">
-                         <item.icon className="w-6 h-6 text-gray-700 group-hover:text-black" />
-                       </div>
-                     </div>
-                     <div>
-                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">{item.label}</p>
-                       <p className="font-bold text-[#1a1a1a] text-lg mb-2 leading-tight">{item.name}</p>
-                       <p className="text-xs text-gray-500 font-medium">{item.desc}</p>
-                     </div>
-                   </div>
-                 ))}
-              </div>
-              <div className="mt-8 text-center">
-                <p className="text-xs text-gray-400">※プロジェクトの課題に応じて最適なツールを選定・開発します</p>
-              </div>
             </div>
           </div>
 
