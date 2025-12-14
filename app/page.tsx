@@ -37,11 +37,8 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
-            <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-4">
+            <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-6">
               時間を半分に、成果を倍にすることから始める。
-            </p>
-            <p className="text-lg md:text-xl text-gray-500 font-bold mb-6">
-              Half the Time, Twice the Result
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
