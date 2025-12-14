@@ -35,16 +35,16 @@ export default function Home() {
 
       {/* 1. Hero Section - Impact & Expectation */}
       <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white overflow-hidden">
-        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            {/* Left: Text Content */}
-            <div className="lg:w-1/2 relative z-10">
-              <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-4">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1400px]">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            {/* Left: Text Content (Wider) */}
+            <div className="lg:w-[60%] relative z-10 shrink-0">
+              <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-4 whitespace-nowrap">
                 施策にかかる時間を半分に。成果を倍にすることから始める。
               </p>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
-                <span className="block">AI編集部構築サービス</span>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight leading-none mb-8 whitespace-nowrap">
+                AI編集部構築サービス
               </h1>
 
               <p className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed mb-10 font-medium">
@@ -68,12 +68,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: Image Placeholder */}
-            <div className="lg:w-1/2 w-full">
-              <div className="bg-gray-100 aspect-[4/3] relative overflow-hidden group rounded-2xl">
+            {/* Right: Image Placeholder (Narrower) */}
+            <div className="lg:w-[40%] w-full">
+              <div className="bg-gray-100 aspect-[4/3] relative overflow-hidden group rounded-2xl w-full">
                  {/* Placeholder for Hero Image */}
                  <div className="absolute inset-0 bg-gray-200 flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-500">
-                    <Zap className="w-32 h-32 text-gray-400 opacity-20" />
+                    <Zap className="w-24 h-24 text-gray-400 opacity-20" />
                  </div>
                  <div className="absolute inset-0 border-2 border-black/5 m-4 rounded-xl"></div>
               </div>
