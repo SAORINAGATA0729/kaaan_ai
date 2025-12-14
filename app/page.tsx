@@ -263,7 +263,7 @@ export default function Home() {
           </div>
 
           {/* Tool Stack (Integrated) */}
-          <div className="max-w-[800px] mx-auto border-t border-gray-800 pt-20">
+          <div className="max-w-[800px] mx-auto pt-20">
             <h4 className="text-xl font-bold mb-10 text-center text-white flex items-center justify-center gap-3">
               使用するAIツール
             </h4>
