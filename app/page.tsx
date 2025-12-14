@@ -164,13 +164,13 @@ export default function Home() {
       </section>
 
       {/* 4. Philosophy Section - Gray Background */}
-      <section className="py-24 md:py-32 bg-gray-50 border-t border-gray-100">
+      <section className="py-32 md:py-48 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           {/* Philosophy Section - Simple Left/Right Layout */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-start">
             {/* Left: Heading */}
-            <div className="lg:w-5/12 sticky top-8">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+            <div className="lg:w-5/12 sticky top-12">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-8 lg:mb-0">
                 AIのプロではない。<br />
                 <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
               </h3>
@@ -178,9 +178,9 @@ export default function Home() {
 
             {/* Right: Body Text */}
             <div className="lg:w-7/12 pt-2">
-              <div className="space-y-8 text-lg leading-relaxed text-gray-700">
+              <div className="space-y-12 text-lg md:text-xl leading-loose text-gray-700 font-medium">
                 <p>
-                  私たちは<strong className="text-black border-b border-gray-300">マーケティングのプロ</strong>であって、AIの専門家ではありません。
+                  私たちは<strong className="text-black border-b border-gray-300 pb-1">マーケティングのプロ</strong>であって、AIの専門家ではありません。
                 </p>
                 <p>
                   しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
