@@ -167,9 +167,8 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start mb-32">
             <div className="lg:w-5/12 sticky top-8">
               <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight mb-8">
-                「AIのプロ」<br />
-                ではない。<br />
-                <span className="text-gray-400">マーケティングのプロが作る仕組み。</span>
+                「AIのプロ」ではない。<br />
+                <span className="text-gray-400">マーケティングのプロが<br />作る仕組み。</span>
               </h3>
             </div>
 
