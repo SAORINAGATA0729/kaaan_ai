@@ -169,14 +169,11 @@ export default function Home() {
                         マーケティングの実務を知り尽くしたプロフェッショナルとして、<br className="hidden md:inline" />
                         AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
                       </p>
-                      <p className="mb-6 font-bold text-lg text-[#1a1a1a]">
-                        重要なのは、AIツールの導入ではなく、<strong>組織をどう作っていくのか、プロジェクトをどう設計していくのか</strong>です。
-                      </p>
                       <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-yellow-300 mt-6">
                         <p className="font-bold mb-2 text-[#1a1a1a]">私たちのアプローチ：</p>
                         <ol className="list-decimal list-inside space-y-2 text-gray-700">
                           <li><strong>現状を把握</strong> - プロジェクト全体のボトルネックを特定</li>
-                          <li><strong>ストラテジーから入る</strong> - マーケティング戦略を明確にし、成果を最大化する設計。組織をどう作っていくのか、プロジェクトをどう設計していくのかを明確にする</li>
+                          <li><strong>ストラテジーから入る</strong> - マーケティング戦略を明確にし、成果を最大化する設計</li>
                           <li><strong>フルスクラッチで仕組みを構築</strong> - 成果を伸ばし、プロジェクトチームの時間を削減する仕組みを構築</li>
                         </ol>
                       </div>
