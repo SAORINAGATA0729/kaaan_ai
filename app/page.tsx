@@ -132,9 +132,9 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 relative z-10 max-w-[1200px]">
           {/* Title & Lead */}
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-[#1a1a1a]">
-              ストラテジーから始める。<br />
-              成果を伸ばす編集部を構築する
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[#1a1a1a]">
+              マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
+              AIを武器に、成果を加速させる組織へと変革する。
             </h2>
             <p className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-12">
               KAAANのAI編集部構築支援サービス
