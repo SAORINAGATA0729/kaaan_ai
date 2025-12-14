@@ -34,35 +34,49 @@ export default function Home() {
       <LPHeader />
 
       {/* 1. Hero Section - Impact & Expectation */}
-      <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white">
+      <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="max-w-6xl">
-            <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-4">
-              施策にかかる時間を半分に。成果を倍にすることから始める。
-            </p>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
-              <span className="block">AI編集部構築サービス</span>
-            </h1>
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            {/* Left: Text Content */}
+            <div className="lg:w-1/2 relative z-10">
+              <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-4">
+                施策にかかる時間を半分に。成果を倍にすることから始める。
+              </p>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
+                <span className="block">AI編集部構築サービス</span>
+              </h1>
 
-            <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
-              マーケティングのプロフェッショナルが、<br />
-              AIを武器に成果を出す編集部へと構築。<br />
-              自走できるチームへと導きます。
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
-                <Link href="/contact/service?service=ai">
-                  案件相談・お問い合わせ
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="h-14 px-8 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-gray-50 bg-transparent transition-all">
-                <Link href="/download/ai-editing">
-                  サービス紹介資料
-                </Link>
-              </Button>
+              <p className="text-lg md:text-xl text-[#1a1a1a] leading-relaxed mb-10 font-medium">
+                マーケティングのプロフェッショナルが、<br />
+                AIを武器に成果を出す編集部へと構築。<br />
+                自走できるチームへと導きます。
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
+                  <Link href="/contact/service?service=ai">
+                    案件相談・お問い合わせ
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="h-14 px-8 rounded-full text-base font-bold border-2 border-[#1a1a1a] text-[#1a1a1a] hover:bg-gray-50 bg-transparent transition-all">
+                  <Link href="/download/ai-editing">
+                    サービス紹介資料
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Right: Image Placeholder */}
+            <div className="lg:w-1/2 w-full">
+              <div className="bg-gray-100 aspect-[4/3] relative overflow-hidden group rounded-2xl">
+                 {/* Placeholder for Hero Image */}
+                 <div className="absolute inset-0 bg-gray-200 flex items-center justify-center group-hover:bg-gray-300 transition-colors duration-500">
+                    <Zap className="w-32 h-32 text-gray-400 opacity-20" />
+                 </div>
+                 <div className="absolute inset-0 border-2 border-black/5 m-4 rounded-xl"></div>
+              </div>
             </div>
           </div>
         </div>
