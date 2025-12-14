@@ -192,38 +192,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* Approach Section */}
-          <div>
-            <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-12 text-center">Our Approach</p>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { 
-                  step: "01", 
-                  title: "現状を把握", 
-                  desc: "プロジェクト全体のボトルネックを特定" 
-                },
-                { 
-                  step: "02", 
-                  title: "戦略から入る", 
-                  desc: "マーケティング戦略を明確にし、成果を最大化する設計" 
-                },
-                { 
-                  step: "03", 
-                  title: "仕組みを構築", 
-                  desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みをフルスクラッチで構築" 
-                }
-              ].map((item, i) => (
-                <div key={i} className="bg-white p-8 border-t-2 border-black group hover:shadow-lg transition-all">
-                  <span className="text-4xl font-bold text-gray-200 font-mono block mb-6 group-hover:text-black transition-colors duration-300">
-                    {item.step}
-                  </span>
-                  <h5 className="text-xl font-bold text-black mb-4">{item.title}</h5>
-                  <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
