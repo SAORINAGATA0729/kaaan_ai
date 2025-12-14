@@ -195,19 +195,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Implementation Package Section (Dark Theme) */}
-      <section className="py-24 md:py-32 bg-[#1a1a1a] text-white">
+      {/* 5. Implementation Package Section (Clean White Theme) */}
+      <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
-              <span className="text-yellow-300 block mb-2 text-xl md:text-2xl">成果を出すために必要な</span>
-              AI編集部 構築基盤
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#1a1a1a]">
+              マーケティングのプロが作る、<br />
+              成果を加速させる5つのシステム
             </h3>
-            <p className="text-gray-400 text-lg">プロジェクトの課題に応じて、最適な基盤とツールを実装します。</p>
+            <p className="text-gray-500 text-lg">プロジェクトの課題に応じて、最適な基盤とツールを実装します。</p>
           </div>
 
-          {/* 提供するもの Grid (Redesigned) */}
+          {/* 提供するもの Grid (Redesigned - Clean Gray) */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
             {[
               {
@@ -241,19 +241,21 @@ export default function Home() {
                 items: ["n8n/Zapierによる自動化ワークフロー", "課題に応じた専用ツール開発", "API連携・システム実装"]
               }
             ].map((item, i) => (
-              <div key={i} className="bg-transparent border border-gray-800 p-8 rounded-2xl hover:border-yellow-300 transition-all duration-300 group hover:bg-gray-900/30">
+              <div key={i} className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-black transition-all duration-300 group">
                 <div className="mb-6">
-                  <item.icon className="w-10 h-10 text-yellow-300 mb-4" strokeWidth={1.5} />
-                  <h4 className="font-bold text-xl text-white mb-2 leading-tight">{item.title}</h4>
-                  <p className="text-sm text-gray-400 font-medium">{item.desc}</p>
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-sm border border-gray-100">
+                    <item.icon className="w-6 h-6 text-black" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-bold text-xl text-[#1a1a1a] mb-2 leading-tight">{item.title}</h4>
+                  <p className="text-sm text-gray-500 font-medium">{item.desc}</p>
                 </div>
                 
-                <div className="w-full h-px bg-gray-800 mb-6 group-hover:bg-gray-700 transition-colors"></div>
+                <div className="w-full h-px bg-gray-200 mb-6"></div>
 
                 <ul className="space-y-4">
                   {item.items.map((subItem, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm text-gray-300 leading-relaxed">
-                      <Check className="w-4 h-4 text-gray-600 mt-0.5 shrink-0 group-hover:text-yellow-300 transition-colors" />
+                    <li key={j} className="flex items-start gap-3 text-sm text-gray-600 leading-relaxed">
+                      <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-2 shrink-0 group-hover:bg-black transition-colors"></span>
                       <span>{subItem}</span>
                     </li>
                   ))}
@@ -262,9 +264,9 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Tool Stack (Integrated) */}
-          <div className="max-w-[800px] mx-auto pt-20">
-            <h4 className="text-xl font-bold mb-10 text-center text-white flex items-center justify-center gap-3">
+          {/* Tool Stack (Integrated - Clean) */}
+          <div className="max-w-[800px] mx-auto pt-10">
+            <h4 className="text-xl font-bold mb-10 text-center text-[#1a1a1a] flex items-center justify-center gap-3">
               使用するAIツール
             </h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -275,23 +277,23 @@ export default function Home() {
                 { label: "Automation", name: "n8n / Zapier", icon: RefreshCw },
                ].map((item, i) => (
                  <div key={i} className="flex flex-col items-center text-center group">
-                   <div className="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center mb-4 text-white group-hover:bg-white group-hover:text-black transition-colors duration-300 shadow-sm border border-gray-700">
+                   <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-4 text-gray-600 group-hover:bg-black group-hover:text-white transition-colors duration-300 shadow-sm border border-gray-100">
                      <item.icon className="w-8 h-8" />
                    </div>
-                   <p className="font-bold text-white text-lg mb-1">{item.name}</p>
+                   <p className="font-bold text-[#1a1a1a] text-lg mb-1">{item.name}</p>
                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{item.label}</p>
                  </div>
                ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-xs text-gray-500">※プロジェクトの課題に応じて最適なツールを選定・開発します</p>
+              <p className="text-xs text-gray-400">※プロジェクトの課題に応じて最適なツールを選定・開発します</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* 6. Comparison Section (Independent White Background) */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-24 md:py-32 bg-white border-t border-gray-100">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <h3 className="text-2xl md:text-3xl font-bold mb-16 text-center text-[#1a1a1a]">一般的なAIツール導入とKAAANの違い</h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-[1000px] mx-auto">
@@ -303,8 +305,8 @@ export default function Home() {
               </div>
               <ul className="space-y-6">
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
-                    <X className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 text-gray-400" />
                   </div>
                   <div>
                     <p className="font-bold text-gray-700 text-sm mb-1">導入完了・生産性向上</p>
@@ -312,8 +314,8 @@ export default function Home() {
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
-                    <X className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 text-gray-400" />
                   </div>
                   <div>
                     <p className="font-bold text-gray-700 text-sm mb-1">作れる量を増やす</p>
@@ -321,8 +323,8 @@ export default function Home() {
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
-                    <X className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 text-gray-400" />
                   </div>
                   <div>
                     <p className="font-bold text-gray-700 text-sm mb-1">制作工程のみAI化</p>
@@ -330,8 +332,8 @@ export default function Home() {
                   </div>
                 </li>
                  <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center shrink-0">
-                    <X className="w-4 h-4 text-gray-500" />
+                  <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center shrink-0">
+                    <X className="w-4 h-4 text-gray-400" />
                   </div>
                   <div>
                     <p className="font-bold text-gray-700 text-sm mb-1">ツール・知識の提供</p>
@@ -342,47 +344,47 @@ export default function Home() {
             </div>
 
             {/* Right: KAAAN */}
-            <div className="bg-[#1a1a1a] text-white rounded-2xl p-8 border-2 border-yellow-300 relative shadow-2xl transform md:-translate-y-4">
-               <div className="absolute -top-4 -right-4 bg-yellow-300 text-black text-xs font-bold px-4 py-1 rounded-full shadow-lg">Recommended</div>
-               <div className="text-center mb-8 pb-6 border-b border-gray-700">
-                 <p className="text-sm font-bold text-yellow-300 uppercase tracking-widest mb-2">KAAAN Service</p>
-                 <h4 className="text-xl font-bold text-white">AI編集部構築</h4>
+            <div className="bg-white text-[#1a1a1a] rounded-2xl p-8 border-2 border-black relative shadow-xl transform md:-translate-y-4">
+               <div className="absolute -top-4 -right-4 bg-black text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg">Recommended</div>
+               <div className="text-center mb-8 pb-6 border-b border-gray-100">
+                 <p className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2">KAAAN Service</p>
+                 <h4 className="text-xl font-bold text-black">AI編集部構築</h4>
               </div>
               <ul className="space-y-6">
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
-                    <Check className="w-5 h-5 text-black" />
+                  <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-lg mb-1">自走化・プロジェクトの成果</p>
-                    <p className="text-sm text-gray-400">事業成果が出るまでコミット</p>
+                    <p className="font-bold text-black text-lg mb-1">自走化・プロジェクトの成果</p>
+                    <p className="text-sm text-gray-500">事業成果が出るまでコミット</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
-                    <Check className="w-5 h-5 text-black" />
+                  <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-lg mb-1">公開できる量を増やす</p>
-                    <p className="text-sm text-gray-400">品質担保の仕組みもセットで</p>
+                    <p className="font-bold text-black text-lg mb-1">公開できる量を増やす</p>
+                    <p className="text-sm text-gray-500">品質担保の仕組みもセットで</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
-                    <Check className="w-5 h-5 text-black" />
+                  <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-lg mb-1">レビュー・品質管理もAI化</p>
-                    <p className="text-sm text-gray-400">全工程を最適化しスピードUP</p>
+                    <p className="font-bold text-black text-lg mb-1">レビュー・品質管理もAI化</p>
+                    <p className="text-sm text-gray-500">全工程を最適化しスピードUP</p>
                   </div>
                 </li>
                  <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-yellow-300 flex items-center justify-center shrink-0">
-                    <Check className="w-5 h-5 text-black" />
+                  <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center shrink-0">
+                    <Check className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-white text-lg mb-1">動く仕組み・基盤</p>
-                    <p className="text-sm text-gray-400">明日から使える環境を構築</p>
+                    <p className="font-bold text-black text-lg mb-1">動く仕組み・基盤</p>
+                    <p className="text-sm text-gray-500">明日から使える環境を構築</p>
                   </div>
                 </li>
               </ul>
