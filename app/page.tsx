@@ -137,9 +137,26 @@ export default function Home() {
               マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
               AIを武器に、成果を加速させる組織へ。
             </h2>
-            <p className="text-lg md:text-xl font-medium text-gray-500">
+            <p className="text-lg md:text-xl font-medium text-gray-500 mb-12">
               KAAANのAI編集部構築支援サービス
             </p>
+            
+            {/* 4 Keywords Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto">
+              {[
+                { text: "量と品質の両立", icon: Target },
+                { text: "内製化・脱属人化", icon: Users },
+                { text: "ボトルネック解消", icon: Zap },
+                { text: "成果最大化チーム", icon: TrendingUp }
+              ].map((item, i) => (
+                <div key={i} className="flex flex-col items-center gap-2 text-center">
+                  <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-2">
+                    <item.icon className="w-6 h-6 text-black" />
+                  </div>
+                  <span className="font-bold text-sm text-gray-800">{item.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Philosophy Content - Unified Box Layout */}
@@ -197,21 +214,6 @@ export default function Home() {
                           <h5 className="text-xl font-bold text-black mb-2">{item.title}</h5>
                           <p className="text-gray-600 leading-relaxed text-base">{item.desc}</p>
                         </div>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {/* 4 Keywords Grid */}
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-4 mt-12 pt-8 border-t border-gray-200">
-                    {[
-                      { text: "量と品質の両立", icon: Target },
-                      { text: "内製化・脱属人化", icon: Users },
-                      { text: "ボトルネック解消", icon: Zap },
-                      { text: "成果最大化チーム", icon: TrendingUp }
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <item.icon className="w-4 h-4 text-black" />
-                        <span className="font-bold text-xs text-gray-600">{item.text}</span>
                       </div>
                     ))}
                   </div>
