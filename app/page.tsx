@@ -72,9 +72,6 @@ export default function Home() {
       <section id="problem" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="text-center mb-20">
-            <span className="inline-block py-1 px-3 border border-black rounded-full text-xs font-bold tracking-widest uppercase mb-6 bg-white">
-              Issue
-            </span>
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
               成果を出したい。<br className="md:hidden" />
               でも、リソースは限界。
@@ -136,9 +133,6 @@ export default function Home() {
           
           {/* Title Area */}
           <div className="text-center mb-24 md:mb-32">
-            <span className="inline-block py-1 px-3 border border-black rounded-full text-xs font-bold tracking-widest uppercase mb-8 bg-white">
-              Solution
-            </span>
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[#1a1a1a]">
               マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
               AIを武器に、成果を加速させる組織へ。
