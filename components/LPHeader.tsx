@@ -20,7 +20,7 @@ export function LPHeader() {
           {/* Logo */}
           <Link 
             href="/" 
-            className="text-lg font-bold tracking-tight text-[#1a1a1a] hover:opacity-80 transition-opacity shrink-0"
+            className="text-2xl md:text-3xl font-bold tracking-tight text-[#1a1a1a] hover:opacity-80 transition-opacity shrink-0"
           >
             KAAAN
           </Link>
