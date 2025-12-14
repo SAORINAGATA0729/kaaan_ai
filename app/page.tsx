@@ -37,6 +37,13 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
+            <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-4">
+              時間を半分に、成果を倍にすることから始める。
+            </p>
+            <p className="text-lg md:text-xl text-gray-500 font-bold mb-6">
+              Half the Time, Twice the Result
+            </p>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
               <span className="block">AI編集部構築支援サービス</span>
             </h1>
@@ -70,7 +77,8 @@ export default function Home() {
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
               やりたい施策は山積み。<br className="md:hidden" />
-              でも、リソースは限界。
+              でも、リソースは限界。<br />
+              <span className="text-2xl md:text-3xl text-gray-600 mt-4 block">成果を伸ばすために、時間を削減する。</span>
             </h2>
           </div>
 
@@ -129,8 +137,8 @@ export default function Home() {
           {/* Title & Lead */}
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6 text-[#1a1a1a]">
-              AIを活用して編集部の課題を解決。<br />
-              マーケティングを一気に加速させる
+              ストラテジーから始める。<br />
+              成果を伸ばす編集部を構築する
             </h2>
             <p className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-12">
               KAAANのAI編集部構築支援サービス
@@ -158,12 +166,22 @@ export default function Home() {
                       <p>
                         しかし、<strong>プロだからこそ</strong>、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
                       </p>
+                      <p className="mb-4 font-bold text-xl text-[#1a1a1a]">
+                        <strong>リザルトドリブンで成果を伸ばす。</strong>
+                      </p>
+                      <p className="mb-4">
+                        マーケティングの実務を知り尽くしたプロフェッショナルとして、<br className="hidden md:inline" />
+                        AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                      </p>
+                      <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-yellow-300 mt-6">
+                        <p className="font-bold mb-2 text-[#1a1a1a]">私たちのアプローチ：</p>
+                        <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                          <li><strong>現状を把握</strong> - プロジェクト全体のボトルネックを特定</li>
+                          <li><strong>ストラテジーから入る</strong> - マーケティング戦略を明確にし、成果を最大化する設計</li>
+                          <li><strong>フルスクラッチで仕組みを構築</strong> - 成果を伸ばし、プロジェクトチームの時間を削減する仕組みを構築</li>
+                        </ol>
+                      </div>
                     </div>
-                    
-                    <p className="font-bold text-xl text-[#1a1a1a]">
-                      マーケティングの実務を知り尽くしたプロフェッショナルとして、<br className="hidden md:inline" />
-                      AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-                    </p>
                     
                     <div className="grid sm:grid-cols-2 gap-6 mt-8">
                       {[
@@ -389,6 +407,7 @@ export default function Home() {
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
               KAAANが選ばれる、<br />
+              成果を伸ばすために、プロフェッショナルが伴走する。<br />
               3つの理由。
             </h2>
           </div>
@@ -553,14 +572,14 @@ export default function Home() {
       <section id="flow" className="py-32 bg-white scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1000px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
-            プロジェクトの進め方
+            ストラテジーから始める。成果を伸ばすロードマップ
           </h2>
 
           <div className="relative border-l-2 border-gray-200 ml-4 md:ml-0 md:border-l-0 space-y-12">
             {[
               { step: "01", title: "現状把握・診断", sub: "Phase 1", desc: "プロジェクト全体のボトルネックを特定（制作だけでなく、レビュー・承認・公開フローも含めて）。現状の制作フローを可視化し、マーケティングの成果を最大化するために、どこをAI化すべきかを診断" },
-              { step: "02", title: "マーケティング戦略策定・プロジェクト設計", sub: "Phase 2", desc: "ボトルネックに合わせた最適な生産量を設計（個人の生産性向上ではなく、マーケティングの成果を最大化する設計）。AI前提のコンテンツ戦略、新しいワークフロー、必要なツールスタックを設計" },
-              { step: "03", title: "AIシステム構築", sub: "Phase 3", desc: "レビュー・品質管理もAI化（制作だけでなく、チェック工程もスケールさせる）。実際に運用可能なプロンプトチェーン、データベース、品質チェックフローを構築し、納品" },
+              { step: "02", title: "ストラテジーから入る - マーケティング戦略策定・プロジェクト設計", sub: "Phase 2", desc: "現状を把握してストラテジーを明確にする。ボトルネックに合わせた最適な生産量を設計（個人の生産性向上ではなく、マーケティングの成果を最大化する設計）。AI前提のコンテンツ戦略、新しいワークフロー、必要なツールスタックを設計。組織をどう作っていくのか、プロジェクトをどう設計していくのかを明確にする" },
+              { step: "03", title: "フルスクラッチで仕組みを構築", sub: "Phase 3", desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みを構築。データとミキシングしてアウトプットまで作っていく、レビュー、それを一気通貫するタイプで構築。レビュー・品質管理もAI化（制作だけでなく、チェック工程もスケールさせる）。実際に運用可能なプロンプトチェーン、データベース、品質チェックフローを構築し、納品" },
               { step: "04", title: "レクチャー・チューニング", sub: "Phase 4", desc: "構築したシステムを実際の業務で使いこなせるよう、ハンズオンワークショップと実案件での並走を通じてサポート。マーケティングの成果を最大化するために、プロンプトやワークフローを継続的にチューニング・最適化" },
               { step: "05", title: "自走化", sub: "Phase 5", desc: "完全な内製化を確認し、プロジェクトは完了。以降は対等なパートナーとして、必要に応じてナレッジを共有" },
             ].map((item, i) => (
