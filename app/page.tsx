@@ -241,16 +241,19 @@ export default function Home() {
                 items: ["n8n/Zapierによる自動化ワークフロー", "課題に応じた専用ツール開発", "API連携・システム実装"]
               }
             ].map((item, i) => (
-              <div key={i} className="bg-[#262626] p-8 rounded-xl border border-[#333] hover:border-yellow-300 transition-all group hover:-translate-y-1 duration-300">
-                <div className="w-12 h-12 rounded-lg bg-[#333] flex items-center justify-center mb-6 group-hover:bg-yellow-300 transition-colors">
-                  <item.icon className="w-6 h-6 text-white group-hover:text-black transition-colors" />
+              <div key={i} className="bg-transparent border border-gray-800 p-8 rounded-2xl hover:border-yellow-300 transition-all duration-300 group hover:bg-gray-900/30">
+                <div className="mb-6">
+                  <item.icon className="w-10 h-10 text-yellow-300 mb-4" strokeWidth={1.5} />
+                  <h4 className="font-bold text-xl text-white mb-2 leading-tight">{item.title}</h4>
+                  <p className="text-sm text-gray-400 font-medium">{item.desc}</p>
                 </div>
-                <h4 className="font-bold text-lg mb-2 text-white">{item.title}</h4>
-                <p className="text-sm text-gray-400 mb-6 font-medium leading-relaxed">{item.desc}</p>
-                <ul className="space-y-3">
+                
+                <div className="w-full h-px bg-gray-800 mb-6 group-hover:bg-gray-700 transition-colors"></div>
+
+                <ul className="space-y-4">
                   {item.items.map((subItem, j) => (
-                    <li key={j} className="flex items-start gap-3 text-sm text-gray-300">
-                      <Check className="w-4 h-4 text-yellow-300 shrink-0 mt-0.5" />
+                    <li key={j} className="flex items-start gap-3 text-sm text-gray-300 leading-relaxed">
+                      <Check className="w-4 h-4 text-gray-600 mt-0.5 shrink-0 group-hover:text-yellow-300 transition-colors" />
                       <span>{subItem}</span>
                     </li>
                   ))}
