@@ -36,7 +36,7 @@ export default function Home() {
       {/* 1. Hero Section - Impact & Expectation */}
       <section className="relative pt-20 pb-20 md:pt-20 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="max-w-6xl">
+          <div className="max-w-6xl mt-12 md:mt-16">
             <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-10">
               時間を半分に、成果を倍にすることから始める。
             </p>
