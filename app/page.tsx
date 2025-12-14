@@ -162,16 +162,6 @@ export default function Home() {
                     しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
                   </p>
                 </div>
-                
-                <div className="pl-6 md:pl-8 border-l-2 border-black">
-                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-6 leading-tight">
-                    リザルトドリブンで<br />成果を伸ばす。
-                  </h4>
-                  <p>
-                    マーケティングの実務を知り尽くしたプロフェッショナルとして、
-                    AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-                  </p>
-                </div>
               </div>
 
               {/* Approach Grid */}
