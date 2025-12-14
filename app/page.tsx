@@ -143,31 +143,32 @@ export default function Home() {
           </div>
 
           {/* Philosophy Content - Modern Layout */}
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-24 items-start">
-            <div className="lg:w-5/12 sticky top-32">
-              <h3 className="text-3xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-8">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24 mb-24 items-start">
+            <div className="md:w-5/12 sticky top-32">
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-8">
                 「AIのプロ」<br />ではない。<br />
                 <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
               </h3>
-              <div className="w-20 h-1 bg-yellow-300"></div>
             </div>
 
-            <div className="lg:w-7/12 pt-4">
-              <div className="space-y-10 text-lg leading-relaxed text-gray-600">
-                <div>
-                  <p className="mb-6">
-                    私たちは<strong className="text-black border-b border-gray-200">マーケティングのプロ</strong>であって、AIの専門家ではありません。
-                  </p>
-                  <p>
-                    しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
-                  </p>
-                </div>
+            <div className="md:w-7/12 pt-2 md:pt-4">
+              <div className="space-y-8 text-lg leading-relaxed text-gray-600 mb-16">
+                <p>
+                  私たちは<strong className="text-black border-b border-gray-200">マーケティングのプロ</strong>であって、AIの専門家ではありません。
+                </p>
+                <p>
+                  しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
+                </p>
+                <p>
+                  マーケティングの実務を知り尽くしたプロフェッショナルとして、
+                  AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                </p>
               </div>
 
               {/* Approach Grid */}
-              <div className="mt-20">
-                <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8">Our Approach</p>
-                <div className="grid md:grid-cols-1 gap-8">
+              <div>
+                <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8 pb-2 border-b border-gray-100">Our Approach</p>
+                <div className="space-y-10">
                   {[
                     { 
                       step: "01", 
@@ -185,13 +186,13 @@ export default function Home() {
                       desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みをフルスクラッチで構築" 
                     }
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-6 group">
-                      <span className="text-4xl font-bold text-gray-200 group-hover:text-yellow-300 transition-colors duration-300 leading-none font-mono">
+                    <div key={i} className="flex gap-6 group">
+                      <span className="text-2xl font-bold text-gray-300 font-mono pt-1">
                         {item.step}
                       </span>
-                      <div className="pt-2">
+                      <div>
                         <h5 className="text-xl font-bold text-black mb-2">{item.title}</h5>
-                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                        <p className="text-gray-600 leading-relaxed text-base">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -199,16 +200,16 @@ export default function Home() {
               </div>
 
               {/* 4 Keywords Grid */}
-              <div className="grid grid-cols-2 gap-4 mt-16 pt-16 border-t border-gray-100">
+              <div className="grid grid-cols-2 gap-x-8 gap-y-4 mt-16 pt-10 border-t border-gray-100">
                 {[
                   { text: "量と品質の両立", icon: Target },
                   { text: "内製化・脱属人化", icon: Users },
                   { text: "ボトルネック解消", icon: Zap },
                   { text: "成果最大化チーム", icon: TrendingUp }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 py-2">
-                    <item.icon className="w-5 h-5 text-gray-400" />
-                    <span className="font-bold text-sm text-gray-800">{item.text}</span>
+                  <div key={i} className="flex items-center gap-3">
+                    <item.icon className="w-4 h-4 text-black" />
+                    <span className="font-medium text-sm text-gray-800">{item.text}</span>
                   </div>
                 ))}
               </div>
