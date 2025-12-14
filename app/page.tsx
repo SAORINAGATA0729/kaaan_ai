@@ -38,7 +38,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
             <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-4">
-              時間を半分に、成果を倍にすることから始める。
+              施策にかかる時間を半分に。成果を倍にすることから始める。
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
