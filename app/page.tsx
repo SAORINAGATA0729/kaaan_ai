@@ -145,9 +145,6 @@ export default function Home() {
           {/* Philosophy Content - Modern Layout */}
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-24 items-start">
             <div className="lg:w-5/12 sticky top-32">
-              <span className="inline-block px-3 py-1 bg-black text-white text-xs font-bold tracking-widest uppercase mb-6 rounded-sm">
-                KAAAN's Philosophy
-              </span>
               <h3 className="text-3xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-8">
                 「AIのプロ」<br />ではない。<br />
                 <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
