@@ -241,16 +241,16 @@ export default function Home() {
                 items: ["n8n/Zapierによる自動化ワークフロー", "課題に応じた専用ツール開発", "API連携・システム実装"]
               }
             ].map((item, i) => (
-              <div key={i} className="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-yellow-300 transition-colors group">
-                <div className="w-14 h-14 rounded-xl bg-gray-800 flex items-center justify-center mb-6 group-hover:bg-yellow-300 transition-colors">
-                  <item.icon className="w-7 h-7 text-white group-hover:text-black transition-colors" />
+              <div key={i} className="bg-[#262626] p-8 rounded-xl border border-[#333] hover:border-yellow-300 transition-all group hover:-translate-y-1 duration-300">
+                <div className="w-12 h-12 rounded-lg bg-[#333] flex items-center justify-center mb-6 group-hover:bg-yellow-300 transition-colors">
+                  <item.icon className="w-6 h-6 text-white group-hover:text-black transition-colors" />
                 </div>
-                <h4 className="font-bold text-xl mb-2 text-white">{item.title}</h4>
-                <p className="text-sm text-gray-400 mb-6 font-medium">{item.desc}</p>
+                <h4 className="font-bold text-lg mb-2 text-white">{item.title}</h4>
+                <p className="text-sm text-gray-400 mb-6 font-medium leading-relaxed">{item.desc}</p>
                 <ul className="space-y-3">
                   {item.items.map((subItem, j) => (
                     <li key={j} className="flex items-start gap-3 text-sm text-gray-300">
-                      <span className="w-1.5 h-1.5 bg-yellow-300 rounded-full mt-1.5 shrink-0"></span>
+                      <Check className="w-4 h-4 text-yellow-300 shrink-0 mt-0.5" />
                       <span>{subItem}</span>
                     </li>
                   ))}
