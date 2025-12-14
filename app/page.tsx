@@ -72,11 +72,13 @@ export default function Home() {
       <section id="problem" className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight tracking-tight">
+            <p className="text-xs font-bold text-yellow-500 tracking-widest uppercase mb-4">
+              Current Issue
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight tracking-tight">
               成果を出したい。<br className="md:hidden" />
               でも、リソースは限界。
             </h2>
-            <div className="w-24 h-1.5 bg-yellow-300 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
