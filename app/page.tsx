@@ -42,7 +42,7 @@ export default function Home() {
             </p>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
-              <span className="block">AI編集部構築支援サービス</span>
+              <span className="block">AI編集部構築サービス</span>
             </h1>
 
             <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
@@ -254,7 +254,7 @@ export default function Home() {
                  <div className="absolute -top-4 -right-4 bg-yellow-300 text-black text-xs font-bold px-4 py-1 rounded-full shadow-lg">Recommended</div>
                  <div className="text-center mb-8 pb-6 border-b border-gray-700">
                    <p className="text-sm font-bold text-yellow-300 uppercase tracking-widest mb-2">KAAAN Service</p>
-                   <h4 className="text-xl font-bold text-white">AI編集部構築支援</h4>
+                   <h4 className="text-xl font-bold text-white">AI編集部構築</h4>
                 </div>
                 <ul className="space-y-6">
                   <li className="flex gap-4">
