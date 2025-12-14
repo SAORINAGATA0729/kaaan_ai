@@ -148,7 +148,7 @@ export default function Home() {
                 { text: "量と品質の両立", icon: Target },
                 { text: "内製化・脱属人化", icon: Users },
                 { text: "ボトルネック解消", icon: Zap },
-                { text: "成果最大化チーム", icon: TrendingUp }
+                { text: "事業成果の最大化", icon: TrendingUp }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center gap-2 text-center">
                   <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-2">
