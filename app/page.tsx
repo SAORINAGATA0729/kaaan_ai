@@ -131,35 +131,37 @@ export default function Home() {
       <section id="solution" className="py-24 md:py-32 bg-white relative scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           
-          {/* Title Area: Result Driven First */}
-          <div className="text-center mb-24 md:mb-32">
-            <span className="inline-block py-1 px-3 border border-black rounded-full text-xs font-bold tracking-widest uppercase mb-6">
+          {/* Title Area: Left Aligned for Clean Look */}
+          <div className="mb-24 md:mb-32">
+            <span className="inline-block py-1 px-3 border border-black rounded-full text-xs font-bold tracking-widest uppercase mb-8">
               Result Driven
             </span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-[#1a1a1a]">
-              AIツールの導入ではない。<br className="hidden md:block" />
-              成果を出すための<br className="md:hidden" />「組織作り」を。
-            </h2>
-            <p className="text-xl md:text-2xl font-medium text-gray-500 mb-12">
-              マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
-              AIを武器に、成果を加速させる組織へと変革する。
-            </p>
-            
-            {/* 4 Keywords Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto mt-16">
-              {[
-                { text: "量と品質の両立", icon: Target },
-                { text: "内製化・脱属人化", icon: Users },
-                { text: "ボトルネック解消", icon: Zap },
-                { text: "成果最大化チーム", icon: TrendingUp }
-              ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-3 text-center group">
-                  <div className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors duration-300">
-                    <item.icon className="w-7 h-7" />
+            <div className="flex flex-col lg:flex-row gap-16 items-start">
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-8 text-[#1a1a1a] tracking-tight">
+                  AIツールの導入ではない。<br />
+                  成果を出すための<br />「組織作り」を。
+                </h2>
+                <p className="text-xl md:text-2xl font-medium text-gray-500 leading-relaxed">
+                  マーケティング戦略から、施策の実行まで。<br />
+                  AIを武器に、成果を加速させる組織へと変革する。
+                </p>
+              </div>
+              
+              {/* 4 Keywords Grid - Right Side */}
+              <div className="lg:w-1/2 grid grid-cols-2 gap-4 pt-2">
+                {[
+                  { text: "量と品質の両立", icon: Target },
+                  { text: "内製化・脱属人化", icon: Users },
+                  { text: "ボトルネック解消", icon: Zap },
+                  { text: "成果最大化チーム", icon: TrendingUp }
+                ].map((item, i) => (
+                  <div key={i} className="flex flex-col items-start p-6 bg-gray-50 rounded-xl group hover:bg-black hover:text-white transition-colors duration-300">
+                    <item.icon className="w-6 h-6 mb-4 group-hover:text-yellow-300 transition-colors" />
+                    <span className="font-bold text-sm">{item.text}</span>
                   </div>
-                  <span className="font-bold text-base text-gray-800">{item.text}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 
