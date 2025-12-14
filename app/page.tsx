@@ -139,11 +139,11 @@ export default function Home() {
             </h2>
             <p className="text-lg md:text-xl font-medium text-gray-500 mb-12 leading-relaxed">
               マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
-              AIを武器に、成果を加速させる組織へと変革する。
+              AIを武器に、事業成長を加速させる組織へと変革する。
             </p>
             
             {/* 4 Keywords Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-3xl mx-auto mb-20">
               {[
                 { text: "量と品質の両立", icon: Target },
                 { text: "内製化・脱属人化", icon: Users },
@@ -158,6 +158,9 @@ export default function Home() {
                 </div>
               ))}
             </div>
+
+            {/* Section Divider */}
+            <div className="w-full h-px bg-gray-200 max-w-2xl mx-auto"></div>
           </div>
 
           {/* Philosophy Content - Modern Layout */}
