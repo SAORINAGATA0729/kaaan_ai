@@ -132,7 +132,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           
           {/* Title Area */}
-          <div className="text-center mb-24 md:mb-32">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 text-[#1a1a1a]">
               AIツールの導入ではない。<br className="hidden md:block" />
               成果を出すための<br className="md:hidden" />「組織作り」を。
