@@ -159,41 +159,42 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Section Divider */}
-            <div className="w-full h-px bg-gray-200 max-w-2xl mx-auto mb-24"></div>
           </div>
+        </div>
+      </section>
 
+      {/* 4. Philosophy Section - Gray Background */}
+      <section className="py-24 md:py-32 bg-gray-50 border-t border-gray-100">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           {/* Philosophy Section - Simple Left/Right Layout */}
-          <div className="bg-gray-50 rounded-3xl p-8 md:p-12 lg:p-16 mb-24">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
-              {/* Left: Heading */}
-              <div className="lg:w-5/12 sticky top-8">
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-                  「AIのプロ」ではない。<br />
-                  <span className="text-gray-400">マーケティングのプロが作る仕組み。</span>
-                </h3>
-              </div>
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start mb-24">
+            {/* Left: Heading */}
+            <div className="lg:w-5/12 sticky top-8">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+                「AIのプロ」ではない。<br />
+                <span className="text-gray-400">マーケティングのプロが<br />作る仕組み。</span>
+              </h3>
+            </div>
 
-              {/* Right: Body Text */}
-              <div className="lg:w-7/12 pt-2">
-                <div className="space-y-8 text-lg leading-relaxed text-gray-700">
-                  <p>
-                    私たちは<strong className="text-black border-b border-gray-300">マーケティングのプロ</strong>であって、AIの専門家ではありません。
-                  </p>
-                  <p>
-                    しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
-                  </p>
-                  <p>
-                    マーケティングの実務を知り尽くしたプロフェッショナルとして、
-                    AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-                  </p>
-                </div>
+            {/* Right: Body Text */}
+            <div className="lg:w-7/12 pt-2">
+              <div className="space-y-8 text-lg leading-relaxed text-gray-700">
+                <p>
+                  私たちは<strong className="text-black border-b border-gray-300">マーケティングのプロ</strong>であって、AIの専門家ではありません。
+                </p>
+                <p>
+                  しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
+                </p>
+                <p>
+                  マーケティングの実務を知り尽くしたプロフェッショナルとして、
+                  AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Approach Section - Separated */}
-          <div className="mb-32">
+          {/* Approach Section */}
+          <div>
             <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-12 text-center">Our Approach</p>
             <div className="grid md:grid-cols-3 gap-8">
               {[
@@ -213,7 +214,7 @@ export default function Home() {
                   desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みをフルスクラッチで構築" 
                 }
               ].map((item, i) => (
-                <div key={i} className="bg-white p-8 border-t-2 border-black group hover:bg-gray-50 transition-colors">
+                <div key={i} className="bg-white p-8 border-t-2 border-black group hover:shadow-lg transition-all">
                   <span className="text-4xl font-bold text-gray-200 font-mono block mb-6 group-hover:text-black transition-colors duration-300">
                     {item.step}
                   </span>
@@ -223,6 +224,12 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Comparison Section (Previously part of Solution) */}
+      <section className="py-24 md:py-32 bg-white scroll-mt-20">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
 
           {/* Comparison Table (Visual) */}
           <div className="mb-32">
