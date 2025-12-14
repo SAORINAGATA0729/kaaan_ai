@@ -112,14 +112,14 @@ export default function Home() {
                 icon: BarChart
               }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 border-l-4 border-gray-300 hover:border-black transition-colors shadow-sm group">
+              <div key={i} className="bg-white p-8 border-l-4 border-gray-300 hover:border-black transition-colors shadow-sm group h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4 min-h-[3.5rem]">
                   <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-yellow-300 transition-colors shrink-0 mt-1">
                     <item.icon className="w-5 h-5 text-gray-600 group-hover:text-black transition-colors" />
                   </div>
                   <h3 className="font-bold text-lg leading-tight pt-1">{item.title}</h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-sm">
+                <p className="text-gray-600 leading-relaxed text-sm flex-grow min-h-[4.5rem]">
                   {item.desc}
                 </p>
               </div>
