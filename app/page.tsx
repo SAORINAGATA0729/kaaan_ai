@@ -73,7 +73,7 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
-              結果を残したい。<br className="md:hidden" />
+              成果を出したい。<br className="md:hidden" />
               でも、リソースは限界。
             </h2>
           </div>
