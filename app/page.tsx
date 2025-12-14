@@ -370,7 +370,6 @@ export default function Home() {
           {/* ツールスタック */}
           <div className="max-w-[800px] mx-auto mt-20">
             <h3 className="text-xl font-bold mb-10 text-center flex items-center justify-center gap-3 text-[#1a1a1a]">
-              <Settings className="w-6 h-6" />
               使用するAIツール
             </h3>
             
