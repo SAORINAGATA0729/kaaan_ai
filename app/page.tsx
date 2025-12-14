@@ -150,11 +150,11 @@ export default function Home() {
                 { text: "ボトルネック解消", icon: Zap },
                 { text: "事業成果の最大化", icon: TrendingUp }
               ].map((item, i) => (
-                <div key={i} className="flex flex-col items-center gap-2 text-center">
-                  <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center mb-2">
-                    <item.icon className="w-6 h-6 text-black" />
+                <div key={i} className="flex flex-col items-center gap-3 text-center">
+                  <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-2">
+                    <item.icon className="w-8 h-8 text-black" />
                   </div>
-                  <span className="font-bold text-sm text-gray-800">{item.text}</span>
+                  <span className="font-bold text-base text-gray-800">{item.text}</span>
                 </div>
               ))}
             </div>
