@@ -179,7 +179,7 @@ export default function Home() {
             </div>
 
             {/* Right: Body Text */}
-            <div className="lg:w-7/12 pt-2">
+            <div className="lg:w-7/12 pt-2 text-center lg:text-left">
               <div className="space-y-12 text-lg md:text-xl leading-loose text-gray-700 font-medium">
                 <p>
                   私たちは<strong className="text-black border-b border-gray-300 pb-1">マーケティングのプロ</strong>であって、AIの専門家ではありません。
