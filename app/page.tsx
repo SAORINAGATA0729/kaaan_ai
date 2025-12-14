@@ -35,13 +35,8 @@ export default function Home() {
 
       {/* 1. Hero Section - Impact & Expectation */}
       <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white">
-        <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-5 font-medium mx-auto px-6 md:px-8">
-          マーケティングのプロフェッショナルが、<br />
-          AIを武器に成果を出す編集部へと構築。<br />
-          自走できるチームへと導きます。
-        </p>
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-          <div className="max-w-6xl mt-12 md:mt-16">
+          <div className="max-w-6xl">
             <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-0">
               時間を半分に、成果を倍にすることから始める。
             </p>
@@ -49,6 +44,12 @@ export default function Home() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight -mt-2 mb-8">
               <span className="block">AI編集部構築支援サービス</span>
             </h1>
+
+            <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
+              マーケティングのプロフェッショナルが、<br />
+              AIを武器に成果を出す編集部へと構築。<br />
+              自走できるチームへと導きます。
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
