@@ -37,19 +37,13 @@ export default function Home() {
       <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
-            <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-4">
+            <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-6">
               施策にかかる時間を半分に。成果を倍にすることから始める。
             </p>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-10">
               <span className="block">AI編集部構築支援サービス</span>
             </h1>
-
-            <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
-              マーケティングのプロフェッショナルが、<br />
-              AIを武器に成果を出す編集部へと構築。<br />
-              自走できるチームへと導きます。
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
