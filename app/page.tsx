@@ -128,74 +128,103 @@ export default function Home() {
       </section>
 
       {/* 3. Solution Section - Concept & Logic */}
-      <section id="solution" className="py-32 bg-white relative overflow-hidden scroll-mt-20">
-        <div className="container mx-auto px-6 md:px-8 relative z-10 max-w-[1200px]">
-          {/* Title & Lead */}
-          <div className="text-center mb-20">
+      <section id="solution" className="py-24 md:py-32 bg-white relative scroll-mt-20">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
+          
+          {/* Title Area */}
+          <div className="text-center mb-24 md:mb-32">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[#1a1a1a]">
               マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
               AIを武器に、成果を加速させる組織へと変革する。
             </h2>
-            <p className="text-xl md:text-2xl font-bold text-[#1a1a1a] mb-12">
+            <p className="text-lg md:text-xl font-medium text-gray-500">
               KAAANのAI編集部構築支援サービス
             </p>
-            
-            <div className="bg-white rounded-3xl p-10 md:p-14 max-w-4xl mx-auto text-left relative overflow-hidden border border-gray-100 shadow-xl">
-               <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-300/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
-               
-               <div className="relative z-10">
-                 <div className="inline-flex items-center gap-2 bg-black text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6">
-                   <span className="w-2 h-2 rounded-full bg-yellow-300"></span>
-                   KAAAN's Philosophy
-                 </div>
-                 
-                 <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                   「AIのプロ」ではない。<br />
-                   <span className="border-b-4 border-yellow-300">マーケティングのプロ</span>が作る仕組み。
-                 </h3>
-                 
-                 <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
-                    <div>
-                      <p className="mb-4">
-                        私たちは<strong>マーケティングのプロ</strong>であって、AIの専門家ではありません。
-                      </p>
-                      <p>
-                        しかし、<strong>プロだからこそ</strong>、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
-                      </p>
-                      <p className="mb-4 font-bold text-xl text-[#1a1a1a]">
-                        <strong>リザルトドリブンで成果を伸ばす。</strong>
-                      </p>
-                      <p className="mb-4">
-                        マーケティングの実務を知り尽くしたプロフェッショナルとして、<br className="hidden md:inline" />
-                        AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-                      </p>
-                      <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-yellow-300 mt-6">
-                        <p className="font-bold mb-2 text-[#1a1a1a]">私たちのアプローチ：</p>
-                        <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                          <li><strong>現状を把握</strong> - プロジェクト全体のボトルネックを特定</li>
-                          <li><strong>ストラテジーから入る</strong> - マーケティング戦略を明確にし、成果を最大化する設計</li>
-                          <li><strong>フルスクラッチで仕組みを構築</strong> - 成果を伸ばし、プロジェクトチームの時間を削減する仕組みを構築</li>
-                        </ol>
+          </div>
+
+          {/* Philosophy Content - Modern Layout */}
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-24 items-start">
+            <div className="lg:w-5/12 sticky top-32">
+              <span className="inline-block px-3 py-1 bg-black text-white text-xs font-bold tracking-widest uppercase mb-6 rounded-sm">
+                KAAAN's Philosophy
+              </span>
+              <h3 className="text-3xl md:text-5xl font-bold leading-[1.15] tracking-tight mb-8">
+                「AIのプロ」<br />ではない。<br />
+                <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
+              </h3>
+              <div className="w-20 h-1 bg-yellow-300"></div>
+            </div>
+
+            <div className="lg:w-7/12 pt-4">
+              <div className="space-y-10 text-lg leading-relaxed text-gray-600">
+                <div>
+                  <p className="mb-6">
+                    私たちは<strong className="text-black border-b border-gray-200">マーケティングのプロ</strong>であって、AIの専門家ではありません。
+                  </p>
+                  <p>
+                    しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
+                  </p>
+                </div>
+                
+                <div className="pl-6 md:pl-8 border-l-2 border-black">
+                  <h4 className="text-2xl md:text-3xl font-bold text-black mb-6 leading-tight">
+                    リザルトドリブンで<br />成果を伸ばす。
+                  </h4>
+                  <p>
+                    マーケティングの実務を知り尽くしたプロフェッショナルとして、
+                    AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                  </p>
+                </div>
+              </div>
+
+              {/* Approach Grid */}
+              <div className="mt-20">
+                <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8">Our Approach</p>
+                <div className="grid md:grid-cols-1 gap-8">
+                  {[
+                    { 
+                      step: "01", 
+                      title: "現状を把握", 
+                      desc: "プロジェクト全体のボトルネックを特定" 
+                    },
+                    { 
+                      step: "02", 
+                      title: "戦略から入る", 
+                      desc: "マーケティング戦略を明確にし、成果を最大化する設計" 
+                    },
+                    { 
+                      step: "03", 
+                      title: "仕組みを構築", 
+                      desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みをフルスクラッチで構築" 
+                    }
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-6 group">
+                      <span className="text-4xl font-bold text-gray-200 group-hover:text-yellow-300 transition-colors duration-300 leading-none font-mono">
+                        {item.step}
+                      </span>
+                      <div className="pt-2">
+                        <h5 className="text-xl font-bold text-black mb-2">{item.title}</h5>
+                        <p className="text-gray-600 leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
-                    
-                    <div className="grid sm:grid-cols-2 gap-6 mt-8">
-                      {[
-                        { text: "量と品質の両立", icon: Target },
-                        { text: "内製化・脱属人化", icon: Users },
-                        { text: "ボトルネック解消", icon: Zap },
-                        { text: "成果最大化チーム", icon: TrendingUp }
-                      ].map((item, i) => (
-                        <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 border border-gray-100 hover:border-black transition-colors group">
-                          <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center border border-gray-200 group-hover:bg-yellow-300 group-hover:border-transparent transition-colors">
-                            <item.icon className="w-5 h-5 text-gray-600 group-hover:text-black" />
-                          </div>
-                          <span className="font-bold text-[#1a1a1a]">{item.text}</span>
-                        </div>
-                      ))}
-                    </div>
-                 </div>
-               </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 4 Keywords Grid */}
+              <div className="grid grid-cols-2 gap-4 mt-16 pt-16 border-t border-gray-100">
+                {[
+                  { text: "量と品質の両立", icon: Target },
+                  { text: "内製化・脱属人化", icon: Users },
+                  { text: "ボトルネック解消", icon: Zap },
+                  { text: "成果最大化チーム", icon: TrendingUp }
+                ].map((item, i) => (
+                  <div key={i} className="flex items-center gap-3 py-2">
+                    <item.icon className="w-5 h-5 text-gray-400" />
+                    <span className="font-bold text-sm text-gray-800">{item.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
