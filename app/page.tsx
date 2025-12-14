@@ -37,11 +37,11 @@ export default function Home() {
       <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl">
-            <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-6">
+            <p className="text-base md:text-lg text-gray-600 uppercase tracking-widest font-bold mb-3">
               施策にかかる時間を半分に。成果を倍にすることから始める。
             </p>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-10">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-12">
               <span className="block">AI編集部構築支援サービス</span>
             </h1>
             
