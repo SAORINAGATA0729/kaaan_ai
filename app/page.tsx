@@ -200,8 +200,9 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           {/* Heading */}
           <div className="text-center mb-20">
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#1a1a1a]">
-              成果を加速させる5つのシステム
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#1a1a1a] text-center">
+              事業成長を加速させる<br />
+              5つのシステム
             </h3>
             <p className="text-gray-500 text-lg">プロジェクトの課題に応じて、最適な基盤とツールを実装します。</p>
           </div>
