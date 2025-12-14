@@ -369,29 +369,40 @@ export default function Home() {
 
           {/* ツール */}
           <div className="max-w-[1000px] mx-auto mt-20">
-                <h3 className="text-xl font-bold mb-8 flex items-center gap-3 border-b border-gray-200 pb-4">
-                  <Settings className="w-6 h-6 text-black" />
-                  使用するツールスタック
+            <div className="bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100">
+              <div className="text-center mb-10">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 flex items-center justify-center gap-3 text-[#1a1a1a]">
+                  <Settings className="w-6 h-6" />
+                  Technology Stack
                 </h3>
-                <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                   {[
-                    { label: "AI Editors", name: "Cursor", icon: PenTool },
-                    { label: "LLM Models", name: "Claude / Gemini", icon: Zap },
-                    { label: "Knowledge", name: "Notion / Drive", icon: Database },
-                    { label: "Automation", name: "n8n / Zapier", icon: RefreshCw },
-                   ].map((item, i) => (
-                     <div key={i} className="flex flex-col items-center text-center group">
-                       <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-4 text-gray-700 group-hover:bg-[#1a1a1a] group-hover:text-white transition-colors duration-300 shadow-sm">
-                         <item.icon className="w-8 h-8" />
+                <p className="text-gray-500 text-sm font-medium">成果を最大化するための、最適なツール選定とアーキテクチャ</p>
+              </div>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                 {[
+                  { label: "AI Editor", name: "Cursor", icon: PenTool, desc: "AIネイティブ開発" },
+                  { label: "LLM", name: "Claude / Gemini", icon: Zap, desc: "推論・生成モデル" },
+                  { label: "Knowledge", name: "Notion / Drive", icon: Database, desc: "ナレッジ管理" },
+                  { label: "Automation", name: "n8n / Zapier", icon: RefreshCw, desc: "ワークフロー自動化" },
+                 ].map((item, i) => (
+                   <div key={i} className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-black transition-all group text-center flex flex-col items-center h-full justify-between">
+                     <div className="mb-4">
+                       <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-yellow-300 transition-colors duration-300">
+                         <item.icon className="w-6 h-6 text-gray-700 group-hover:text-black" />
                        </div>
-                       <p className="font-bold text-[#1a1a1a] text-lg">{item.name}</p>
-                       <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">{item.label}</p>
                      </div>
-                   ))}
-                </div>
-                <div className="mt-10 text-center border-t border-gray-100 pt-6">
-                  <p className="text-xs text-gray-500">※プロジェクトに応じて最適なツールを選定・開発します</p>
-                </div>
+                     <div>
+                       <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1">{item.label}</p>
+                       <p className="font-bold text-[#1a1a1a] text-lg mb-2 leading-tight">{item.name}</p>
+                       <p className="text-xs text-gray-500 font-medium">{item.desc}</p>
+                     </div>
+                   </div>
+                 ))}
+              </div>
+              <div className="mt-8 text-center">
+                <p className="text-xs text-gray-400">※プロジェクトの課題に応じて最適なツールを選定・開発します</p>
+              </div>
+            </div>
           </div>
 
         </div>
