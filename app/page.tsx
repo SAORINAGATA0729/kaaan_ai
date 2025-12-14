@@ -170,7 +170,7 @@ export default function Home() {
               <div className="lg:w-5/12 sticky top-8">
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-8">
                   「AIのプロ」ではない。<br />
-                  <span className="text-gray-400">マーケティングのプロが作る仕組み。</span>
+                  <span className="text-gray-400">マーケティングのプロが<br />作る仕組み。</span>
                 </h3>
                 <div className="space-y-6 text-lg leading-relaxed text-gray-600">
                   <p>
