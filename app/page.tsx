@@ -347,34 +347,51 @@ export default function Home() {
                     "課題に応じた専用ツール開発",
                     "API連携・システム実装"
                   ]
-                },
-                {
-                   // Technology Stack as the last item in the grid, spanning if needed or just styled differently
-                   title: "テクノロジースタック選定",
-                   icon: PenTool,
-                   isTechStack: true,
-                   items: [
-                     "最適なAIモデル・ツールの選定",
-                     "Cursor / Claude / n8n / Notion",
-                     "セキュアな開発環境の構築"
-                   ]
                 }
               ].map((item, i) => (
-                <div key={i} className={`bg-white border rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group ${item.isTechStack ? 'border-black bg-[#1a1a1a] text-white' : 'border-gray-200'}`}>
-                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 transition-colors ${item.isTechStack ? 'bg-yellow-300 text-black' : 'bg-gray-100 group-hover:bg-black group-hover:text-white'}`}>
+                <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
                     <item.icon className="w-6 h-6" />
                   </div>
-                  <h4 className={`font-bold text-lg mb-4 ${item.isTechStack ? 'text-white' : 'text-[#1a1a1a]'}`}>{item.title}</h4>
+                  <h4 className="font-bold text-lg mb-4 text-[#1a1a1a]">{item.title}</h4>
                   <ul className="space-y-3">
                     {item.items.map((subItem, j) => (
-                      <li key={j} className={`flex items-start gap-2 text-sm ${item.isTechStack ? 'text-gray-300' : 'text-gray-600'}`}>
-                        <span className={`w-1.5 h-1.5 rounded-full mt-1.5 shrink-0 ${item.isTechStack ? 'bg-yellow-300' : 'bg-gray-300 group-hover:bg-yellow-300'}`}></span>
+                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-1.5 shrink-0 group-hover:bg-yellow-300"></span>
                         <span>{subItem}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* ツールスタック */}
+          <div className="max-w-[800px] mx-auto mt-20 border-t border-gray-100 pt-16">
+            <h3 className="text-xl font-bold mb-10 text-center flex items-center justify-center gap-3 text-[#1a1a1a]">
+              <Settings className="w-6 h-6" />
+              Technology Stack
+            </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+               {[
+                { label: "AI Editor", name: "Cursor", icon: PenTool },
+                { label: "LLM", name: "Claude / Gemini", icon: Zap },
+                { label: "Knowledge", name: "Notion / Drive", icon: Database },
+                { label: "Automation", name: "n8n / Zapier", icon: RefreshCw },
+               ].map((item, i) => (
+                 <div key={i} className="flex flex-col items-center text-center group">
+                   <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mb-4 text-gray-700 group-hover:bg-[#1a1a1a] group-hover:text-white transition-colors duration-300 shadow-sm border border-gray-100">
+                     <item.icon className="w-8 h-8" />
+                   </div>
+                   <p className="font-bold text-[#1a1a1a] text-lg mb-1">{item.name}</p>
+                   <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{item.label}</p>
+                 </div>
+               ))}
+            </div>
+            <div className="mt-10 text-center">
+              <p className="text-xs text-gray-400">※プロジェクトの課題に応じて最適なツールを選定・開発します</p>
             </div>
           </div>
 
