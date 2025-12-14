@@ -34,22 +34,21 @@ export default function Home() {
       <LPHeader />
 
       {/* 1. Hero Section - Impact & Expectation */}
-      <section className="relative pt-20 pb-20 md:pt-20 md:pb-32 bg-white">
+      <section className="relative pt-20 pb-20 md:pt-48 md:pb-32 bg-white">
+        <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-5 font-medium mx-auto px-6 md:px-8">
+          マーケティングのプロフェッショナルが、<br />
+          AIを武器に成果を出す編集部へと構築。<br />
+          自走できるチームへと導きます。
+        </p>
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="max-w-6xl mt-12 md:mt-16">
-            <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-10">
+            <p className="text-sm md:text-base text-gray-600 uppercase tracking-widest font-bold mb-0">
               時間を半分に、成果を倍にすることから始める。
             </p>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight -mt-2 mb-8">
               <span className="block">AI編集部構築支援サービス</span>
             </h1>
-
-            <p className="text-lg md:text-xl text-[#1a1a1a] max-w-2xl leading-relaxed mb-10 font-medium">
-              マーケティングのプロフェッショナルが、<br />
-              AIを武器に成果を出す編集部へと構築。<br />
-              自走できるチームへと導きます。
-            </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="h-14 px-8 rounded-full text-base font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
@@ -73,9 +72,8 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
-              やりたい施策は山積み。<br className="md:hidden" />
-              でも、リソースは限界。<br />
-              <span className="text-2xl md:text-3xl text-gray-600 mt-4 block">成果を伸ばすために、時間を削減する。</span>
+              成果を出したい。<br className="md:hidden" />
+              でも、リソースは限界。
             </h2>
           </div>
 
