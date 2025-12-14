@@ -166,8 +166,7 @@ export default function Home() {
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-8">
                   「AIのプロ」<br />
                   ではない。<br />
-                  <span className="text-gray-400">マーケティングの<br />
-                  プロが作る仕組み。</span>
+                  <span className="text-gray-400">マーケティングのプロが<br />作る仕組み。</span>
                 </h3>
               </div>
 
