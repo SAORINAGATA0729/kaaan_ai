@@ -135,7 +135,7 @@ export default function Home() {
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 text-[#1a1a1a]">
               AIツールの導入ではない。<br className="hidden md:block" />
-              成果を出すための<br className="md:hidden" />「組織作り」を。
+              事業成長を実現するための<br className="md:hidden" />「組織作り」を。
             </h2>
             <p className="text-lg md:text-xl font-medium text-gray-500 mb-12 leading-relaxed">
               マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
