@@ -133,12 +133,13 @@ export default function Home() {
           
           {/* Title Area */}
           <div className="text-center mb-24 md:mb-32">
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-[#1a1a1a]">
-              マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
-              AIを武器に、成果を加速させる組織へ。
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 text-[#1a1a1a]">
+              AIツールの導入ではない。<br className="hidden md:block" />
+              成果を出すための<br className="md:hidden" />「組織作り」を。
             </h2>
-            <p className="text-lg md:text-xl font-medium text-gray-500 mb-12">
-              KAAANのAI編集部構築支援サービス
+            <p className="text-lg md:text-xl font-medium text-gray-500 mb-12 leading-relaxed">
+              マーケティング戦略から、施策の実行まで。<br className="hidden md:block" />
+              AIを武器に、成果を加速させる組織へと変革する。
             </p>
             
             {/* 4 Keywords Grid */}
