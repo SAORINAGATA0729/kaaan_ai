@@ -168,12 +168,14 @@ export default function Home() {
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           {/* Philosophy Section - Simple Left/Right Layout */}
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
-            {/* Left: Heading */}
-            <div className="lg:w-5/12">
-              <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight tracking-tight mb-8 lg:mb-0 whitespace-nowrap">
-                AIのプロではない。<br />
-                <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
-              </h3>
+            {/* Left: Heading (Boxed) */}
+            <div className="lg:w-5/12 flex items-center justify-center">
+              <div className="border border-gray-300 p-12 md:p-16 aspect-square flex items-center justify-center w-full max-w-[500px] bg-white">
+                <h3 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight tracking-tight whitespace-nowrap text-center">
+                  AIのプロではない。<br />
+                  <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
+                </h3>
+              </div>
             </div>
 
             {/* Right: Body Text */}
