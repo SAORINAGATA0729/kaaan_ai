@@ -618,7 +618,7 @@ export default function Home() {
       </section>
 
       {/* 9. FAQ Section */}
-      <section className="py-32 bg-white border-t border-gray-100 scroll-mt-20">
+      <section className="py-32 bg-[#f9f9f9] border-t border-gray-100 scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[800px]">
           <h2 className="text-3xl md:text-5xl font-bold mb-20 text-center tracking-tight">
             よくある質問
