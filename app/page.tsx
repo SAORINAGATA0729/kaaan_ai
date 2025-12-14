@@ -199,6 +199,75 @@ export default function Home() {
       <section className="py-24 md:py-32 bg-white scroll-mt-20">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
 
+          {/* 提供するもの Grid */}
+          <div className="mb-32">
+            <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#1a1a1a]">提供するもの</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "インプットデータ基盤構築",
+                  icon: Database,
+                  items: [
+                    "ナレッジ管理基盤 (Notion/Drive)",
+                    "過去記事・動画・議事録の格納",
+                    "AI用データクレンジング・構造化"
+                  ]
+                },
+                {
+                  title: "マーケティング設計",
+                  icon: Target,
+                  items: [
+                    "ペルソナ・カスタマージャーニー再設計",
+                    "戦略に基づくコンテンツ基盤構築",
+                    "AIが参照可能な構造化データ作成"
+                  ]
+                },
+                {
+                  title: "プロンプトチェーン構築",
+                  icon: Zap,
+                  items: [
+                    "企画→構成→執筆→編集の自動化",
+                    "独自データを活用するプロンプト設計",
+                    "高品質・高精度な出力チューニング"
+                  ]
+                },
+                {
+                  title: "品質管理フロー構築",
+                  icon: Check,
+                  items: [
+                    "ファクトチェックの仕組み化",
+                    "ハウスルール順守の自動チェック",
+                    "人間による最終確認フロー設計"
+                  ]
+                },
+                {
+                  title: "カスタムツール開発",
+                  icon: Settings,
+                  items: [
+                    "n8n/Zapierによる自動化ワークフロー",
+                    "課題に応じた専用ツール開発",
+                    "API連携・システム実装"
+                  ]
+                }
+              ].map((item, i) => (
+                <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group">
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-lg mb-4 text-[#1a1a1a]">{item.title}</h4>
+                  <ul className="space-y-3">
+                    {item.items.map((subItem, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-1.5 shrink-0 group-hover:bg-yellow-300"></span>
+                        <span>{subItem}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Comparison Table (Visual) */}
           <div className="mb-32">
             <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#1a1a1a]">一般的なAIツール導入とKAAANの違い</h3>
@@ -295,75 +364,6 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-
-          {/* 提供するもの Grid */}
-          <div className="mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center text-[#1a1a1a]">提供するもの</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "インプットデータ基盤構築",
-                  icon: Database,
-                  items: [
-                    "ナレッジ管理基盤 (Notion/Drive)",
-                    "過去記事・動画・議事録の格納",
-                    "AI用データクレンジング・構造化"
-                  ]
-                },
-                {
-                  title: "マーケティング設計",
-                  icon: Target,
-                  items: [
-                    "ペルソナ・カスタマージャーニー再設計",
-                    "戦略に基づくコンテンツ基盤構築",
-                    "AIが参照可能な構造化データ作成"
-                  ]
-                },
-                {
-                  title: "プロンプトチェーン構築",
-                  icon: Zap,
-                  items: [
-                    "企画→構成→執筆→編集の自動化",
-                    "独自データを活用するプロンプト設計",
-                    "高品質・高精度な出力チューニング"
-                  ]
-                },
-                {
-                  title: "品質管理フロー構築",
-                  icon: Check,
-                  items: [
-                    "ファクトチェックの仕組み化",
-                    "ハウスルール順守の自動チェック",
-                    "人間による最終確認フロー設計"
-                  ]
-                },
-                {
-                  title: "カスタムツール開発",
-                  icon: Settings,
-                  items: [
-                    "n8n/Zapierによる自動化ワークフロー",
-                    "課題に応じた専用ツール開発",
-                    "API連携・システム実装"
-                  ]
-                }
-              ].map((item, i) => (
-                <div key={i} className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all hover:-translate-y-1 group">
-                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center mb-6 group-hover:bg-black group-hover:text-white transition-colors">
-                    <item.icon className="w-6 h-6" />
-                  </div>
-                  <h4 className="font-bold text-lg mb-4 text-[#1a1a1a]">{item.title}</h4>
-                  <ul className="space-y-3">
-                    {item.items.map((subItem, j) => (
-                      <li key={j} className="flex items-start gap-2 text-sm text-gray-600">
-                        <span className="w-1.5 h-1.5 bg-gray-300 rounded-full mt-1.5 shrink-0 group-hover:bg-yellow-300"></span>
-                        <span>{subItem}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
             </div>
           </div>
 
