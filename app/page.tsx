@@ -371,7 +371,7 @@ export default function Home() {
           <div className="max-w-[800px] mx-auto mt-20">
             <h3 className="text-xl font-bold mb-10 text-center flex items-center justify-center gap-3 text-[#1a1a1a]">
               <Settings className="w-6 h-6" />
-              使用するツールスタック
+              使用するAIツール
             </h3>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
