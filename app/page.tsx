@@ -171,7 +171,7 @@ export default function Home() {
             {/* Left: Heading */}
             <div className="lg:w-5/12 sticky top-8">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
-                「AIのプロ」ではない。<br />
+                AIのプロではない。<br />
                 <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
               </h3>
             </div>
