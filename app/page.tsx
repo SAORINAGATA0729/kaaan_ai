@@ -454,27 +454,22 @@ export default function Home() {
                   ツール導入で終わらせず、<span className="font-bold text-black border-b border-yellow-300">「事業成長」というゴールまで伴走します。</span>
                 </p>
                 
-                <div className="bg-white border-l-4 border-black p-6 shadow-sm">
-                  <p className="font-bold mb-4 text-sm text-gray-400 uppercase tracking-widest">主要実績</p>
-                  <ul className="space-y-3 text-base text-gray-700 font-medium">
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      市場とブランドをつなぐコミュニケーション設計
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      データドリブンな集客施策の最適化と運用
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      サイトグロースを通じた継続的な事業成長の実現
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      クライアント経営層と伴走するプロジェクト推進
-                    </li>
+                <div className="mt-10">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Key Achievements</p>
+                  <ul className="space-y-4">
+                    {[
+                      "市場とブランドをつなぐコミュニケーション設計",
+                      "データドリブンな集客施策の最適化と運用",
+                      "サイトグロースを通じた継続的な事業成長の実現",
+                      "クライアント経営層と伴走するプロジェクト推進"
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-4 text-gray-700">
+                        <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 shrink-0"></span>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                    ))}
                   </ul>
-                  <p className="text-xs text-gray-400 mt-4 text-right">※一部抜粋して掲載</p>
+                  <p className="text-xs text-gray-400 mt-6 pl-5">※一部抜粋して掲載</p>
                 </div>
               </div>
             </div>
@@ -496,21 +491,19 @@ export default function Home() {
                   机上の空論ではなく、<span className="font-bold text-black border-b border-yellow-300">私たち自身がこの「AI編集部」で成果を出している</span>からこそ、
                   生きた仕組みと、再現性のあるメソッドを提供できるのです。
                 </p>
-                <div className="bg-white border-l-4 border-black p-6 shadow-sm">
-                  <p className="font-bold mb-4 text-sm text-gray-400 uppercase tracking-widest">KAAANの取り組み</p>
-                  <ul className="space-y-3 text-base text-gray-700 font-medium">
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      「全員が月1回、新ツールや手法を発表する」社内文化
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      全メンバーが「Cursor」を活用し、非エンジニアでもAIと共創してシステムを構築
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 bg-black rounded-full mt-2 shrink-0"></span>
-                      自社サイトを実験場とした、継続的な仮説検証とアップデート
-                    </li>
+                <div className="mt-10">
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Internal Practice</p>
+                  <ul className="space-y-4">
+                     {[
+                      "「全員が月1回、新ツールや手法を発表する」社内文化",
+                      "全メンバーが「Cursor」を活用し、非エンジニアでもAIと共創してシステムを構築",
+                      "自社サイトを実験場とした、継続的な仮説検証とアップデート"
+                     ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-4 text-gray-700">
+                        <span className="w-1.5 h-1.5 bg-black rounded-full mt-2.5 shrink-0"></span>
+                        <span className="leading-relaxed">{item}</span>
+                      </li>
+                     ))}
                   </ul>
                 </div>
               </div>
