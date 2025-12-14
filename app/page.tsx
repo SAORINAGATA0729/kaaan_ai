@@ -142,76 +142,78 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Philosophy Content - Modern Layout */}
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 mb-24 items-start">
-            <div className="md:w-5/12 sticky top-32">
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-8">
-                「AIのプロ」<br />ではない。<br />
-                <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
-              </h3>
-            </div>
-
-            <div className="md:w-7/12 pt-2 md:pt-4">
-              <div className="space-y-8 text-lg leading-relaxed text-gray-600 mb-16">
-                <p>
-                  私たちは<strong className="text-black border-b border-gray-200">マーケティングのプロ</strong>であって、AIの専門家ではありません。
-                </p>
-                <p>
-                  しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
-                </p>
-                <p>
-                  マーケティングの実務を知り尽くしたプロフェッショナルとして、
-                  AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
-                </p>
+          {/* Philosophy Content - Unified Box Layout */}
+          <div className="bg-gray-50 rounded-3xl p-8 md:p-12 lg:p-16 mb-24">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+              <div className="lg:w-5/12 sticky top-8">
+                <h3 className="text-3xl md:text-5xl font-bold leading-[1.1] tracking-tight mb-8">
+                  「AIのプロ」<br />ではない。<br />
+                  <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
+                </h3>
               </div>
 
-              {/* Approach Grid */}
-              <div>
-                <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8 pb-2 border-b border-gray-100">Our Approach</p>
-                <div className="space-y-10">
-                  {[
-                    { 
-                      step: "01", 
-                      title: "現状を把握", 
-                      desc: "プロジェクト全体のボトルネックを特定" 
-                    },
-                    { 
-                      step: "02", 
-                      title: "戦略から入る", 
-                      desc: "マーケティング戦略を明確にし、成果を最大化する設計" 
-                    },
-                    { 
-                      step: "03", 
-                      title: "仕組みを構築", 
-                      desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みをフルスクラッチで構築" 
-                    }
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-6 group">
-                      <span className="text-2xl font-bold text-gray-300 font-mono pt-1">
-                        {item.step}
-                      </span>
-                      <div>
-                        <h5 className="text-xl font-bold text-black mb-2">{item.title}</h5>
-                        <p className="text-gray-600 leading-relaxed text-base">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
+              <div className="lg:w-7/12">
+                <div className="space-y-8 text-lg leading-relaxed text-gray-700 mb-12">
+                  <p>
+                    私たちは<strong className="text-black border-b border-gray-300">マーケティングのプロ</strong>であって、AIの専門家ではありません。
+                  </p>
+                  <p>
+                    しかし、プロだからこそ、クライアントの成果を最大化できる「最高の道具（AI）」を、「専門外だから」と見過ごすわけにはいきません。
+                  </p>
+                  <p>
+                    マーケティングの実務を知り尽くしたプロフェッショナルとして、
+                    AIを活用しながら、実務に直結する成果を出す編集部の構築を支援します。
+                  </p>
                 </div>
-              </div>
 
-              {/* 4 Keywords Grid */}
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4 mt-16 pt-10 border-t border-gray-100">
-                {[
-                  { text: "量と品質の両立", icon: Target },
-                  { text: "内製化・脱属人化", icon: Users },
-                  { text: "ボトルネック解消", icon: Zap },
-                  { text: "成果最大化チーム", icon: TrendingUp }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <item.icon className="w-4 h-4 text-black" />
-                    <span className="font-medium text-sm text-gray-800">{item.text}</span>
+                {/* Approach Grid */}
+                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+                  <p className="text-xs font-bold text-gray-400 tracking-widest uppercase mb-8">Our Approach</p>
+                  <div className="space-y-10">
+                    {[
+                      { 
+                        step: "01", 
+                        title: "現状を把握", 
+                        desc: "プロジェクト全体のボトルネックを特定" 
+                      },
+                      { 
+                        step: "02", 
+                        title: "戦略から入る", 
+                        desc: "マーケティング戦略を明確にし、成果を最大化する設計" 
+                      },
+                      { 
+                        step: "03", 
+                        title: "仕組みを構築", 
+                        desc: "成果を伸ばし、プロジェクトチームの時間を削減する仕組みをフルスクラッチで構築" 
+                      }
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-5 group">
+                        <span className="text-xl font-bold text-gray-300 font-mono pt-1 group-hover:text-black transition-colors">
+                          {item.step}
+                        </span>
+                        <div>
+                          <h5 className="text-lg font-bold text-black mb-1">{item.title}</h5>
+                          <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                  
+                  {/* 4 Keywords Grid - Integrated into the white card */}
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-3 mt-10 pt-8 border-t border-gray-100">
+                    {[
+                      { text: "量と品質の両立", icon: Target },
+                      { text: "内製化・脱属人化", icon: Users },
+                      { text: "ボトルネック解消", icon: Zap },
+                      { text: "成果最大化チーム", icon: TrendingUp }
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <item.icon className="w-4 h-4 text-black" />
+                        <span className="font-bold text-xs text-gray-600">{item.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
