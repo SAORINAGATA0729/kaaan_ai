@@ -167,10 +167,10 @@ export default function Home() {
       <section className="py-32 md:py-48 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
           {/* Philosophy Section - Simple Left/Right Layout */}
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-start">
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32 items-center">
             {/* Left: Heading */}
-            <div className="lg:w-5/12 sticky top-12">
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-8 lg:mb-0">
+            <div className="lg:w-5/12">
+              <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight tracking-tight mb-8 lg:mb-0 whitespace-nowrap">
                 AIのプロではない。<br />
                 <span className="text-gray-400">マーケティングの<br />プロが作る仕組み。</span>
               </h3>
