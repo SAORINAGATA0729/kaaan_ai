@@ -203,7 +203,7 @@ export default function Home() {
           {/* Heading */}
           <div className="text-center mb-20">
             <h3 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-[#1a1a1a] text-center">
-              事業成長を加速させる<br />
+              成果を加速させる<br />
               5つのシステム
             </h3>
             <p className="text-gray-500 text-lg">プロジェクトの課題に応じて、最適な基盤とツールを実装します。</p>
