@@ -78,7 +78,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "量を増やすと品質が落ち、品質にこだわると数が作れない",
@@ -111,14 +111,15 @@ export default function Home() {
                 icon: BarChart
               }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-8 border-l-4 border-gray-300 hover:border-black transition-colors shadow-sm group h-full flex flex-col">
-                <div className="flex items-start gap-4 mb-4 min-h-[5rem]">
-                  <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-yellow-300 transition-colors shrink-0 mt-1">
-                    <item.icon className="w-5 h-5 text-gray-600 group-hover:text-black transition-colors" />
+              <div key={i} className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-black transition-all duration-300 hover:shadow-xl group h-full flex flex-col relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-gray-50 rounded-bl-full -mr-4 -mt-4 transition-colors group-hover:bg-yellow-300/20"></div>
+                <div className="flex items-start gap-4 mb-4 min-h-[5rem] relative z-10">
+                  <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-colors shrink-0 mt-1">
+                    <item.icon className="w-6 h-6 text-gray-700 transition-colors" />
                   </div>
                   <h3 className="font-bold text-lg leading-tight pt-1">{item.title}</h3>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-sm flex-grow min-h-[4.5rem]">
+                <p className="text-gray-600 leading-relaxed text-sm flex-grow min-h-[4.5rem] relative z-10">
                   {item.desc}
                 </p>
               </div>
