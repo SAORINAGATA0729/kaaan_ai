@@ -13,17 +13,19 @@ export function CaseStudySection() {
         team: "マーケ担当チーム"
       },
       problems: [
-        "外注依存で、社内にノウハウが残らない（外部編集者に月2本の制作を依頼）",
-        "「あの人しか書けない」属人化で、チーム全体が底上げできない（専門性が多岐にわたり、編集者の学習負担が大きい）",
-        "量を増やすと品質が落ち、品質にこだわると数が作れない（1本のライティングに5〜8時間、公開できないレベルの記事が増える）",
-        "レビュー・承認フローのボトルネック（執筆後の確認作業に相当な時間が必要）"
+        "外部編集者依存で月2本の制作が限界、専門性が高く学習コストが高い",
+        "社員ライター化に過去何度も失敗、業務多忙で執筆時間を確保できない",
+        "品質担保と量産の両立が困難（執筆後の確認に時間がかかりボトルネックに）"
+      ],
+      process: [
+        "対話からの知見抽出：日常会話から社員の「経験」や「ノウハウ」を引き出し、AIとの対話だけで記事化する手法を確立",
+        "AI対話システムの構築：非ライターでも30〜60分の会話だけで、高品質な記事を作成できる仕組みを実装",
+        "無理のない運用設計：執筆業務をゼロにし、会話するだけの負担のないフローで持続可能な運用を実現"
       ],
       results: [
         "月2本から30本以上へ、制作数を15倍に拡大",
-        "ライティング時間を5〜8時間から30分の会話へ短縮",
-        "公開レベルコンテンツ化率を50%から85%以上に向上",
-        "1人で3〜4本を担当するケースも発生し、想定以上のアウトプットを実現",
-        "社内の暗黙知を資産化し、戦略オートメーション化AIエージェントに組み込み"
+        "制作時間を5〜8時間から30分〜1時間に短縮",
+        "社員の暗黙知を資産化し、自走する編集部を実現"
       ]
     },
     {
@@ -38,6 +40,11 @@ export function CaseStudySection() {
         "外部編集者依存で、月2本の制作が限界",
         "成果指標の伸び悩み（CV数が月6件程度で頭打ち、トラフィックが17K程度で成長が停滞）",
         "作ることが目的になっていて、成果を追えていない"
+      ],
+      process: [
+        "現状把握・診断：プロジェクト全体のボトルネックを特定し、AI化すべき領域を診断",
+        "戦略策定：マーケティング戦略に基づき、成果を最大化するためのワークフローと体制を設計",
+        "基盤構築：ナレッジデータベース、プロンプトチェーン、品質管理フローをフルスクラッチで構築"
       ],
       results: [
         "利益率を52.8%から76.6%へ改善（約1.4倍、+23.8ポイント）",
@@ -72,12 +79,12 @@ export function CaseStudySection() {
               >
                 
                 {/* Header: Title & Profile */}
-                <div className="mb-8 border-b border-gray-100 pb-8">
+                <div className="mb-10 border-b border-gray-100 pb-8">
                     <div className="flex items-center gap-3 mb-4">
                         <span className="bg-[#1a1a1a] text-white text-xs font-bold px-3 py-1 rounded-full">CASE {caseStudy.id}</span>
                         <p className="text-sm font-bold text-gray-500">{caseStudy.profile.industry}</p>
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-[#1a1a1a] leading-tight mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] leading-tight mb-4">
                     {caseStudy.title}
                     </h3>
                     <p className="text-sm text-gray-500">
@@ -85,8 +92,8 @@ export function CaseStudySection() {
                     </p>
                 </div>
 
-                {/* Body: Problem & Result */}
-                <div className="flex flex-col gap-8 flex-grow">
+                {/* Body: Problem, Process, Result */}
+                <div className="grid md:grid-cols-3 gap-8 md:gap-8">
                     
                     {/* Problem */}
                     <div>
@@ -96,8 +103,23 @@ export function CaseStudySection() {
                         </h4>
                         <ul className="space-y-4">
                             {caseStudy.problems.map((prob, i) => (
-                                <li key={i} className="text-sm md:text-base text-gray-700 leading-relaxed pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-red-500 before:text-xl before:leading-none">
+                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-red-500 before:text-lg before:leading-none">
                                     {prob}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Process */}
+                    <div>
+                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
+                            <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">→</span>
+                            プロセス
+                        </h4>
+                        <ul className="space-y-4">
+                            {caseStudy.process.map((proc, i) => (
+                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-blue-500 before:text-lg before:leading-none">
+                                    {proc}
                                 </li>
                             ))}
                         </ul>
@@ -111,7 +133,7 @@ export function CaseStudySection() {
                         </h4>
                         <ul className="space-y-4">
                             {caseStudy.results.map((res, i) => (
-                                <li key={i} className="text-sm md:text-base text-gray-700 leading-relaxed pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-green-500 before:text-xl before:leading-none">
+                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-green-500 before:text-lg before:leading-none">
                                     {res}
                                 </li>
                             ))}
