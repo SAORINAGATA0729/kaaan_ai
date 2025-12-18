@@ -162,7 +162,7 @@ export function CaseStudySection() {
                     <div className="pt-8 border-t border-gray-100">
                         <h4 className="font-bold text-[#1a1a1a] mb-10 flex items-center gap-3 text-lg tracking-wide">
                             <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">→</span>
-                            成果を出すために変えた3つのこと
+                            AIの活用で編集部はどう変わったか
                         </h4>
                         
                         {/* 3 Columns for Process */}
