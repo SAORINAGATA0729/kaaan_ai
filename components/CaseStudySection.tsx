@@ -1,22 +1,8 @@
 "use client";
 
-import { useRef } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export function CaseStudySection() {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -600, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 600, behavior: 'smooth' });
-    }
-  };
   
   const caseStudies = [
     {
@@ -78,32 +64,11 @@ export function CaseStudySection() {
             </p>
         </div>
 
-        <div className="relative w-full group">
-            {/* Navigation Buttons */}
-            <button
-                onClick={scrollLeft}
-                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white text-[#1a1a1a] shadow-lg flex items-center justify-center hover:bg-[#1a1a1a] hover:text-white transition-all border border-gray-200"
-                aria-label="前のケース"
-            >
-                <ChevronLeft className="w-6 h-6" />
-            </button>
-            <button
-                onClick={scrollRight}
-                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white text-[#1a1a1a] shadow-lg flex items-center justify-center hover:bg-[#1a1a1a] hover:text-white transition-all border border-gray-200"
-                aria-label="次のケース"
-            >
-                <ChevronRight className="w-6 h-6" />
-            </button>
-
-          {/* Scroll Container */}
-          <div 
-            ref={scrollRef}
-            className="overflow-x-auto pb-12 pt-4 scrollbar-hide flex gap-6 px-4 md:px-[10vw] snap-x snap-mandatory w-full"
-          >
+        <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((caseStudy) => (
               <div
                 key={caseStudy.id}
-                className="min-w-[90vw] md:min-w-[800px] bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 md:p-10 snap-center relative border border-gray-100 flex flex-col shrink-0"
+                className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 md:p-10 border border-gray-100 flex flex-col h-full"
               >
                 
                 {/* Header: Title & Profile */}
@@ -121,9 +86,9 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Body: Problem & Result */}
-                <div className="grid md:grid-cols-2 gap-8 md:gap-12 flex-grow">
+                <div className="flex flex-col gap-8 flex-grow">
                     
-                    {/* Left Column: Problem */}
+                    {/* Problem */}
                     <div>
                         <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
                             <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm">!</span>
@@ -138,7 +103,7 @@ export function CaseStudySection() {
                         </ul>
                     </div>
 
-                    {/* Right Column: Results */}
+                    {/* Results */}
                     <div>
                         <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
                             <span className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm">✓</span>
@@ -156,7 +121,6 @@ export function CaseStudySection() {
 
               </div>
             ))}
-          </div>
         </div>
         
       </div>
