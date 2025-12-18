@@ -1,9 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
-import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight, Target, Zap, Users, BarChart, Settings, Search } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { ArrowRight, ChevronLeft, ChevronRight, Users } from 'lucide-react';
 
 export function CaseStudySection() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -286,15 +284,6 @@ export function CaseStudySection() {
           </div>
         </div>
         
-        <div className="mt-12 text-center">
-             <Button asChild size="lg" className="h-16 px-12 rounded-full text-lg font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
-              <Link href="/contact/service?service=ai">
-                実績について詳しく聞く
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-        </div>
-
       </div>
     </section>
   );
