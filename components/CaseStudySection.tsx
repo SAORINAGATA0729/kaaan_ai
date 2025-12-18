@@ -64,11 +64,11 @@ export function CaseStudySection() {
             </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-12 max-w-4xl mx-auto">
             {caseStudies.map((caseStudy) => (
               <div
                 key={caseStudy.id}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 md:p-10 border border-gray-100 flex flex-col h-full"
+                className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 md:p-12 border border-gray-100"
               >
                 
                 {/* Header: Title & Profile */}
