@@ -29,6 +29,8 @@ import {
   CircleDollarSign
 } from "lucide-react";
 
+import { CaseStudySection } from "@/components/CaseStudySection";
+
 export default function AiEditingDepartmentPage() {
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a] font-sans selection:bg-gray-200">
@@ -464,40 +466,11 @@ export default function AiEditingDepartmentPage() {
             </div>
           </div>
 
-          {/* Testimonials */}
-          <div className="bg-white p-8 md:p-12 border border-gray-200 rounded-xl relative">
-            <div className="flex items-center gap-3 mb-10 justify-center md:justify-start">
-              <MessageSquareQuote className="w-8 h-8 text-[#1a1a1a]" />
-              <h3 className="text-2xl font-bold">支援実績・お客様の声</h3>
-            </div>
-            <div className="absolute top-8 right-8 md:top-12 md:right-12">
-               <p className="text-xs text-gray-400">※一部抜粋して掲載</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { text: "初めてAIを使うメンバーばかりだったが、1ヶ月で記事制作が自走できるようになった", attr: "SaaS企業 マーケティング責任者" },
-                { text: "単なる時短ではなく、自分たちが気づかなかった企画案がAIから出てくるようになった", attr: "人材系企業 事業部長" },
-                { text: "プロと一緒に進めることで、AIへの苦手意識がなくなり、今では全社で活用している", attr: "IT企業 代表" },
-                { text: "BtoB企業のリード獲得数が200%達成。AI活用の本質がわかった", attr: "BtoBサービス企業 経営企画室長" },
-                { text: "導入から3ヶ月でオウンドメディアの公開記事数が3倍に増加しました", attr: "Webメディア 編集長" },
-                { text: "社内にある議事録がこれほど価値あるコンテンツになるとは驚きでした", attr: "コンサルティング企業 マネージャー" },
-                { text: "採用広報の記事作成時間が1/3に短縮され、スカウト業務に集中できるように", attr: "スタートアップ 人事責任者" },
-                { text: "「AIに任せる」ではなく「AIと作る」感覚がつかめ、チームの士気が上がった", attr: "EC事業 責任者" }
-              ].map((item, i) => (
-                <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow relative">
-                  <div className="absolute top-6 left-4 text-4xl text-gray-200 font-serif leading-none">“</div>
-                  <p className="text-sm font-bold text-gray-800 mb-4 relative z-10 pt-2 leading-relaxed">
-                    {item.text}
-                  </p>
-                  <p className="text-xs text-gray-500 font-medium border-t border-gray-200 pt-3">
-                    {item.attr}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
+
+      {/* 5.5 Case Study Section (New) */}
+      <CaseStudySection />
 
       {/* 6. Process Section - Timeline */}
       <section id="flow" className="py-32 bg-white scroll-mt-20">
