@@ -137,13 +137,23 @@ export function CaseStudySection() {
                             実現までのプロセス
                         </h4>
                         <div className="grid md:grid-cols-3 gap-6 relative">
-                             {/* PCでの横矢印演出（背景装飾として薄く入れるイメージ、またはシンプルにグリッドで並べる） */}
-                            {caseStudy.process.map((proc, i) => (
-                                <div key={i} className="relative bg-white p-5 rounded-lg border border-blue-100 shadow-sm">
-                                    <div className="text-xs font-bold text-blue-400 mb-2 uppercase tracking-wider">STEP {i+1}</div>
-                                    <p className="text-sm text-gray-700 leading-relaxed font-medium">{proc}</p>
-                                </div>
-                            ))}
+                             {/* PCでの横矢印演出 */}
+                            {caseStudy.process.map((proc, i) => {
+                                const [title, desc] = proc.split("：");
+                                return (
+                                    <div key={i} className="relative bg-white p-5 rounded-lg border border-blue-100 shadow-sm flex flex-col h-full">
+                                        <div className="text-xs font-bold text-blue-400 mb-3 uppercase tracking-wider">STEP {i+1}</div>
+                                        <div className="mb-2">
+                                            <h5 className="font-bold text-[#1a1a1a] text-lg leading-snug">
+                                                {title}
+                                            </h5>
+                                        </div>
+                                        <p className="text-sm text-gray-600 leading-relaxed mt-auto">
+                                            {desc || proc}
+                                        </p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
 
