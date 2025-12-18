@@ -31,7 +31,7 @@ export function CaseStudySection() {
     },
     {
       id: 2,
-      title: "AI編集部構築により、利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
+      title: "AI編集部構築により、半年で利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
         team: ""
