@@ -56,13 +56,13 @@ export function CaseStudySection() {
     },
     {
       id: 2,
-      title: "立ち上げ1年で100万MAU達成、分業と品質管理で月200本の記事制作",
+      title: "AIと人の協業体制で月200本の記事制作、1年で100万MAU達成",
       profile: {
         industry: "マーケティング支援企業（BtoC メディア）",
         team: "新規メディア立ち上げチーム",
         info: "制作体制なし | 激戦領域への後発参入"
       },
-      problem_text: "大手競合が存在する激戦領域で、リソース不足と品質管理の課題",
+      problem_text: "激戦領域での後発参入のため大量の高品質コンテンツが必要だが、リソース不足",
       results: [
         {
           label: "MAU成長",
@@ -89,13 +89,13 @@ export function CaseStudySection() {
     },
     {
       id: 3,
-      title: "ステークホルダー巻き込み戦略で8万UUから300万UUへ40倍成長",
+      title: "社内ナレッジをAIで資産化し、8万UUから300万UUへ40倍成長",
       profile: {
         industry: "大手BtoB企業",
         team: "オウンドメディアチーム",
         info: "8万UU | 費用対効果に課題"
       },
-      problem_text: "メディア成長が停滞し、社内の協力が得られず費用対効果が見えない",
+      problem_text: "社内の専門知識や議事録のコンテンツ化に工数が割けず、メディア成長が停滞",
       results: [
         {
           label: "UU数成長",
