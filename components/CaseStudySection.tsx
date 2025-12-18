@@ -58,7 +58,7 @@ export function CaseStudySection() {
 
   return (
     <section className="py-24 bg-gray-50 relative overflow-hidden">
-      <div className="container mx-auto px-6 md:px-8 max-w-[1200px] relative z-10">
+      <div className="container mx-auto px-6 md:px-8 max-w-[1400px] relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -71,11 +71,11 @@ export function CaseStudySection() {
             </p>
         </div>
 
-        <div className="flex flex-col gap-12 max-w-4xl mx-auto">
+        <div className="flex flex-col gap-16 w-full">
             {caseStudies.map((caseStudy) => (
               <div
                 key={caseStudy.id}
-                className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow p-8 md:p-12 border border-gray-100"
+                className="bg-white rounded-3xl shadow-sm hover:shadow-md transition-shadow p-8 md:p-14 border border-gray-100"
               >
                 
                 {/* Header: Title & Profile */}
