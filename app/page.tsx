@@ -27,6 +27,7 @@ import {
   Flag,
   CircleDollarSign
 } from "lucide-react";
+import { CaseStudySection } from "@/components/CaseStudySection";
 
 export default function Home() {
   return (
@@ -519,38 +520,8 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Testimonials */}
-          <div className="bg-white p-8 md:p-12 border border-gray-200 rounded-xl relative">
-            <div className="flex items-center gap-3 mb-10 justify-center md:justify-start">
-              <MessageSquareQuote className="w-8 h-8 text-[#1a1a1a]" />
-              <h3 className="text-2xl font-bold">支援実績・お客様の声</h3>
-            </div>
-            <div className="absolute top-8 right-8 md:top-12 md:right-12">
-               <p className="text-xs text-gray-400">※一部抜粋して掲載</p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { text: "導入から3ヶ月でリード獲得数が200%達成。マーケティングの成果を最大化する方法がわかった", attr: "BtoBサービス企業 経営企画室長" },
-                { text: "コンテンツマーケティングの成果が明確になり、CV数が前年比150%に。作ることが目的ではなく、成果を追える体制になった", attr: "SaaS企業 マーケティング責任者" },
-                { text: "マーケ部門立ち上げから半年で、月間リード獲得数が目標の120%を達成。ゼロから始めたのに、これほど早く成果が出るとは思わなかった", attr: "中堅BtoB企業 マーケティング責任者" },
-                { text: "外注費を半分に削減しながら、リード獲得数は1.5倍に。内製化できたことで、コストパフォーマンスが劇的に改善した", attr: "Webメディア 編集長" },
-                { text: "社内の議事録やナレッジをコンテンツ化したことで、認知拡大につながり、問い合わせが3倍に増加", attr: "コンサルティング企業 マネージャー" },
-                { text: "マーケティングの成果指標が明確になり、何を優先すべきかがわかるようになった。結果として、売上に直結する施策に集中できるようになった", attr: "IT企業 代表" },
-                { text: "AIを活用したコンテンツ戦略により、ブランド認知が向上し、採用応募数が前年比180%に。採用広報の成果が明確になった", attr: "スタートアップ 人事責任者" },
-                { text: "プロと一緒に進めることで、マーケティングの成果を最大化する方法がわかった。今では事業成長の重要な武器になっている", attr: "EC事業 責任者" }
-              ].map((item, i) => (
-                <div key={i} className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow relative">
-                  <div className="absolute top-6 left-4 text-4xl text-gray-200 font-serif leading-none">"</div>
-                  <p className="text-sm font-bold text-gray-800 mb-4 relative z-10 pt-2 leading-relaxed">
-                    {item.text}
-                  </p>
-                  <p className="text-xs text-gray-500 font-medium border-t border-gray-200 pt-3">
-                    {item.attr}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Case Study Section */}
+          <CaseStudySection />
         </div>
       </section>
 
