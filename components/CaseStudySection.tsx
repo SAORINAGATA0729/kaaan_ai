@@ -106,15 +106,15 @@ export function CaseStudySection() {
                     {/* Upper Row: Problem vs Result */}
                     <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                         {/* Problem Section */}
-                        <div className="bg-red-50/50 rounded-xl p-6 border border-red-100 h-full">
-                            <h4 className="font-bold text-red-700 mb-6 flex items-center gap-2 text-lg">
-                                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm font-bold">!</span>
+                        <div className="bg-[#f5f5f5] rounded-xl p-8 h-full border border-transparent">
+                            <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-3 text-lg tracking-wide">
+                                <span className="w-8 h-8 rounded-full bg-[#e0e0e0] text-[#1a1a1a] flex items-center justify-center text-sm font-bold">!</span>
                                 課題背景
                             </h4>
                             <ul className="space-y-4">
                                 {caseStudy.problems.map((prob, i) => (
-                                    <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative">
-                                        <span className="absolute left-0 top-1.5 w-1.5 h-1.5 rounded-full bg-red-300"></span>
+                                    <li key={i} className="text-sm md:text-base text-gray-600 leading-relaxed pl-5 relative font-medium">
+                                        <span className="absolute left-0 top-2 w-1.5 h-1.5 rounded-full bg-gray-400"></span>
                                         {prob}
                                     </li>
                                 ))}
@@ -122,15 +122,15 @@ export function CaseStudySection() {
                         </div>
 
                         {/* Results Section */}
-                        <div className="bg-green-50/50 rounded-xl p-6 border border-green-100 h-full">
-                            <h4 className="font-bold text-green-700 mb-6 flex items-center gap-2 text-lg">
-                                <span className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">✓</span>
-                                結果どうなった
+                        <div className="bg-[#1a1a1a] rounded-xl p-8 h-full text-white shadow-lg">
+                            <h4 className="font-bold text-white mb-6 flex items-center gap-3 text-lg tracking-wide">
+                                <span className="w-8 h-8 rounded-full bg-white text-[#1a1a1a] flex items-center justify-center text-sm font-bold">✓</span>
+                                成果
                             </h4>
-                            <ul className="space-y-4">
+                            <ul className="space-y-5">
                                 {caseStudy.results.map((res, i) => (
-                                    <li key={i} className="text-sm text-gray-800 font-medium leading-relaxed flex items-start gap-3 bg-white p-3 rounded-lg border border-green-100 shadow-sm">
-                                        <span className="text-green-500 text-lg mt-[-2px]">✓</span>
+                                    <li key={i} className="text-base md:text-lg text-gray-200 font-bold leading-relaxed flex items-start gap-3 border-b border-gray-800 pb-4 last:border-0 last:pb-0">
+                                        {/* 数字が含まれる場合、その数字を強調する処理を入れることも可能だが、今回はシンプルにテキストとして表示 */}
                                         {res}
                                     </li>
                                 ))}
@@ -139,24 +139,23 @@ export function CaseStudySection() {
                     </div>
 
                     {/* Lower Row: Process */}
-                    <div className="bg-blue-50/30 rounded-xl p-6 border border-blue-50">
-                        <h4 className="font-bold text-blue-700 mb-4 flex items-center gap-2 text-lg">
-                            <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">→</span>
-                            実現までのプロセス
+                    <div className="pt-8 border-t border-gray-100">
+                        <h4 className="font-bold text-[#1a1a1a] mb-8 flex items-center gap-3 text-lg tracking-wide">
+                            <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">→</span>
+                            実現プロセス
                         </h4>
-                        <div className="grid md:grid-cols-3 gap-6 relative">
-                             {/* PCでの横矢印演出 */}
+                        <div className="grid md:grid-cols-3 gap-8 relative">
                             {caseStudy.process.map((proc, i) => {
                                 const [title, desc] = proc.split("：");
                                 return (
-                                    <div key={i} className="relative bg-white p-5 rounded-lg border border-blue-100 shadow-sm flex flex-col h-full">
-                                        <div className="text-xs font-bold text-blue-400 mb-3 uppercase tracking-wider">STEP {i+1}</div>
-                                        <div className="mb-2">
-                                            <h5 className="font-bold text-[#1a1a1a] text-lg leading-snug">
+                                    <div key={i} className="relative group">
+                                        <div className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">STEP {i+1}</div>
+                                        <div className="mb-3">
+                                            <h5 className="font-bold text-[#1a1a1a] text-lg leading-snug border-l-2 border-black pl-4">
                                                 {title}
                                             </h5>
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed mt-auto">
+                                        <p className="text-sm text-gray-600 leading-relaxed pl-4">
                                             {desc || proc}
                                         </p>
                                     </div>
