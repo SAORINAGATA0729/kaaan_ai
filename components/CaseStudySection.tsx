@@ -184,28 +184,6 @@ export function CaseStudySection() {
                             })}
                         </div>
 
-                        {/* Overall Insight Block */}
-                        {(caseStudy as any).overallInsight && (
-                            <div className="mt-12 flex flex-col md:flex-row gap-4 md:gap-6 items-start">
-                                {/* 人のアイコン */}
-                                <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center">
-                                        <User className="w-6 h-6 md:w-7 md:h-7" />
-                                    </div>
-                                </div>
-                                
-                                {/* 吹き出し */}
-                                <div className="flex-grow relative bg-gray-50 rounded-xl p-6 md:p-7">
-                                    {/* 吹き出しのしっぽ（左側から出る） */}
-                                    <div className="absolute left-0 top-6 w-0 h-0 border-t-[10px] border-t-transparent border-r-[10px] border-r-gray-50 border-b-[10px] border-b-transparent -translate-x-2"></div>
-                                    
-                                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                        {(caseStudy as any).overallInsight}
-                                    </p>
-                                </div>
-                            </div>
-                        )}
-
                     </div>
 
                 </div>
