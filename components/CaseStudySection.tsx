@@ -20,9 +20,21 @@ export function CaseStudySection() {
         "品質担保と量産の両立が困難（執筆後の確認に時間がかかりボトルネックに）"
       ],
       process: [
-        "対話からの知見抽出：日常会話から社員の「経験」や「ノウハウ」を引き出し、AIとの対話だけで記事化する手法を確立",
-        "AI対話システムの構築：非ライターでも30〜60分の会話だけで、高品質な記事を作成できる仕組みを実装",
-        "無理のない運用設計：執筆業務をゼロにし、会話するだけの負担のないフローで持続可能な運用を実現"
+        {
+            title: "「書く」から「話す」へ",
+            desc: "執筆スキルに依存せず、日常会話から社員の「暗黙知」を引き出す手法へシフト。",
+            insight: "社員のコア価値は「ライティングスキル」ではなく「現場の知見」にあると再定義しました。"
+        },
+        {
+            title: "「人手」から「AIシステム」へ",
+            desc: "専門外のライティング学習を廃止し、AIとの対話だけで完結する仕組みへ移行。",
+            insight: "学習コストの高いスキル習得を捨て、AIに任せる決断をしました。"
+        },
+        {
+            title: "「努力」から「仕組み」へ",
+            desc: "個人のモチベーションに頼らず、業務フローに組み込むことで持続可能な運用を実現。",
+            insight: "「頑張ればできる」ではなく「自然とできる」環境こそが継続の鍵です。"
+        }
       ],
       results: [
         "月2本から30本以上へ、制作数を15倍に拡大",
@@ -32,7 +44,7 @@ export function CaseStudySection() {
     },
     {
       id: 2,
-      title: "AI編集部構築により、半年で利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
+      title: "「AIとの対話」だけで記事を量産。社員の専門性を最大化する、AI駆動型の編集部構築",
       summary: "人手依存の従来型体制から、AI主導体制へ完全移行し、持続的な成長基盤を構築",
       profile: {
         industry: "BtoB向け商材 事業会社",
@@ -44,9 +56,21 @@ export function CaseStudySection() {
         "作ることに手一杯で、成果を追えていない"
       ],
       process: [
-        "現状把握・診断：業務プロセスを分解し、AIで代替可能な領域と「人が介在すべき価値ある領域」を再定義",
-        "戦略策定：マーケティング戦略に基づき、成果を最大化するためのワークフローと体制を設計",
-        "基盤構築：ナレッジデータベース、プロンプトチェーン、品質管理フローをフルスクラッチで構築"
+        {
+            title: "「作業」から「戦略」へ",
+            desc: "作るだけの作業をやめ、AIで代替すべき領域と人がやるべき領域を再定義。",
+            insight: "手を動かす前に、「何をやめるか」を決めることが生産性向上の第一歩です。"
+        },
+        {
+            title: "「部分最適」から「全体設計」へ",
+            desc: "個別の記事作成ではなく、成果を最大化する全体ワークフローを設計。",
+            insight: "1記事の質にこだわるより、全体のワークフロー最適化が最終成果を左右します。"
+        },
+        {
+            title: "「属人化」から「基盤構築」へ",
+            desc: "人の手癖に頼らず、誰もが高品質を出せるプロンプト基盤をフルスクラッチで構築。",
+            insight: "人のスキルに依存しない「再現性のある基盤」こそが、事業の資産になります。"
+        }
       ],
       results: [
         "利益率を50%から75%以上へ改善（約1.4倍）",
@@ -142,22 +166,34 @@ export function CaseStudySection() {
                     <div className="pt-8 border-t border-gray-100">
                         <h4 className="font-bold text-[#1a1a1a] mb-8 flex items-center gap-3 text-lg tracking-wide">
                             <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">→</span>
-                            実現プロセス
+                            成果を生み出すための「3つの転換」
                         </h4>
                         <div className="grid md:grid-cols-3 gap-8 relative">
-                            {caseStudy.process.map((proc, i) => {
-                                const [title, desc] = proc.split("：");
+                            {caseStudy.process.map((proc: any, i) => {
                                 return (
-                                    <div key={i} className="relative group">
-                                        <div className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">STEP {i+1}</div>
+                                    <div key={i} className="relative group flex flex-col h-full">
+                                        <div className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">POINT {i+1}</div>
                                         <div className="mb-3">
                                             <h5 className="font-bold text-[#1a1a1a] text-lg leading-snug border-l-2 border-black pl-4">
-                                                {title}
+                                                {proc.title}
                                             </h5>
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed pl-4">
-                                            {desc || proc}
+                                        <p className="text-sm text-gray-600 leading-relaxed pl-4 mb-4 flex-grow">
+                                            {proc.desc}
                                         </p>
+                                        
+                                        {/* Insight Block */}
+                                        <div className="mt-auto pl-4">
+                                            <div className="bg-gray-50 p-4 rounded-lg border-l-2 border-gray-300">
+                                                <p className="text-xs font-bold text-gray-400 mb-1 flex items-center gap-1">
+                                                    <span className="w-1 h-1 rounded-full bg-gray-400"></span>
+                                                    PRO'S INSIGHT
+                                                </p>
+                                                <p className="text-xs md:text-sm text-gray-700 font-medium leading-relaxed">
+                                                    {proc.insight}
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 );
                             })}
