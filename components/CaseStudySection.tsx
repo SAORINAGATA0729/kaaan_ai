@@ -9,7 +9,7 @@ export function CaseStudySection() {
     {
       id: 1,
       title: "「AIとの対話」だけで記事を量産。社員の専門性を最大化する、AI駆動型の編集部構築",
-      summary: "月2本から30本へ。社員の「暗黙知」を資産化し、組織全体のコンテンツ力を底上げ",
+      summary: "社員の「暗黙知」を資産化し、組織全体のコンテンツ力を底上げ",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
         team: ""
