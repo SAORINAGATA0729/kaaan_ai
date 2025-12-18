@@ -93,47 +93,53 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Body: Problem, Process, Result */}
-                <div className="grid md:grid-cols-3 gap-8 md:gap-8">
+                <div className="grid lg:grid-cols-3 gap-6">
                     
-                    {/* Problem */}
-                    <div>
-                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
-                            <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm">!</span>
+                    {/* Problem Section */}
+                    <div className="bg-red-50/50 rounded-xl p-6 border border-red-100 h-full">
+                        <h4 className="font-bold text-red-700 mb-6 flex items-center gap-2 text-lg">
+                            <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm font-bold">!</span>
                             課題背景
                         </h4>
                         <ul className="space-y-4">
                             {caseStudy.problems.map((prob, i) => (
-                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-red-500 before:text-lg before:leading-none">
+                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative">
+                                    <span className="absolute left-0 top-1.5 w-1.5 h-1.5 rounded-full bg-red-300"></span>
                                     {prob}
                                 </li>
                             ))}
                         </ul>
                     </div>
 
-                    {/* Process */}
-                    <div>
-                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
-                            <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm">→</span>
+                    {/* Process Section */}
+                    <div className="bg-blue-50/50 rounded-xl p-6 border border-blue-100 h-full relative">
+                        {/* PCでの矢印演出（あえてシンプルに枠で囲うのみにする） */}
+                        <h4 className="font-bold text-blue-700 mb-6 flex items-center gap-2 text-lg">
+                            <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-sm font-bold">→</span>
                             プロセス
                         </h4>
-                        <ul className="space-y-4">
+                        <div className="space-y-4 relative">
+                            {/* 縦の線をつなぐ */}
+                            <div className="absolute left-[7px] top-2 bottom-2 w-0.5 bg-blue-100"></div>
                             {caseStudy.process.map((proc, i) => (
-                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-blue-500 before:text-lg before:leading-none">
-                                    {proc}
-                                </li>
+                                <div key={i} className="relative pl-6">
+                                    <span className="absolute left-0 top-1.5 w-4 h-4 rounded-full bg-white border-2 border-blue-300 z-10"></span>
+                                    <p className="text-sm text-gray-700 leading-relaxed">{proc}</p>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
 
-                    {/* Results */}
-                    <div>
-                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
-                            <span className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm">✓</span>
+                    {/* Results Section */}
+                    <div className="bg-green-50/50 rounded-xl p-6 border border-green-100 h-full">
+                        <h4 className="font-bold text-green-700 mb-6 flex items-center gap-2 text-lg">
+                            <span className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm font-bold">✓</span>
                             結果どうなった
                         </h4>
                         <ul className="space-y-4">
                             {caseStudy.results.map((res, i) => (
-                                <li key={i} className="text-sm text-gray-700 leading-relaxed pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-green-500 before:text-lg before:leading-none">
+                                <li key={i} className="text-sm text-gray-800 font-medium leading-relaxed flex items-start gap-3 bg-white p-3 rounded-lg border border-green-100 shadow-sm">
+                                    <span className="text-green-500 text-lg mt-[-2px]">✓</span>
                                     {res}
                                 </li>
                             ))}
