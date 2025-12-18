@@ -67,7 +67,7 @@ export function CaseStudySection() {
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium">
             マーケティングの課題を、<br className="md:hidden" />
-            AI編集部構築サービスでどう解決したのか。
+            AIと共創しながらどのように解決したのか。
             </p>
         </div>
 
