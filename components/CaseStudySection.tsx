@@ -129,8 +129,8 @@ export function CaseStudySection() {
             <span className="text-[200px] font-bold leading-none tracking-tighter">CASE</span>
         </div>
 
-      <div className="container mx-auto px-6 md:px-8 max-w-[1200px] relative z-10">
-        <div className="text-center mb-16">
+      <div className="relative z-10">
+        <div className="container mx-auto px-6 md:px-8 max-w-[1200px] text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
             KAAAN導入実績
             </h2>
@@ -139,32 +139,32 @@ export function CaseStudySection() {
             </p>
         </div>
 
-        <div className="relative">
+        <div className="relative w-full group">
             {/* Navigation Buttons (Left/Right Overlay) */}
             <button
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-20 w-12 h-12 rounded-full bg-[#1a1a1a] text-white shadow-lg flex items-center justify-center hover:bg-gray-800 transition-colors hidden md:flex"
+                className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full bg-white/90 text-[#1a1a1a] shadow-xl flex items-center justify-center hover:bg-[#1a1a1a] hover:text-white transition-all border border-gray-100 backdrop-blur-sm"
                 aria-label="前のケース"
             >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-8 h-8" />
             </button>
             <button
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-20 w-12 h-12 rounded-full bg-[#1a1a1a] text-white shadow-lg flex items-center justify-center hover:bg-gray-800 transition-colors hidden md:flex"
+                className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 w-14 h-14 rounded-full bg-white/90 text-[#1a1a1a] shadow-xl flex items-center justify-center hover:bg-[#1a1a1a] hover:text-white transition-all border border-gray-100 backdrop-blur-sm"
                 aria-label="次のケース"
             >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-8 h-8" />
             </button>
 
           {/* Scroll Container */}
           <div 
             ref={scrollRef}
-            className="overflow-x-auto pb-12 pt-4 scrollbar-hide flex gap-6 md:gap-8 px-4 snap-x snap-mandatory"
+            className="overflow-x-auto pb-12 pt-4 scrollbar-hide flex gap-6 px-4 md:px-[10vw] snap-x snap-mandatory w-full"
           >
             {caseStudies.map((caseStudy) => (
               <div
                 key={caseStudy.id}
-                className="min-w-[85vw] md:min-w-[800px] bg-white rounded-none shadow-xl p-8 md:p-10 snap-center relative border-t-4 border-[#1a1a1a]"
+                className="min-w-[90vw] md:min-w-[800px] bg-white rounded-xl shadow-xl p-8 md:p-10 snap-center relative border-t-4 border-[#1a1a1a] shrink-0"
               >
                 {/* Background Watermark inside card */}
                  <div className="absolute top-4 right-8 text-gray-100 font-bold text-6xl md:text-8xl select-none pointer-events-none opacity-40">
@@ -238,7 +238,7 @@ export function CaseStudySection() {
           </div>
         </div>
         
-        <div className="mt-12 text-center">
+        <div className="mt-8 text-center">
              <Button asChild size="lg" className="h-16 px-12 rounded-full text-lg font-bold bg-[#1a1a1a] text-white hover:bg-black hover:scale-105 transition-all shadow-xl">
               <Link href="/contact/service?service=ai">
                 実績について詳しく聞く
