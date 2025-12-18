@@ -35,7 +35,7 @@ export function CaseStudySection() {
       title: "AI編集部構築により、半年で利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
       summary: "人手依存の従来型体制から、AI主導体制へ完全移行し、持続的な成長基盤を構築",
       profile: {
-        industry: "デジタルマーケ支援企業（BtoB コンサル）",
+        industry: "BtoB向け商材 事業会社",
         team: ""
       },
       problems: [
@@ -89,7 +89,7 @@ export function CaseStudySection() {
                     </h3>
                     {/* Summary */}
                     {(caseStudy as any).summary && (
-                        <p className="text-lg text-[#1a1a1a] font-bold mb-4 leading-relaxed">
+                        <p className="text-lg text-gray-600 font-bold mb-4 leading-relaxed">
                             {(caseStudy as any).summary}
                         </p>
                     )}
