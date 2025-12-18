@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowDown, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -27,242 +27,210 @@ export function CaseStudySection() {
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
         team: "マーケ担当3名",
-        before: "コンテンツ制作月2本 | 利益率30-50%"
+        info: "コンテンツ制作月2本 | 利益率30-50%"
       },
-      problems: [
-        "人手依存による工数負担の大きさ",
-        "コンテンツ制作の限界（月2本が限界）",
-        "成果指標の伸び悩み（CV数6件、トラフィック17K）"
-      ],
-      solutions: [
-        "ストラテジーから入る",
-        "フルスクラッチで仕組みを構築",
-        "プロフェッショナルによる伴走"
-      ],
+      problem_text: "人手依存で月2本が限界。成果指標も伸び悩み（CV数6件）",
       results: [
         {
           label: "利益率改善",
           before: "52.8%",
           after: "76.6%",
-          improvement: "約1.4倍"
+          unit: "",
+          highlight: true
         },
         {
           label: "CV数成長",
           before: "6件",
           after: "38件",
-          improvement: "6倍"
+          unit: "",
+          highlight: true
         },
         {
           label: "トラフィック拡大",
           before: "17K",
           after: "81K",
-          improvement: "4.8倍"
+          unit: "",
+          highlight: true
         }
       ]
     },
     {
       id: 2,
-      title: "立ち上げ1年で100万MAU達成、分業と品質管理で月200本の記事制作を実現",
+      title: "立ち上げ1年で100万MAU達成、分業と品質管理で月200本の記事制作",
       profile: {
         industry: "マーケティング支援企業（BtoC メディア）",
         team: "新規メディア立ち上げチーム",
-        before: "制作体制なし | 激戦領域への後発参入"
+        info: "制作体制なし | 激戦領域への後発参入"
       },
-      problems: [
-        "大手プレイヤーが存在する激戦領域",
-        "コンテンツ制作のリソース不足",
-        "品質のばらつきと管理コスト"
-      ],
-      solutions: [
-        "ユーザー行動に基づくトレンド分析と地域特化戦略",
-        "分業と品質管理の多段階プロセス構築",
-        "メンバーの専門性を活かす運用体制整備"
-      ],
+      problem_text: "大手競合が存在する激戦領域で、リソース不足と品質管理の課題",
       results: [
         {
           label: "MAU成長",
           before: "0",
           after: "100万",
-          improvement: "1年で達成"
+          unit: "",
+          highlight: true
         },
         {
           label: "記事制作数",
           before: "月0本",
           after: "月200本",
-          improvement: "安定稼働"
+          unit: "",
+          highlight: true
         },
         {
           label: "検索流入",
           before: "圏外",
-          after: "上位表示",
-          improvement: "ビッグワード"
+          after: "上位",
+          unit: "表示",
+          highlight: true
         }
       ]
     },
     {
       id: 3,
-      title: "ステークホルダー巻き込み戦略で8万UUから300万UUへ40倍成長達成",
+      title: "ステークホルダー巻き込み戦略で8万UUから300万UUへ40倍成長",
       profile: {
         industry: "大手BtoB企業",
         team: "オウンドメディアチーム",
-        before: "8万UU | 費用対効果に課題"
+        info: "8万UU | 費用対効果に課題"
       },
-      problems: [
-        "メディアの成長が停滞（8万UUで頭打ち）",
-        "費用対効果が見えにくい",
-        "社内の協力が得られにくい"
-      ],
-      solutions: [
-        "ステークホルダーを巻き込む編集体制の構築",
-        "独自コンテンツの制作フロー整備",
-        "収益化とマネタイズ体制の確立"
-      ],
+      problem_text: "メディア成長が停滞し、社内の協力が得られず費用対効果が見えない",
       results: [
         {
           label: "UU数成長",
           before: "8万",
           after: "300万",
-          improvement: "40倍"
+          unit: "",
+          highlight: true
         },
         {
           label: "事業貢献",
           before: "赤字",
           after: "収益化",
-          improvement: "マネタイズ確立"
+          unit: "",
+          highlight: true
         },
         {
           label: "制作体制",
           before: "外注依存",
-          after: "独自制作",
-          improvement: "内製化"
+          after: "内製化",
+          unit: "",
+          highlight: true
         }
       ]
     }
   ];
 
   return (
-    <section className="py-32 bg-[#f9f9f9]">
-      <div className="container mx-auto px-6 md:px-8 max-w-[1200px]">
-        <div className="flex justify-between items-end mb-12">
-            <div>
-                <span className="text-[#1a1a1a] font-bold tracking-widest text-sm uppercase mb-4 block">Case Studies</span>
-                <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a]">
-                クライアントとともに<br />創出してきた成果
-                </h2>
-            </div>
-            <div className="hidden md:flex gap-4">
-                 <button
-                    onClick={scrollLeft}
-                    className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors border border-gray-100"
-                    aria-label="前のケース"
-                >
-                    <ChevronLeft className="w-6 h-6 text-[#1a1a1a]" />
-                </button>
-                <button
-                    onClick={scrollRight}
-                    className="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center hover:bg-gray-50 transition-colors border border-gray-100"
-                    aria-label="次のケース"
-                >
-                    <ChevronRight className="w-6 h-6 text-[#1a1a1a]" />
-                </button>
-            </div>
+    <section className="py-24 bg-[#f3f5f8] relative overflow-hidden">
+        {/* Background Watermark */}
+        <div className="absolute top-10 right-0 pointer-events-none select-none opacity-5">
+            <span className="text-[200px] font-bold leading-none tracking-tighter">CASE</span>
         </div>
 
-        <div className="relative -mx-6 md:-mx-8 px-6 md:px-8">
-          {/* ケーススタディカード */}
+      <div className="container mx-auto px-6 md:px-8 max-w-[1200px] relative z-10">
+        <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-4">
+            KAAAN導入実績
+            </h2>
+            <p className="text-blue-600 font-bold text-lg">
+            AI編集部構築・運用支援の<span className="text-blue-600">成功事例</span>
+            </p>
+        </div>
+
+        <div className="relative">
+            {/* Navigation Buttons (Left/Right Overlay) */}
+            <button
+                onClick={scrollLeft}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-20 w-12 h-12 rounded-full bg-[#1a1a1a] text-white shadow-lg flex items-center justify-center hover:bg-gray-800 transition-colors hidden md:flex"
+                aria-label="前のケース"
+            >
+                <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+                onClick={scrollRight}
+                className="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-20 w-12 h-12 rounded-full bg-[#1a1a1a] text-white shadow-lg flex items-center justify-center hover:bg-gray-800 transition-colors hidden md:flex"
+                aria-label="次のケース"
+            >
+                <ChevronRight className="w-6 h-6" />
+            </button>
+
+          {/* Scroll Container */}
           <div 
             ref={scrollRef}
-            className="overflow-x-auto pb-12 scrollbar-hide flex gap-6 md:gap-8 px-4 snap-x snap-mandatory"
+            className="overflow-x-auto pb-12 pt-4 scrollbar-hide flex gap-6 md:gap-8 px-4 snap-x snap-mandatory"
           >
             {caseStudies.map((caseStudy) => (
               <div
                 key={caseStudy.id}
-                className="min-w-[85vw] md:min-w-[700px] bg-white rounded-xl shadow-lg p-8 md:p-12 snap-center border border-gray-100"
+                className="min-w-[85vw] md:min-w-[800px] bg-white rounded-none shadow-xl p-8 md:p-10 snap-center relative border-t-4 border-[#1a1a1a]"
               >
-                {/* ケース番号とタイトル */}
-                <div className="mb-8">
-                  <span className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-2 block">
+                {/* Background Watermark inside card */}
+                 <div className="absolute top-4 right-8 text-gray-100 font-bold text-6xl md:text-8xl select-none pointer-events-none opacity-40">
                     CASE {caseStudy.id}
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] leading-tight">
-                    {caseStudy.title}
-                  </h3>
-                </div>
+                 </div>
 
-                {/* プロフィール */}
-                <div className="mb-8 p-4 bg-gray-50 rounded-lg">
-                  <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">PROFILE</p>
-                  <p className="text-sm md:text-base font-bold text-[#1a1a1a]">{caseStudy.profile.industry}</p>
-                  <p className="text-sm text-gray-600 mt-1">{caseStudy.profile.team} | {caseStudy.profile.before}</p>
-                </div>
+                {/* Title */}
+                <h3 className="text-xl md:text-2xl font-bold text-[#1a1a1a] leading-tight mb-8 pr-12 relative z-10">
+                  {caseStudy.title}
+                </h3>
 
-                <div className="grid md:grid-cols-2 gap-8 mb-8">
-                    {/* 課題 */}
+                <hr className="border-gray-200 mb-8" />
+
+                {/* Profile & Problem Grid */}
+                <div className="grid md:grid-cols-2 gap-8 mb-8 relative z-10">
+                    {/* Profile */}
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
-                        <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center">
-                            <span className="text-red-600 text-sm">⚠️</span>
-                        </div>
-                        <h4 className="text-lg font-bold text-[#1a1a1a]">課題</h4>
-                        </div>
-                        <ul className="space-y-3 pl-2">
-                        {caseStudy.problems.map((problem, idx) => (
-                            <li key={idx} className="text-sm md:text-base text-gray-700 flex items-start">
-                            <span className="mr-2 text-red-400">•</span>
-                            <span>{problem}</span>
-                            </li>
-                        ))}
-                        </ul>
+                        <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">PROFILE</p>
+                        <p className="text-base font-bold text-[#1a1a1a] mb-2">{caseStudy.profile.industry}</p>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                            {caseStudy.profile.team}
+                            <span className="mx-2 text-gray-300">|</span>
+                            {caseStudy.profile.info}
+                        </p>
                     </div>
 
-                    {/* 解決策 */}
-                    <div>
-                        <div className="flex items-center gap-3 mb-4">
-                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
-                            <span className="text-blue-600 text-sm">💡</span>
+                    {/* Problem */}
+                    <div className="bg-gray-50 p-4 rounded-lg flex gap-4 items-start">
+                        <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1a1a1a] flex items-center justify-center">
+                             <span className="text-white text-xs font-bold">課題</span>
                         </div>
-                        <h4 className="text-lg font-bold text-[#1a1a1a]">KAAANのアプローチ</h4>
-                        </div>
-                        <ul className="space-y-3 pl-2">
-                        {caseStudy.solutions.map((solution, idx) => (
-                            <li key={idx} className="text-sm md:text-base text-gray-700 flex items-start">
-                            <span className="mr-2 text-blue-400">•</span>
-                            <span>{solution}</span>
-                            </li>
-                        ))}
-                        </ul>
+                        <p className="text-sm font-medium text-[#1a1a1a] leading-relaxed pt-1">
+                            {caseStudy.problem_text}
+                        </p>
                     </div>
                 </div>
 
-                {/* 成果 */}
-                <div>
-                  <div className="flex items-center gap-3 mb-6">
-                    <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
-                      <span className="text-green-600 text-sm">📈</span>
-                    </div>
-                    <h4 className="text-lg font-bold text-[#1a1a1a]">成果</h4>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {caseStudy.results.map((result, idx) => (
-                      <div key={idx} className="bg-gray-50 p-6 rounded-lg border border-gray-100 text-center relative overflow-hidden group hover:shadow-md transition-shadow">
-                        <p className="text-sm font-bold text-gray-500 mb-4">{result.label}</p>
-                        
-                        <div className="flex items-center justify-center gap-3 mb-3">
-                            <div className="text-right">
-                                <p className="text-lg font-bold text-gray-400 line-through decoration-gray-400/50">{result.before}</p>
-                            </div>
-                            <ArrowRight className="w-4 h-4 text-gray-300" />
-                            <div className="text-left">
-                                <p className="text-2xl font-bold text-[#1a1a1a]">{result.after}</p>
-                            </div>
-                        </div>
+                {/* After Section */}
+                <div className="mt-8">
+                    <h4 className="text-lg font-bold text-[#1a1a1a] mb-6 flex items-center gap-2">
+                        After with KAAAN
+                        <span className="text-sm font-normal text-gray-500">（導入成果）</span>
+                    </h4>
 
-                        <div className="inline-block bg-[#F4E04D] px-3 py-1 rounded-full text-xs font-bold text-[#1a1a1a]">
-                            {result.improvement}
+                    <div className="border border-gray-200 rounded-lg p-6 md:p-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x md:divide-gray-200">
+                            {caseStudy.results.map((result, idx) => (
+                                <div key={idx} className="flex flex-col items-center justify-center text-center px-4">
+                                    <p className="text-sm font-bold text-gray-600 mb-4">{result.label}</p>
+                                    
+                                    <div className="space-y-2">
+                                        <p className="text-xl font-bold text-gray-400 line-through decoration-gray-400/50">
+                                            {result.before}
+                                        </p>
+                                        <div className="flex justify-center">
+                                            <ArrowDown className="w-5 h-5 text-gray-400 animate-bounce" />
+                                        </div>
+                                        <p className="text-3xl md:text-4xl font-bold text-blue-600">
+                                            {result.after}
+                                            <span className="text-sm ml-1 text-gray-600 font-bold">{result.unit}</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                      </div>
-                    ))}
-                  </div>
+                    </div>
                 </div>
 
               </div>
@@ -283,4 +251,3 @@ export function CaseStudySection() {
     </section>
   );
 }
-
