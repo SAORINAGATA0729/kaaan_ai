@@ -155,12 +155,12 @@ export function CaseStudySection() {
         
         {/* Section Header */}
         <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-6 leading-tight">
-            KAAAN導入実績
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6 tracking-tight">
+            CASE STUDY
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            マーケティングのプロがAIを実装し、<br className="md:hidden" />
-            <span className="font-bold text-[#1a1a1a]">「時間を半分に、成果を倍に」</span>を実現した成功事例。
+            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-medium">
+            マーケティングの課題を、<br className="md:hidden" />
+            AIと人の共創でどう解決したのか。
             </p>
         </div>
 
