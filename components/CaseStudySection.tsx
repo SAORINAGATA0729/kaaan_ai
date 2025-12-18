@@ -162,7 +162,7 @@ export function CaseStudySection() {
                     <div className="pt-8 border-t border-gray-100">
                         <h4 className="font-bold text-[#1a1a1a] mb-10 flex items-center gap-3 text-lg tracking-wide">
                             <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">→</span>
-                            成果を生み出すための「3つの転換」
+                            AI活用の3つのポイント
                         </h4>
                         
                         {/* 3 Columns for Process */}
@@ -186,24 +186,21 @@ export function CaseStudySection() {
 
                         {/* Overall Insight Block */}
                         {(caseStudy as any).overallInsight && (
-                            <div className="mt-12 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                            <div className="mt-12 flex flex-col md:flex-row gap-4 md:gap-6 items-start">
                                 {/* 人のアイコン */}
                                 <div className="flex-shrink-0">
-                                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center shadow-lg">
-                                        <User className="w-8 h-8 md:w-10 md:h-10" />
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center">
+                                        <User className="w-6 h-6 md:w-7 md:h-7" />
                                     </div>
                                 </div>
                                 
                                 {/* 吹き出し */}
-                                <div className="flex-grow relative bg-gray-50 rounded-2xl p-8 md:p-10 shadow-sm">
+                                <div className="flex-grow relative bg-gray-50 rounded-xl p-6 md:p-7">
                                     {/* 吹き出しのしっぽ（左側から出る） */}
-                                    <div className="absolute left-0 top-8 w-0 h-0 border-t-[12px] border-t-transparent border-r-[12px] border-r-gray-50 border-b-[12px] border-b-transparent -translate-x-3"></div>
+                                    <div className="absolute left-0 top-6 w-0 h-0 border-t-[10px] border-t-transparent border-r-[10px] border-r-gray-50 border-b-[10px] border-b-transparent -translate-x-2"></div>
                                     
-                                    <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">
-                                        PRO'S INSIGHT
-                                    </p>
-                                    <p className="text-base md:text-lg text-[#1a1a1a] font-medium leading-relaxed">
-                                        "{(caseStudy as any).overallInsight}"
+                                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                                        {(caseStudy as any).overallInsight}
                                     </p>
                                 </div>
                             </div>
