@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, Users } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export function CaseStudySection() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -21,128 +21,23 @@ export function CaseStudySection() {
   const caseStudies = [
     {
       id: 1,
-      title: "AI編集部構築により、利益率1.4倍、CV数6倍の成果を実現",
+      title: "AI対話システムで社員をライター化、月2本から30本へ15倍の生産性向上を達成",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
-        team: "マーケ担当3名",
-        info: "コンテンツ制作月2本 | 利益率30-50%"
+        team: "マーケ担当チーム"
       },
       problems: [
-        "人手依存による工数負担が大きく、制作本数が限界（月2本）",
-        "外部編集者依存で、専門性が多岐にわたるため学習負担が大きい",
-        "成果指標（CV数、トラフィック）が伸び悩み、利益率も低迷"
-      ],
-      processes: [
-        { title: "戦略設計", desc: "ストラテジーから入り、事業成果に直結するKPIを設計" },
-        { title: "AI編集部構築", desc: "フルスクラッチでAI主導体制を構築。カンバライティング手法により、非ライターでも30〜60分の会話でコンテンツ作成を実現" },
-        { title: "伴走支援", desc: "プロフェッショナルによるハンズオンワークショップと継続的なチューニングで、自走できるチームへと導く" }
+        "外注依存で、社内にノウハウが残らない（外部編集者に月2本の制作を依頼）",
+        "「あの人しか書けない」属人化で、チーム全体が底上げできない（専門性が多岐にわたり、編集者の学習負担が大きい）",
+        "量を増やすと品質が落ち、品質にこだわると数が作れない（1本のライティングに5〜8時間、公開できないレベルの記事が増える）",
+        "レビュー・承認フローのボトルネック（執筆後の確認作業に相当な時間が必要）"
       ],
       results: [
-        {
-          label: "利益率改善",
-          before: "52.8%",
-          after: "76.6%",
-          unit: "",
-          desc: "約1.4倍の改善"
-        },
-        {
-          label: "CV数成長",
-          before: "6件",
-          after: "38件",
-          unit: "",
-          desc: "6倍の成長"
-        },
-        {
-          label: "トラフィック",
-          before: "17K",
-          after: "81K",
-          unit: "",
-          desc: "4.8倍の拡大"
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: "立ち上げ1年で100万MAU達成、分業と品質管理で月200本の記事制作を実現",
-      profile: {
-        industry: "マーケティング支援企業（BtoC メディア）",
-        team: "新規メディア立ち上げチーム",
-        info: "制作体制なし | 激戦領域への後発参入"
-      },
-      problems: [
-        "大手プレイヤーが存在する激戦領域への後発参入",
-        "短期間で大量のコンテンツが必要だがリソースが不足",
-        "品質のばらつきと管理コストの増大"
-      ],
-      processes: [
-        { title: "戦略設計", desc: "ユーザー行動に基づくトレンド分析と地域特化戦略を策定" },
-        { title: "AI編集部構築", desc: "AIを活用した分業と品質管理の多段階プロセスを構築し、制作効率を最大化" },
-        { title: "運用整備", desc: "メンバーの専門性を活かす運用体制を整備し、自走できる組織へ" }
-      ],
-      results: [
-        {
-          label: "MAU成長",
-          before: "0",
-          after: "100万",
-          unit: "",
-          desc: "1年で達成"
-        },
-        {
-          label: "記事制作数",
-          before: "月0本",
-          after: "月200本",
-          unit: "",
-          desc: "安定稼働"
-        },
-        {
-          label: "検索流入",
-          before: "圏外",
-          after: "上位",
-          unit: "表示",
-          desc: "ビッグワード獲得"
-        }
-      ]
-    },
-    {
-      id: 3,
-      title: "ステークホルダー巻き込み戦略で8万UUから300万UUへ40倍成長達成",
-      profile: {
-        industry: "大手BtoB企業",
-        team: "オウンドメディアチーム",
-        info: "8万UU | 費用対効果に課題"
-      },
-      problems: [
-        "メディアの成長が停滞（8万UUで頭打ち）",
-        "費用対効果が見えにくく、社内の協力が得られにくい",
-        "制作体制が外注依存で、独自性を出しにくい"
-      ],
-      processes: [
-        { title: "体制構築", desc: "ステークホルダーを巻き込む編集体制を構築し、社内リソースを活用" },
-        { title: "AI編集部構築", desc: "AIを活用して独自コンテンツを生み出す制作フローを整備し、内製化を実現" },
-        { title: "収益化", desc: "事業貢献を可視化するマネタイズ体制を確立し、コストセンターから収益源へ" }
-      ],
-      results: [
-        {
-          label: "UU数成長",
-          before: "8万",
-          after: "300万",
-          unit: "",
-          desc: "40倍の成長"
-        },
-        {
-          label: "事業貢献",
-          before: "赤字",
-          after: "収益化",
-          unit: "",
-          desc: "マネタイズ確立"
-        },
-        {
-          label: "制作体制",
-          before: "外注",
-          after: "内製化",
-          unit: "",
-          desc: "独自制作へ"
-        }
+        "月2本から30本以上へ、制作数を15倍に拡大",
+        "ライティング時間を5〜8時間から30分の会話へ短縮",
+        "公開レベルコンテンツ化率を50%から85%以上に向上",
+        "1人で3〜4本を担当するケースも発生し、想定以上のアウトプットを実現",
+        "社内の暗黙知を資産化し、戦略オートメーション化AIエージェントに組み込み"
       ]
     }
   ];
@@ -199,83 +94,42 @@ export function CaseStudySection() {
                     <h3 className="text-xl md:text-2xl font-bold text-[#1a1a1a] leading-tight mb-4">
                     {caseStudy.title}
                     </h3>
-                    <p className="text-sm text-gray-500 flex items-center gap-2">
-                        <Users className="w-4 h-4" />
-                        {caseStudy.profile.team} <span className="text-gray-300">|</span> {caseStudy.profile.info}
+                    <p className="text-sm text-gray-500">
+                        {caseStudy.profile.team}
                     </p>
                 </div>
 
-                {/* Body: Problem -> Solution -> Result */}
+                {/* Body: Problem & Result */}
                 <div className="grid md:grid-cols-2 gap-8 md:gap-12 flex-grow">
                     
-                    {/* Left Column: Problem & Process */}
-                    <div className="flex flex-col gap-8">
-                        {/* Problem */}
-                        <div>
-                            <h4 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                                <span className="w-6 h-6 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-xs">!</span>
-                                課題
-                            </h4>
-                            <ul className="space-y-3">
-                                {caseStudy.problems.map((prob, i) => (
-                                    <li key={i} className="text-sm text-gray-600 leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-gray-400">
-                                        {prob}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Process (KAAAN's Approach) */}
-                        <div>
-                            <h4 className="font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
-                                <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xs">✓</span>
-                                KAAANのアプローチ
-                            </h4>
-                            <div className="space-y-4">
-                                {caseStudy.processes.map((proc, i) => (
-                                    <div key={i} className="flex gap-3 items-start p-3 bg-gray-50 rounded-lg">
-                                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center text-xs font-bold mt-0.5">
-                                            {i + 1}
-                                        </div>
-                                        <div>
-                                            <p className="text-sm font-bold text-[#1a1a1a] mb-1">{proc.title}</p>
-                                            <p className="text-xs text-gray-600 leading-relaxed">{proc.desc}</p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                    {/* Left Column: Problem */}
+                    <div>
+                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
+                            <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm">!</span>
+                            課題背景
+                        </h4>
+                        <ul className="space-y-4">
+                            {caseStudy.problems.map((prob, i) => (
+                                <li key={i} className="text-sm md:text-base text-gray-700 leading-relaxed pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-red-500 before:text-xl before:leading-none">
+                                    {prob}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
 
                     {/* Right Column: Results */}
-                    <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 flex flex-col justify-center">
-                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2">
-                            <span className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs">⚡</span>
-                            導入成果
+                    <div>
+                        <h4 className="font-bold text-[#1a1a1a] mb-6 flex items-center gap-2 text-lg">
+                            <span className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-sm">✓</span>
+                            結果どうなった
                         </h4>
-                        
-                        <div className="space-y-6">
+                        <ul className="space-y-4">
                             {caseStudy.results.map((res, i) => (
-                                <div key={i} className="relative">
-                                    <div className="flex justify-between items-end mb-2">
-                                        <span className="text-sm font-bold text-gray-600">{res.label}</span>
-                                        <span className="text-xs text-green-600 font-bold bg-green-50 px-2 py-0.5 rounded">{res.desc}</span>
-                                    </div>
-                                    <div className="flex items-center gap-4 bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                                        <div className="text-right w-1/3">
-                                            <p className="text-sm text-gray-400 font-medium line-through">{res.before}</p>
-                                        </div>
-                                        <ArrowRight className="w-4 h-4 text-gray-300 flex-shrink-0" />
-                                        <div className="text-left w-1/2">
-                                            <p className="text-xl md:text-2xl font-bold text-[#1a1a1a]">
-                                                {res.after}<span className="text-sm font-medium ml-1">{res.unit}</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <li key={i} className="text-sm md:text-base text-gray-700 leading-relaxed pl-6 relative before:content-['•'] before:absolute before:left-0 before:text-green-500 before:text-xl before:leading-none">
+                                    {res}
+                                </li>
                             ))}
-                        </div>
-
+                        </ul>
                     </div>
                 </div>
 
