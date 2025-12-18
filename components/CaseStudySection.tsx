@@ -9,6 +9,7 @@ export function CaseStudySection() {
     {
       id: 1,
       title: "AI対話システムで社員をライター化、月2本から30本へ15倍の生産性向上を達成",
+      summary: "社員の「暗黙知」をAIで資産化し、組織全体のコンテンツ力を底上げ",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
         team: ""
@@ -32,6 +33,7 @@ export function CaseStudySection() {
     {
       id: 2,
       title: "AI編集部構築により、半年で利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
+      summary: "人手依存の従来型体制から、AI主導体制へ完全移行し、持続的な成長基盤を構築",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
         team: ""
@@ -51,8 +53,7 @@ export function CaseStudySection() {
         "利益率を52.8%から76.6%へ改善（約1.4倍、+23.8ポイント）",
         "CV数を月6件から38件へ成長（6倍）",
         "トラフィックを17Kから81Kへ拡大（4.8倍）",
-        "コンテンツ制作を月2本から月30本以上へ拡大（15倍）",
-        "人手依存の従来型体制から、AI主導体制へ完全移行し、持続的な成長基盤を構築"
+        "コンテンツ制作を月2本から月30本以上へ拡大（15倍）"
       ]
     }
   ];
@@ -88,6 +89,12 @@ export function CaseStudySection() {
                     <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] leading-tight mb-4">
                     {caseStudy.title}
                     </h3>
+                    {/* Summary */}
+                    {(caseStudy as any).summary && (
+                        <p className="text-lg text-[#1a1a1a] font-bold mb-4 leading-relaxed">
+                            {(caseStudy as any).summary}
+                        </p>
+                    )}
                     {caseStudy.profile.team && (
                         <p className="text-sm text-gray-500">
                             {caseStudy.profile.team}
