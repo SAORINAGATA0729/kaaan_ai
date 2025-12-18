@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowRight } from 'lucide-react';
+import { useRef } from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle, Bot, Workflow, Search, PenTool, Settings, CheckCircle2 } from 'lucide-react';
 
 export function CaseStudySection() {
   
@@ -10,7 +11,7 @@ export function CaseStudySection() {
       title: "AI対話システムで社員をライター化、月2本から30本へ15倍の生産性向上を達成",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
-        team: "マーケ担当チーム"
+        team: ""
       },
       problems: [
         "外部編集者依存で月2本の制作が限界、専門性が高く学習コストが高い",
@@ -33,7 +34,7 @@ export function CaseStudySection() {
       title: "AI編集部構築により、利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
       profile: {
         industry: "デジタルマーケ支援企業（BtoB コンサル）",
-        team: "マーケ担当3名"
+        team: ""
       },
       problems: [
         "人手依存による工数負担が大きく、利益率が30~50%台で低迷",
@@ -87,9 +88,11 @@ export function CaseStudySection() {
                     <h3 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] leading-tight mb-4">
                     {caseStudy.title}
                     </h3>
-                    <p className="text-sm text-gray-500">
-                        {caseStudy.profile.team}
-                    </p>
+                    {caseStudy.profile.team && (
+                        <p className="text-sm text-gray-500">
+                            {caseStudy.profile.team}
+                        </p>
+                    )}
                 </div>
 
                 {/* Body: Problem vs Result, then Process */}
