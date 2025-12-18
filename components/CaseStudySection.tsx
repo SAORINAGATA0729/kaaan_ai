@@ -19,21 +19,19 @@ export function CaseStudySection() {
         "社員ライター化に過去何度も失敗、業務多忙で執筆時間を確保できない",
         "品質担保と量産の両立が困難（執筆後の確認に時間がかかりボトルネックに）"
       ],
+      overallInsight: "多くの企業は「どう書くか」に注目しがちですが、本質は「書かない」選択肢をどう設計するかです。社員のコア価値を見極め、AIに任せる部分を大胆に切り替えることこそが、組織を変える第一歩になります。",
       process: [
         {
             title: "「書く」から「話す」へ",
-            desc: "執筆スキルに依存せず、日常会話から社員の「暗黙知」を引き出す手法へシフト。",
-            insight: "社員のコア価値は「ライティングスキル」ではなく「現場の知見」にあると再定義しました。"
+            desc: "執筆スキルに依存せず、日常会話から社員の「暗黙知」を引き出す手法へシフト。"
         },
         {
             title: "「人手」から「AIシステム」へ",
-            desc: "専門外のライティング学習を廃止し、AIとの対話だけで完結する仕組みへ移行。",
-            insight: "学習コストの高いスキル習得を捨て、AIに任せる決断をしました。"
+            desc: "専門外のライティング学習を廃止し、AIとの対話だけで完結する仕組みへ移行。"
         },
         {
             title: "「努力」から「仕組み」へ",
-            desc: "個人のモチベーションに頼らず、業務フローに組み込むことで持続可能な運用を実現。",
-            insight: "「頑張ればできる」ではなく「自然とできる」環境こそが継続の鍵です。"
+            desc: "個人のモチベーションに頼らず、業務フローに組み込むことで持続可能な運用を実現。"
         }
       ],
       results: [
@@ -44,7 +42,7 @@ export function CaseStudySection() {
     },
     {
       id: 2,
-      title: "「AIとの対話」だけで記事を量産。社員の専門性を最大化する、AI駆動型の編集部構築",
+      title: "AI編集部構築により、半年で利益率1.4倍、CV数6倍、トラフィック4.8倍の成果を実現",
       summary: "人手依存の従来型体制から、AI主導体制へ完全移行し、持続的な成長基盤を構築",
       profile: {
         industry: "BtoB向け商材 事業会社",
@@ -55,21 +53,19 @@ export function CaseStudySection() {
         "成果の伸び悩み（CV数・トラフィック共に成長が停滞）",
         "作ることに手一杯で、成果を追えていない"
       ],
+      overallInsight: "リソース不足の解決策は「人を増やす」だけではありません。戦略レベルで「やらないこと」を決め、AIというレバレッジを最大限効かせる設計図を描くことで、少人数でも大きな成果を生み出せます。",
       process: [
         {
             title: "「作業」から「戦略」へ",
-            desc: "作るだけの作業をやめ、AIで代替すべき領域と人がやるべき領域を再定義。",
-            insight: "手を動かす前に、「何をやめるか」を決めることが生産性向上の第一歩です。"
+            desc: "作るだけの作業をやめ、AIで代替すべき領域と人がやるべき領域を再定義。"
         },
         {
             title: "「部分最適」から「全体設計」へ",
-            desc: "個別の記事作成ではなく、成果を最大化する全体ワークフローを設計。",
-            insight: "1記事の質にこだわるより、全体のワークフロー最適化が最終成果を左右します。"
+            desc: "個別の記事作成ではなく、成果を最大化する全体ワークフローを設計。"
         },
         {
             title: "「属人化」から「基盤構築」へ",
-            desc: "人の手癖に頼らず、誰もが高品質を出せるプロンプト基盤をフルスクラッチで構築。",
-            insight: "人のスキルに依存しない「再現性のある基盤」こそが、事業の資産になります。"
+            desc: "人の手癖に頼らず、誰もが高品質を出せるプロンプト基盤をフルスクラッチで構築。"
         }
       ],
       results: [
@@ -125,7 +121,7 @@ export function CaseStudySection() {
                 </div>
 
                 {/* Body: Problem vs Result, then Process */}
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-12">
                     
                     {/* Upper Row: Problem vs Result */}
                     <div className="grid md:grid-cols-2 gap-6 md:gap-8">
@@ -164,40 +160,52 @@ export function CaseStudySection() {
 
                     {/* Lower Row: Process */}
                     <div className="pt-8 border-t border-gray-100">
-                        <h4 className="font-bold text-[#1a1a1a] mb-8 flex items-center gap-3 text-lg tracking-wide">
+                        <h4 className="font-bold text-[#1a1a1a] mb-10 flex items-center gap-3 text-lg tracking-wide">
                             <span className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-bold">→</span>
                             成果を生み出すための「3つの転換」
                         </h4>
-                        <div className="grid md:grid-cols-3 gap-8 relative">
+                        
+                        {/* 3 Columns for Process */}
+                        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-12">
                             {caseStudy.process.map((proc: any, i) => {
                                 return (
                                     <div key={i} className="relative group flex flex-col h-full">
                                         <div className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">POINT {i+1}</div>
-                                        <div className="mb-3">
-                                            <h5 className="font-bold text-[#1a1a1a] text-lg leading-snug border-l-2 border-black pl-4">
+                                        <div className="mb-4">
+                                            <h5 className="font-bold text-[#1a1a1a] text-xl leading-snug border-l-4 border-black pl-4">
                                                 {proc.title}
                                             </h5>
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed pl-4 mb-4 flex-grow">
+                                        <p className="text-sm text-gray-600 leading-relaxed pl-5 font-medium">
                                             {proc.desc}
                                         </p>
-                                        
-                                        {/* Insight Block */}
-                                        <div className="mt-auto pl-4">
-                                            <div className="bg-gray-50 p-4 rounded-lg border-l-2 border-gray-300">
-                                                <p className="text-xs font-bold text-gray-400 mb-1 flex items-center gap-1">
-                                                    <span className="w-1 h-1 rounded-full bg-gray-400"></span>
-                                                    PRO'S INSIGHT
-                                                </p>
-                                                <p className="text-xs md:text-sm text-gray-700 font-medium leading-relaxed">
-                                                    {proc.insight}
-                                                </p>
-                                            </div>
-                                        </div>
                                     </div>
                                 );
                             })}
                         </div>
+
+                        {/* Overall Insight Block */}
+                        {(caseStudy as any).overallInsight && (
+                            <div className="mt-8 bg-gray-50 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-start relative">
+                                {/* Icon / Avatar Placeholder */}
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center shadow-md">
+                                        <Bot className="w-6 h-6 md:w-8 md:h-8" />
+                                    </div>
+                                </div>
+                                
+                                {/* Bubble Content */}
+                                <div className="flex-grow">
+                                    <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest flex items-center gap-2">
+                                        PRO'S INSIGHT
+                                    </p>
+                                    <p className="text-base md:text-lg text-[#1a1a1a] font-medium leading-relaxed italic">
+                                        "{(caseStudy as any).overallInsight}"
+                                    </p>
+                                </div>
+                            </div>
+                        )}
+
                     </div>
 
                 </div>
