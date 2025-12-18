@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle, Bot, Workflow, Search, PenTool, Settings, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, MessageCircle, Bot, Workflow, Search, PenTool, Settings, CheckCircle2, User } from 'lucide-react';
 
 export function CaseStudySection() {
   
@@ -19,7 +19,7 @@ export function CaseStudySection() {
         "社員ライター化に過去何度も失敗、業務多忙で執筆時間を確保できない",
         "品質担保と量産の両立が困難（執筆後の確認に時間がかかりボトルネックに）"
       ],
-      overallInsight: "多くの企業は「どう書くか」に注目しがちですが、本質は「書かない」選択肢をどう設計するかです。社員のコア価値を見極め、AIに任せる部分を大胆に切り替えることこそが、組織を変える第一歩になります。",
+      overallInsight: "多くの企業は「どう書くか」というスキルに注目しがちですが、本質は「書かない」という選択肢をどう設計するかです。社員のコア価値を見極め、AIに任せる部分を大胆に切り替えることこそが、組織を変える第一歩になります。",
       process: [
         {
             title: "「書く」から「話す」へ",
@@ -166,12 +166,12 @@ export function CaseStudySection() {
                         </h4>
                         
                         {/* 3 Columns for Process */}
-                        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-12">
+                        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-16">
                             {caseStudy.process.map((proc: any, i) => {
                                 return (
                                     <div key={i} className="relative group flex flex-col h-full">
-                                        <div className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">POINT {i+1}</div>
-                                        <div className="mb-4">
+                                        <div className="text-xs font-bold text-gray-400 mb-4 uppercase tracking-widest">POINT {i+1}</div>
+                                        <div className="mb-6">
                                             <h5 className="font-bold text-[#1a1a1a] text-xl leading-snug border-l-4 border-black pl-4">
                                                 {proc.title}
                                             </h5>
@@ -186,20 +186,23 @@ export function CaseStudySection() {
 
                         {/* Overall Insight Block */}
                         {(caseStudy as any).overallInsight && (
-                            <div className="mt-8 bg-gray-50 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row gap-6 md:gap-8 items-start relative">
-                                {/* Icon / Avatar Placeholder */}
+                            <div className="mt-12 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                                {/* 人のアイコン */}
                                 <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center shadow-md">
-                                        <Bot className="w-6 h-6 md:w-8 md:h-8" />
+                                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center shadow-lg">
+                                        <User className="w-8 h-8 md:w-10 md:h-10" />
                                     </div>
                                 </div>
                                 
-                                {/* Bubble Content */}
-                                <div className="flex-grow">
-                                    <p className="text-xs font-bold text-gray-400 mb-2 uppercase tracking-widest flex items-center gap-2">
+                                {/* 吹き出し */}
+                                <div className="flex-grow relative bg-gray-50 rounded-2xl p-8 md:p-10 shadow-sm">
+                                    {/* 吹き出しのしっぽ（左側から出る） */}
+                                    <div className="absolute left-0 top-8 w-0 h-0 border-t-[12px] border-t-transparent border-r-[12px] border-r-gray-50 border-b-[12px] border-b-transparent -translate-x-3"></div>
+                                    
+                                    <p className="text-xs font-bold text-gray-400 mb-3 uppercase tracking-widest">
                                         PRO'S INSIGHT
                                     </p>
-                                    <p className="text-base md:text-lg text-[#1a1a1a] font-medium leading-relaxed italic">
+                                    <p className="text-base md:text-lg text-[#1a1a1a] font-medium leading-relaxed">
                                         "{(caseStudy as any).overallInsight}"
                                     </p>
                                 </div>
