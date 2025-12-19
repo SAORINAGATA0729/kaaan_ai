@@ -453,7 +453,7 @@ export default function Home() {
                   マーケティングのプロフェッショナルによる伴走
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                  数々の事業を成長させてきたマーケティングのプロフェッショナルが参画。
+                  数々の事業を成長させたマーケティングのプロフェッショナルが参画。
                   ツール導入で終わらせず、<span className="font-bold text-black border-b border-yellow-300">「事業成長」というゴールまで伴走します。</span>
                 </p>
                 
