@@ -289,7 +289,7 @@ export default function Home() {
                ))}
             </div>
             <div className="mt-10 text-center">
-              <p className="text-xs text-gray-400">※プロジェクトの課題に応じて最適なツールを選定・開発します</p>
+              <p className="text-xs text-gray-400">※プロジェクトの課題に応じて最適なツールを選定・開発します。</p>
             </div>
           </div>
         </div>
