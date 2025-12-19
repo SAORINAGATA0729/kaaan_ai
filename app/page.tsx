@@ -87,7 +87,7 @@ export default function Home() {
                 icon: Target
               },
               {
-                title: "外注依存で、社内にノウハウが残らない",
+                title: "外注依存・社内にノウハウが残らない",
                 desc: "制作会社やライターに頼りきりで、社内にナレッジが蓄積されない。修正指示のラリーで消耗し、コストだけが嵩んでいく",
                 icon: RefreshCw
               },
